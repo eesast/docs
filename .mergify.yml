@@ -1,0 +1,16 @@
+pull_request_rules:
+  - name: branch name check
+    conditions:
+      - "-head~=^(master|main)/"
+      - "-merged"
+      - "-closed"
+    actions:
+      close:
+        message: |
+          @{{author}}
+          Wrong Branch Name: {{head}}
+          Please use a meaningful name instead.
+          This Pull Request will be closed.
+      label:
+        add:
+          - "invalid"
