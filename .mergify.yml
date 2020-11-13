@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: branch name check
     conditions:
-      - "-head~=^(master|main)/"
+      - "head~=^(master|main)/"
       - "-merged"
       - "-closed"
     actions:

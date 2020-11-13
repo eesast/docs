@@ -1,0 +1,47 @@
+---
+title: 使用 MDX 撰写文档
+---
+
+本项目使用 [`Docusaurus`](https://docusaurus.io/)，其使用 [`MDX`](https://mdxjs.com/) 增强了 `Markdown` 的功能。
+
+简而言之，在 `MDX` 的加持下，我们可以在 `Markdown` 文档中使用 `JSX` 和 `React 组件`：
+
+```jsx
+export const Highlight = ({ children, color }) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: "2px",
+      color: "#fff",
+      padding: "0.2rem",
+    }}
+  >
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> 和 <Highlight color="#1877F2">
+  Facebook blue
+</Highlight> 在 `MDX` 的支持下以相应颜色高亮显示。
+```
+
+export const Highlight = ({ children, color }) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: "2px",
+      color: "#fff",
+      padding: "0.2rem",
+    }}
+  >
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> 和 <Highlight color="#1877F2">
+  Facebook blue
+</Highlight> 在 `MDX` 的支持下以相应颜色高亮显示。
+
+---
+
+本项目默认使用 `.mdx` 标识使用或未来可能使用此功能的文件，且默认对所有 `.md` 也视为开启此功能。推荐想使用此功能的贡献者安装相关插件以优化编辑体验。
