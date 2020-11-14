@@ -1,0 +1,92 @@
+---
+title: yarn 简介
+---
+
+Yarn 是比 npm（相对）更好的依赖管理工具，[官网](https://yarn.bootcss.com/docs/getting-started/)。可以使用 npm 进行安装
+
+```bash
+npm install -g yarn
+```
+
+由于各种原因，推荐使用淘宝镜像对 yarn 进行加速
+
+```bash
+yarn config set registry https://registry.npm.taobao.org
+```
+
+与 npm 类似，yarn 也使用`package.json`确定依赖版本。不过相比曾经的 npm（最新的 npm 会默认使用`package-lock.json`）会默认多加一个`yarn.lock`用来确定精确的版本。
+
+在`package.json`中，版本是这样列出的：
+
+```
+"5.0.3"
+"~5.0.3"
+"^5.0.3"
+```
+
+- “5.0.3”表示安装指定的 5.0.3 版本
+- “~5.0.3”表示安装 5.0.X 中最新的版本
+- “^5.0.3”表示安装 5.X.X 中的最新版本。
+
+这样可能会造成安装的依赖版本更新，且恰好遇到了**breaking change**直接导致无法正常运行。而`yarn.lock`中则会写明具体的版本、依赖、使用的源的地址
+
+```
+"@ant-design/colors@^3.1.0":
+  version "xxx"
+  resolved "xxx"
+  integrity xxx
+  dependencies:
+    xxx
+```
+
+### 常用命令
+
+初始化一个新项目
+
+```
+yarn init
+```
+
+添加依赖包
+
+```
+yarn add [package]
+yarn add [package]@[version]
+yarn add [package]@[tag]
+```
+
+将依赖项添加到不同依赖项类别中
+
+分别添加到 devDependencies、peerDependencies 和 optionalDependencies 类别中：
+
+```
+yarn add [package] --dev
+yarn add [package] --peer
+yarn add [package] --optional
+```
+
+升级依赖包
+
+```
+yarn upgrade [package]
+yarn upgrade [package]@[version]
+yarn upgrade [package]@[tag]
+```
+
+移除依赖包
+
+```
+yarn remove [package]
+```
+
+安装项目的全部依赖
+
+```
+yarn
+```
+
+或者
+
+```
+yarn install
+```

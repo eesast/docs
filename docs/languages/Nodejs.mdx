@@ -1,0 +1,33 @@
+---
+title: Node.js 简介
+---
+
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，我们写好的 JavaScript 代码将使用 Node.js 执行。
+
+更具体的
+
+- Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。
+- Node.js 使用了一个**事件驱动**、**非阻塞式 I/O**的模型，使其轻量又高效。
+  - 具体解释
+    - Node.js 是单线程的
+    - 但是每做一次 IO，在 IO 的同时还可以继续进行别的事情的处理
+    - 即 IO 并不会阻塞主线程
+  - 举个栗子：每当进行某项功能的时候的时候，A 函数会被调用，访问一个网上的资源，由于网络延迟，3s 后才会获得返回值。我们连续调用 100 次功能看看
+    - C/C++/Java 的同步实现，至少需要 3s\*100=300s
+    - C/C++/Java 的多线程，需要至少需要 3s\*100/线程数量
+    - Node.js 仅需要比 3s 多一点的时间
+- Node.js 的语法就是 JavaScript 的语法。
+
+最初的 JavaScript 被设计为浏览器内使用的**脚本语言**，方便用户使用浏览器。而有了 Node.js，JavaScript 便可以脱离浏览器运行，进而可以用于前端、后端甚至开发桌面软件。
+
+可以从以下链接获取安装包：
+
+- [官方网站](https://nodejs.org/en/download/)
+- [清华 tuna 镜像](https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/)
+  - [tuna 镜像帮助页面](https://mirrors.tuna.tsinghua.edu.cn/help/nodejs-release/)
+- [北京外国语大学镜像](https://mirrors.bfsu.edu.cn/nodejs-release/)
+  - [北外镜像帮助页面](https://mirrors.bfsu.edu.cn/help/nodejs-release/)
+
+推荐使用尽可能新的长期支持版本，具体安装步骤可以参考[（略过时的）菜鸟教程](https://www.runoob.com/nodejs/nodejs-install-setup.html)。
+
+由于我们目前尚不需要使用 nvm（Node Version Manager）对 Node.js 进行版本管理，有需要的可以自行搜索学习。
