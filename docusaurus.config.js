@@ -40,18 +40,18 @@ module.exports = {
               label: "About",
               to: "docs",
             },
-            // {
-            //   label: "Tools",
-            //   to: "docs/tools",
-            // },
-            // {
-            //   label: "Web",
-            //   to: "docs/web",
-            // },
-            // {
-            //   label: "Languages",
-            //   to: "docs/languages",
-            // },
+            {
+              label: "Languages",
+              to: "docs/languages",
+            },
+            {
+              label: "Tools",
+              to: "docs/tools",
+            },
+            {
+              label: "Web",
+              to: "docs/web",
+            },
           ],
         },
         {

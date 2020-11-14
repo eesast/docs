@@ -10,7 +10,24 @@ const features = [
   {
     title: "开放",
     description: (
-      <>所有资料默认以 CC-BY-SA 4.0 授权开放，并欢迎所有人持续添加内容</>
+      <>
+        所有资料默认以 CC-BY-SA 4.0 授权开放，并欢迎所有人持续添加内容
+        <br />
+        <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img
+            alt="知识共享许可协议"
+            style={{ "border-width": 0 }}
+            src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
+          />
+        </a>
+        <br />
+        本作品采用
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          知识共享署名-相同方式共享 4.0 国际许可协议
+        </a>
+        进行许可。
+      </>
     ),
   },
   {
@@ -21,42 +38,12 @@ const features = [
       </>
     ),
   },
-  // {
-  //   title: "Easy to Use",
-  //   imageUrl: "img/undraw_docusaurus_mountain.svg",
-  //   description: (
-  //     <>
-  //       Docusaurus was designed from the ground up to be easily installed and
-  //       used to get your website up and running quickly.
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "Focus on What Matters",
-  //   imageUrl: "img/undraw_docusaurus_tree.svg",
-  //   description: (
-  //     <>
-  //       Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-  //       ahead and move your docs into the <code>docs</code> directory.
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "Powered by React",
-  //   imageUrl: "img/undraw_docusaurus_react.svg",
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
 ];
 
 function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx("col col--4", styles.feature)}>
+    <div className={clsx("col col", styles.feature)}>
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
@@ -73,8 +60,8 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`EESAST | 清华大学电子工程系学生科协`}
+      description="清华大学电子工程系学生科协"
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
