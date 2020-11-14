@@ -1,0 +1,161 @@
+---
+title: 显示猜测的历史
+---
+
+## 指南
+
+:::tip
+
+- React 哲学
+- 组件的“参数”
+- JS/TS 中的对象
+
+:::
+
+现在我们再用 antd 提供的`Timeline`组件对猜测历史进行渲染。这里同时介绍一下如何定义一个组件，用于将历史渲染的逻辑和游戏的主逻辑尽可能分离。
+
+> 显然，对于这个小游戏是没必要进行分离的。组件分离层次化一般能起到复用和清晰化的效果。具体使用时如何设计组件并没有定式，推荐阅读[React 哲学](https://react.docschina.org/docs/thinking-in-react.html)。
+
+在`src`文件夹下新建一个`history.tsx`，先在其中引入我们需要用到的库并搭一个组件的框架
+
+```tsx
+import React from "react";
+import { Timeline } from "antd";
+
+const History: React.FC = () => {
+  return <div></div>;
+};
+
+export default History;
+```
+
+需要进行渲染的历史需要通过`props`传入`<History />`中，因此我们要添加相应的接口
+
+```tsx
+interface HistoryProps {
+  history: { value: number; status: string }[];
+}
+
+const History: React.FC<HistoryProps> = ({ history }) => {
+...
+}
+```
+
+这里我们声明了一个`HistoryProps`作为`<History />`的接口，其中只有一个`history`，是由`{ value: number; status: string }`这样的`object`构成的“数组”。在定义`<History />`时使用`React.FC<HistoryProps>`是定义一个接口为`HistoryProps`的 React 函数式组件。
+
+接着我们需要将有外层组件传入的`history`转化为 antd 的`<Timeline />`的子项形式
+
+```tsx
+<Timeline>
+  <Timeline.Item>aaa</Timeline.Item>
+  <Timeline.Item>bbb</Timeline.Item>
+  <Timeline.Item>ccc</Timeline.Item>
+  <Timeline.Item>ddd</Timeline.Item>
+</Timeline>
+```
+
+使用`map`将`history`中的每一项都转化为`<Timeline.Item>xxx</Timeline.Item>`的形式
+
+```tsx
+const historyList = history.map((element) => {
+  return (
+    <Timeline.Item
+      key={element.value}
+      color={
+        element.status === "You Win"
+          ? "green"
+          : element.status === "Too small"
+          ? "#ffec3d" // 黄色
+          : "#ffa940" // 橙色
+      }
+    >
+      You've guessed {element.value}. {element.status}
+    </Timeline.Item>
+  );
+});
+```
+
+这段代码会遍历整个`history`，将其中的每一项转变为`<Timeline.Item color="xxx">You've guessed {element.value}. {element.status}</Timeline.Item>`的形式。其中猜测偏小时渲染为黄色，猜测偏大时渲染为橙色，猜对时渲染为绿色。
+
+最后再将`historyList`作为返回值的一部分
+
+```tsx
+return (
+  <div style={{ padding: 10 }}>
+    <Timeline>{historyList}</Timeline>
+  </div>
+);
+```
+
+到这里，`<History />`就定义完了，我们要在`<App />`中调用此组件。首先引入该组件，并定义一个存储猜测历史的状态
+
+```tsx
+import History from "./history";
+
+const [history, setHistory] = useState<{ value: number; status: string }[]>([]);
+```
+
+然后修改`handleSubmit`和`handleRandom`，加入对历史的修改
+
+```tsx
+const handleSubmit = () => {
+  if (guess < secret) {
+    message.info("Too small");
+    setHistory([...history, { value: guess, status: "Too small" }]);
+  } else if (guess > secret) {
+    message.info("Too big");
+    setHistory([...history, { value: guess, status: "Too big" }]);
+  } else {
+    message.success("You win");
+    setHistory([...history, { value: guess, status: "You Win" }]);
+    setRandomAble(true);
+  }
+};
+
+const handleRandom = () => {
+  setSecret(Math.floor(Math.random() * 100 + 1));
+  setHistory([]);
+  setRandomAble(false);
+};
+```
+
+最后在`<App />`返回的渲染中添加`<History />`
+
+```tsx
+return (
+    ...
+    <History history={history} />
+);
+```
+
+到此，我们已经实现了游戏的整体功能，渲染效果应与本章最开始的图片一致。
+
+---
+
+最后的最后，我们再简单看看`effect Hook`。这是 React 提供的用于执行“副作用”操作的部分，一般用于执行一些网络请求等。
+
+```tsx
+useEffect(() => {
+  document.title = `You guess ${guess}`;
+}, [guess]);
+```
+
+这一段是在`guess`改变时，自动修改网页的标题为“You guess \${guess}”
+
+## Demo
+
+### CodeSandbox
+
+<iframe
+  src="https://codesandbox.io/embed/eesast-reactantd-tutorial-13-6i6gf?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
+  style={{
+    width: "100%",
+    height: "500px",
+    border: "0",
+    "border-radius": "4px",
+    overflow: "hidden",
+  }}
+  title="EESΛST React+antd Tutorial 1.3"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>

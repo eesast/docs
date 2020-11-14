@@ -21,3 +21,7 @@ yarn-error.log*
 
 # VSC
 .vscode
+
+# ssh key
+deploy_rsa
+deploy_rsa.pub
