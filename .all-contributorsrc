@@ -67,6 +67,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "BowmanChow",
+      "name": "Bowman",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/43898302?v=4",
+      "profile": "https://github.com/BowmanChow",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
