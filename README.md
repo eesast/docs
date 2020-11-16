@@ -1,5 +1,9 @@
 # EESΛST Docs
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
 
 ## 命令
@@ -46,6 +50,22 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
 
 对于 `git` 的使用，可以参看文档中相关部分。
 
-## 贡献者
+## 贡献者 ✨
 
-以下为本文档的贡献者们
+感谢诸位贡献者们 ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/duskmoon314"><img src="https://avatars2.githubusercontent.com/u/20477228?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Campbell He</b></sub></a><br /><a href="#maintenance-duskmoon314" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

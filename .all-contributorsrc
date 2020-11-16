@@ -1,0 +1,25 @@
+{
+  "projectName": "docs",
+  "projectOwner": "eesast",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md",
+    "docs/intro/contributors.mdx"
+  ],
+  "imageSize": 50,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "duskmoon314",
+      "name": "Campbell He",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20477228?v=4",
+      "profile": "https://github.com/duskmoon314",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
