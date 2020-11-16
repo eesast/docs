@@ -1420,10 +1420,10 @@
     react-router-dom "^5.1.2"
     react-toggle "^4.1.1"
 
-"@docusaurus/theme-live-codeblock@^2.0.0-alpha.66":
+"@docusaurus/theme-live-codeblock@2.0.0-alpha.66":
   version "2.0.0-alpha.66"
-  resolved "https://registry.npm.taobao.org/@docusaurus/theme-live-codeblock/download/@docusaurus/theme-live-codeblock-2.0.0-alpha.66.tgz#25a2ad68499963752ab1451acfab855a56454cfe"
-  integrity sha1-JaKtaEmZY3UqsUUaz6uFWlZFTP4=
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.0.0-alpha.66.tgz#25a2ad68499963752ab1451acfab855a56454cfe"
+  integrity sha512-EHDvl5vwZat2N87GuC08PfyB+aMCmH5ngw09fZJXwH4zvkloV67n2GShl7/B0GY6MD4od9QqCZ8tr5eNKqPLkQ==
   dependencies:
     "@docusaurus/core" "2.0.0-alpha.66"
     "@philpl/buble" "^0.19.7"
@@ -1621,7 +1621,7 @@
     unist-builder "2.0.3"
     unist-util-visit "2.0.3"
 
-"@mdx-js/react@^1.5.8":
+"@mdx-js/react@1.6.21", "@mdx-js/react@^1.5.8":
   version "1.6.21"
   resolved "https://registry.npm.taobao.org/@mdx-js/react/download/@mdx-js/react-1.6.21.tgz#86d962471a5e160c59a6b32054aa55c0c7ca404e"
   integrity sha1-htliRxpeFgxZprMgVKpVwMfKQE4=
@@ -2260,10 +2260,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd@^4.8.2:
+antd@4.8.2:
   version "4.8.2"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-4.8.2.tgz?cache=0&sync_timestamp=1604915370174&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-4.8.2.tgz#8cad882ddb5b18bafacd009cb0096f5b20c8a2f3"
-  integrity sha1-jK2ILdtbGLr6zQCcsAlvWyDIovM=
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.8.2.tgz#8cad882ddb5b18bafacd009cb0096f5b20c8a2f3"
+  integrity sha512-qxagKsiPVO+2rcAdX8WA3TPqiv5TS4FDGoaETVgCCln3x7ap1nqHkBC+Fr3CSNg8MxwQ+6m5BSBLcs5uDQg0Qw==
   dependencies:
     "@ant-design/colors" "^4.0.5"
     "@ant-design/css-animation" "^1.7.2"
@@ -3239,7 +3239,7 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
-clsx@^1.1.1:
+clsx@1.1.1, clsx@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/clsx/download/clsx-1.1.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fclsx%2Fdownload%2Fclsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
   integrity sha1-mLMTT5q73yOyZjSRrOE8XAOnMYg=
@@ -9102,15 +9102,14 @@ react-dev-utils@^10.2.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.8.4:
-  version "16.14.0"
-  resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.14.0.tgz?cache=0&sync_timestamp=1603375193691&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
-  integrity sha1-etg47Cmnd/s8dcOhkPZhz5Kri4k=
+react-dom@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
+  integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
+    scheduler "^0.20.1"
 
 react-error-overlay@^6.0.7:
   version "6.0.8"
@@ -9239,14 +9238,13 @@ react-toggle@^4.1.1:
   dependencies:
     classnames "^2.2.5"
 
-react@^16.8.4:
-  version "16.14.0"
-  resolved "https://registry.npm.taobao.org/react/download/react-16.14.0.tgz?cache=0&sync_timestamp=1603375192297&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=
+react@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
+  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.6:
   version "2.3.7"
@@ -9672,10 +9670,10 @@ sax@^1.2.4, sax@~1.2.4:
   resolved "https://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
 
-scheduler@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  integrity sha1-Tz4u0sGn1laB9MhU+oxaHMtA8ZY=
+scheduler@^0.20.1:
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"
+  integrity sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

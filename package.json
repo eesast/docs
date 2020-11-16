@@ -13,14 +13,16 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.66",
     "@docusaurus/preset-classic": "2.0.0-alpha.66",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.66",
-    "@easyops-cn/docusaurus-search-local": "^0.13.0",
-    "@mdx-js/react": "^1.5.8",
-    "antd": "^4.8.2",
-    "clsx": "^1.1.1",
-    "nodejieba": "^2.4.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.66",
+    "@easyops-cn/docusaurus-search-local": "0.13.0",
+    "antd": "4.8.2",
+    "clsx": "1.1.1",
+    "nodejieba": "2.4.2",
+    "@mdx-js/react": "1.6.21",
+    "antd": "4.8.2",
+    "clsx": "1.1.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "browserslist": {
     "production": [
