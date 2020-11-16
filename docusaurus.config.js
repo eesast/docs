@@ -1,8 +1,8 @@
 module.exports = {
   title: "EESΛST Docs",
   tagline: "Docs powered by EESΛST",
-  url: "https://eesast.github.io",
-  baseUrl: "/docs/",
+  url: "https://docs.eesast.com",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "eesast",
@@ -86,7 +86,7 @@ module.exports = {
     },
     hideableSidebar: true,
     prism: {
-      // additionalLanguages: ["tsx"],
+      additionalLanguages: [],
     },
   },
   presets: [
@@ -95,19 +95,25 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/eesast/docs",
+          editUrl: "https://github.com/eesast/docs/edit/master",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/eesast/docs",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en", "zh"],
       },
     ],
   ],

@@ -1,0 +1,98 @@
+---
+title: EESΛST Docs 的文件结构
+---
+
+本项目使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，文件结构改动不大。以下说明撰写文档时涉及的部分
+
+```
+sidebars.js
+docs/
+    intro/
+    languages/
+    tools/
+    web/
+    <待增加文件夹>
+```
+
+## `sidebars.js`
+
+此文件用于配置各页面左侧是否有侧边栏和其中内容。结构大致如下:
+
+```js
+module.exports = {
+  intro: {
+    intro: [
+      "intro/README",
+      "intro/style_guide",
+      "intro/mdx",
+      "intro/structure",
+    ],
+  },
+  languages: [
+    "languages/README",
+    {
+      "JS/TS": [
+        "languages/JavaScript",
+        "languages/TypeScript",
+        "languages/Nodejs",
+        "languages/npm",
+        "languages/yarn",
+      ],
+    },
+  ],
+};
+```
+
+每个页面根据其所属文件夹和其文件名进行区分。在上方这样的配置中，`intro` 文件夹中的四个文件的侧边栏相同，均为一个可以折叠的 `intro` 列表，含有四个文件的标题和链接。与此相对，`JS/TS` 所包含的五个文件渲染后的侧边栏只有 `languages` 说配置的文件，看不到 `intro` 中的文件。
+
+## MD / MDX 文件的配置信息
+
+:::tip
+
+- 文件名最好唯一
+- 最好加上标题以增强可读性
+- 标题过长时修改侧边栏渲染结果
+
+:::
+
+文档使用以下标记头字段，上下用一行`---`括起来。
+
+`id`: 一个独特的文档 `id`。如果这个字段不存在，文档的 `id` 将默认为它的文件名（不含扩展名）。
+
+`title`: 文件的标题。文件的标题。如果该字段不存在，文档的标题将默认为其 `id`。
+
+`hide_title`: 是否隐藏文档顶部的标题。默认情况下是 `false`。
+
+`hide_table_of_contents`: 是否隐藏文档顶部的标题，默认为 `false`。是否隐藏右边的内容表，默认为 `false`。默认为 `false`。
+
+`sidebar_label`: 文档侧边栏中显示的文字，默认为 `false`。文档侧边栏和下一页/上一页按钮中显示的文本。如果该字段不存在，文档的 `sidebar_label` 将默认为标题。
+
+`custom_edit_url`: 编辑此文档的 `URL`。如果这个字段不存在，文档的编辑 `URL` 将回到传给 `docusaurus-plugin-content-docs `的选项字段的 `editUrl`。
+
+`keywords`: 文档页面的关键字元标签，用于搜索引擎。
+
+`description`: 你的文档的描述。您文档的描述，它将成为`<meta name="description" content="..."/>`和`<meta property="og:description" content="..."/>`中的`<head>`，供搜索引擎使用。如果该字段不存在，将默认为第一行内容。
+
+`image`: 显示你的文章链接时使用的封面或缩略图。
+
+一个例子：
+
+```mdx
+---
+id: doc-markdown
+title: Markdown Features
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Markdown :)
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: How do I find you when I cannot solve this problem
+keywords:
+  - docs
+  - docusaurus
+image: https://i.imgur.com/mErPwqL.png
+---
+```
+
+## 参考
+
+- [facebook/docusaurs document](https://v2.docusaurus.io/docs/markdown-features)
