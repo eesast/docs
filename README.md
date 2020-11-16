@@ -1,7 +1,7 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
@@ -61,6 +61,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
   <tr>
     <td align="center"><a href="https://github.com/duskmoon314"><img src="https://avatars2.githubusercontent.com/u/20477228?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Campbell He</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Code">💻</a> <a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Documentation">📖</a> <a href="#infra-duskmoon314" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-duskmoon314" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/boltma"><img src="https://avatars0.githubusercontent.com/u/6150748?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Xiaoyang Ma</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=boltma" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zxdclyz"><img src="https://avatars2.githubusercontent.com/u/44538240?v=4?s=50" width="50px;" alt=""/><br /><sub><b>lyz</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=zxdclyz" title="Documentation">📖</a></td>
   </tr>
 </table>
 
