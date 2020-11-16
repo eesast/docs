@@ -39,7 +39,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
 
 1. 总应 `fork` 本项目到个人仓库，如 `duskmoon/docs`
 2. 建立一个具有明确意义名字的分支，如 `reactDoc`
-3. 撰写文档，每一个 `commit` 都应具有可读的信息，如 `Add usage of useState() in react docs`
+3. 撰写文档（参照[文件结构](docs/intro/structure.mdx)），每一个 `commit` 都应具有可读的信息，如 `Add usage of useState() in react docs`
 4. 提交一个具有明确意义标题的 Pull Request，如 `Add react docs`
 5. 等待通过 CI 并有仓库的维护人员接受
 6. 由 CI 或维护人员合并到主分支
