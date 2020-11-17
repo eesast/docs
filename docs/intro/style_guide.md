@@ -9,30 +9,30 @@ title: 文档撰写格式指南
 ## Headers
 
 ```md
-# H1 - 1级标题
+# H1 - 1 级标题
 
-## H2 - 2级标题
+## H2 - 2 级标题
 
-### H3 - 3级标题
+### H3 - 3 级标题
 
-#### H4 - 4级标题
+#### H4 - 4 级标题
 
-##### H5 - 5级标题
+##### H5 - 5 级标题
 
-###### H6 - 6级标题
+###### H6 - 6 级标题
 ```
 
-# H1 - 1级标题
+# H1 - 1 级标题
 
-## H2 - 2级标题
+## H2 - 2 级标题
 
-### H3 - 3级标题
+### H3 - 3 级标题
 
-#### H4 - 4级标题
+#### H4 - 4 级标题
 
-##### H5 - 5级标题
+##### H5 - 5 级标题
 
-###### H6 - 6级标题
+###### H6 - 6 级标题
 
 我们默认一级标题为单页面的标题。如无必要，请使用二至三级标题。
 
@@ -41,18 +41,18 @@ title: 文档撰写格式指南
 ## 强调
 
 ```md
-斜体，使用 *星号* 或 _下划线_
+斜体，使用 _星号_ 或 _下划线_
 
-粗体，使用 **两个星号** 或 __两个下划线__
+粗体，使用 **两个星号** 或 **两个下划线**
 
 结合使用 **星号和 _下划线_**
 
 删除线，使用 ~~双波浪线~~
 ```
 
-斜体，使用 *星号* 或 _下划线_
+斜体，使用 _星号_ 或 _下划线_
 
-粗体，使用 **两个星号** 或 __两个下划线__
+粗体，使用 **两个星号** 或 **两个下划线**
 
 结合使用 **星号和 _下划线_**
 
@@ -66,29 +66,29 @@ title: 文档撰写格式指南
 1. 有序列表第一项
 2. 第二项
    - 无序子列表
-1. 数字是多少并不重要
+3. 数字是多少并不重要
    1. 有序子列表
 4. 但是建议按照数字进行排序
 
-* 无序列表可以使用星号 `*`
+- 无序列表可以使用星号 `*`
 
-- 或减号 `-`
+* 或减号 `-`
 
-+ 或加号 `+`
+- 或加号 `+`
 ```
 
 1. 有序列表第一项
 2. 第二项
    - 无序子列表
-1. 数字是多少并不重要
+3. 数字是多少并不重要
    1. 有序子列表
 4. 但是建议按照数字进行排序
 
-* 无序列表可以使用星号 `*`
+- 无序列表可以使用星号 `*`
 
-- 或减号 `-`
+* 或减号 `-`
 
-+ 或加号 `+`
+- 或加号 `+`
 
 ---
 
@@ -99,7 +99,7 @@ title: 文档撰写格式指南
 
 [含标题行内链接](https://www.eesast.com/ "EESΛST Homepage")
 
-[可以修改链接url为特殊文字][任意文字]
+[可以修改链接 url 为特殊文字][任意文字]
 
 [也可以使用数字标号][1]
 
@@ -116,7 +116,7 @@ title: 文档撰写格式指南
 
 [含标题行内链接](https://www.eesast.com/ "EESΛST Homepage")
 
-[可以修改链接url为特殊文字][任意文字]
+[可以修改链接 url 为特殊文字][任意文字]
 
 [也可以使用数字标号][1]
 
@@ -133,22 +133,22 @@ title: 文档撰写格式指南
 ## 图片
 
 ```md
-行间插入图片： ![说明文字](../../static/img/favicon.ico '图标说明文字1')
+行间插入图片： ![说明文字](../../static/img/favicon.ico "图标说明文字1")
 
 引用式插入图片： ![说明文字][logo]
 
-[logo]: ../../static/img/favicon.ico '图标说明文字2'
+[logo]: ../../static/img/favicon.ico "图标说明文字2"
 
 使用相对路径导入图片
 
 ![img](../../static/img/favicon.ico)
 ```
 
-行间插入图片： ![说明文字](../../static/img/favicon.ico '图标说明文字1')
+行间插入图片： ![说明文字](../../static/img/favicon.ico "图标说明文字1")
 
 引用式插入图片： ![说明文字][logo]
 
-[logo]: ../../static/img/favicon.ico '图标说明文字2'
+[logo]: ../../static/img/favicon.ico "图标说明文字2"
 
 使用相对路径导入图片
 
@@ -158,7 +158,7 @@ title: 文档撰写格式指南
 
 ## 代码
 
-```md
+````md
     ```javascript
     var s = 'JavaScript syntax highlighting';
     alert(s);
@@ -179,10 +179,10 @@ title: 文档撰写格式指南
     console.log('This line can be highlighted!');
     }
     ```
-```
+````
 
 ```javascript
-var s = 'JavaScript syntax highlighting';
+var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
@@ -198,7 +198,7 @@ But let's throw in a <b>tag</b>.
 
 ```js {2}
 function highlightMe() {
-  console.log('This line can be highlighted!');
+  console.log("This line can be highlighted!");
 }
 ```
 
@@ -281,7 +281,6 @@ This line is only separated by a single newline, so it's a separate line in the 
 ## Admonitions
 
 ```md
-
 :::note
 
 This is a note
@@ -311,7 +310,6 @@ This is a caution
 This is a warning
 
 :::
-
 ```
 
 :::note

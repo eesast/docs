@@ -1,7 +1,9 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
@@ -25,6 +27,10 @@ yarn start
 ```console
 yarn build
 ```
+
+### 格式化和检查
+
+本项目初步配置了 `eslint` 和 `prettier` 用于进行检查和格式化。由于项目主体为文档，不强求使用。建议编辑后使用 `yarn prettier` 进行格式化。
 
 ## 参与贡献
 

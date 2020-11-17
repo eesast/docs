@@ -1,0 +1,4 @@
+# Ignore
+build
+.docusaurus
+node_modules
