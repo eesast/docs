@@ -1,0 +1,85 @@
+---
+title: Unity3D基础
+---
+
+## Unity 简介
+
+Unity 是一款由 Unity Technoligies 开发的跨平台 2D/3D 游戏引擎，并可以发布到 Windows, MacOS, Linux, iOS 等诸多平台。
+
+Unity 官网：https://unity.com/
+
+Unity 官方学习资源：https://learn.unity.com/
+
+Unity 官方文档：https://docs.unity3d.com/Manual/index.html
+
+Google/Unity Forums
+
+## Unity 开发环境
+
+Unity 工程及 Unity Editor 版本管理：Unity Hub
+
+图形化编辑界面：Unity Editor
+
+下载地址：https://unity3d.com/get-unity/download
+
+需要注册 Unity 账号。非盈利的个人开发者免费使用。
+
+代码编辑器：Visual Studio（安装时选择"使用 Unity 的游戏开发"），VS Code（在 Unity Editor 中修改默认代码编辑器），其他。
+
+## Unity 基本知识
+
+#### Scene（场景）
+
+Scene 包含了若干 GameObject，一个游戏可以包含多个场景，不同的场景之间是独立的，并且可以通过脚本切换场景。
+
+#### GameObject（游戏对象）
+
+一个 GameObject 就是场景中的一个对象，比如一个球，一个人；它可以独立地活动。GameObject 之间存在 Parent 和 Children 的关系，即一个对象可以从属于另一个对象，成为其子对象。
+
+请注意，GameObject 之间的父子关系并非继承关系，而只是一种从属关系。
+
+#### Component（组件）
+
+一个 GameObject 可以拥有若干个 Component，两者之间仍是一种从属关系。每个 Component 可以独立地实现 GameObject 需求的某些功能。常用的如 Rigid（刚体），Animator（动画）等。
+
+#### Prefab（预设）
+
+Prefab 与 GameObject 之间的关系类似于类和对象的关系。即后者是前者的实例。Prefab 的使用能够减少不必要的重复工作。当 Prefab 被修改时，它的所有 GameObject 实例也会被修改。
+
+#### Script（脚本）
+
+通过编写代码，并将 Script 添加为某个 GameObject 的 Component，当该 GameObject 被实例化并且处于活动状态，且该 Component 也处于活动状态时，它便可以控制 GameObject 的行为。
+
+Unity 脚本是基于 Mono 的，所有需要使用 Unity 引擎的脚本，都应该继承自 MonoBehaviour 类。换句话说，只有那些完全不依赖于 Unity 引擎进行初始化和更新，也不调用 Unity 的 API 的脚本，比如单纯进行数学计算的类，是不需要继承 MonoBehaviour 的。
+
+#### Assets（资源）
+
+你的所有 Prefab, Script 以及 Material 等资源都在 Assets 中进行管理。对于规模较大的工程，总应该建立规范的目录结构。
+
+#### 所以，Unity 是如何工作的？
+
+首先要加载一个场景。当场景被加载时，场景中的所有 GameObject 都会被加载。当 GameObject 加载时，其所有 Component 也随之实例化。当某个 Script 实例化时，其 Awake()方法和 Start()方法被先后调用（细节这里不说），当所有 Start()方法都被调用完毕后，游戏会进入第一帧，每隔一段时间就会 Update 一次。
+
+## Unity 开发实例
+
+我们希望实现如下一个简单的游戏：键盘操纵角色在地图中移动，地图中会刷新得分点，当角色接触到得分点时就可以得分。游戏界面中应显示当前的时间，分数，并有重新开始，退出等按钮。
+
+---
+
+## 视频教程
+
+<div style={{ position: "relative", padding: "30% 45%" }}>
+  <iframe
+    style={{
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      left: 0,
+      top: 0,
+    }}
+    src="https://player.bilibili.com/player.html?aid=243753051&cid=212402150&page=9&as_wide=1&high_quality=1&danmaku=0"
+    frameborder="no"
+    scrolling="no"
+    allowfullscreen="true"
+  ></iframe>
+</div>
