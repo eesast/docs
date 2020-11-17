@@ -22,6 +22,17 @@ pull_request_rules:
       merge:
         method: rebase
         rebase_fallback: squash
+  - name: automatic approve for Renovate pull requests
+    conditions:
+      - author=renovate[bot]
+      - check-success=Travis CI - Pull Request
+      - "-conflict"
+      - "-closed"
+    actions:
+      review:
+        type: APPROVE
+        message: |
+          Mergify Automatic Approve Successful Renovate PR
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
