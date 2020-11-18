@@ -1293,10 +1293,10 @@
     unist-util-visit "^2.0.2"
     url-loader "^4.1.0"
 
-"@docusaurus/module-type-aliases@2.0.0-alpha.66":
-  version "2.0.0-alpha.66"
-  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.66.tgz#204588d36a1685aae5695c0717b8eac5b01d7ee9"
-  integrity sha512-d3+fRhjHFl/7oCXgX3E6RbD0h+iHAKjJUnqDKwvEMjavy1EwSg5XjgyqSAUzDBWbABE3dGP5RT/khAfqt1PDXw==
+"@docusaurus/module-type-aliases@2.0.0-alpha.67":
+  version "2.0.0-alpha.67"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.67.tgz#a7c9389a5a93d80db23b1ab1aae144c609f74bb9"
+  integrity sha512-0iKj6NW9yNPVYhlL+Iaz/kjjF8Ll1X0EI/KuISegF8L6m1qYZuX6Qpgk3UHQmE6uyxOITCRCQe5rZLroBXegRA==
 
 "@docusaurus/plugin-content-blog@2.0.0-alpha.66":
   version "2.0.0-alpha.66"
