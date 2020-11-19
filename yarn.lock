@@ -1513,25 +1513,13 @@
     chalk "^3.0.0"
     joi "^17.2.1"
 
-"@docusaurus/utils@2.0.0-alpha.68":
+"@docusaurus/utils@2.0.0-alpha.68", "@docusaurus/utils@^2.0.0-alpha.68":
   version "2.0.0-alpha.68"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-alpha.68.tgz#2c806521edb0ef27c612c0d6380319cb9d8ded4a"
   integrity sha512-Lp4LV2j4wkZtG2GofL3fnLF+Fmj+NAZjt3i0EyPE0dAyW6SW0oyoZQFtoZoEcxFGVViEM3VhXtsHdJxA6TDlFw==
   dependencies:
     "@docusaurus/types" "2.0.0-alpha.68"
     chalk "^3.0.0"
-    escape-string-regexp "^2.0.0"
-    fs-extra "^8.1.0"
-    gray-matter "^4.0.2"
-    lodash.camelcase "^4.3.0"
-    lodash.kebabcase "^4.1.1"
-    resolve-pathname "^3.0.0"
-
-"@docusaurus/utils@^2.0.0-alpha.66":
-  version "2.0.0-alpha.66"
-  resolved "https://registry.npm.taobao.org/@docusaurus/utils/download/@docusaurus/utils-2.0.0-alpha.66.tgz#ef679896e7d7e536cc8196cc303f5f2ced1f5ebb"
-  integrity sha1-72eYlufX5TbMgZbMMD9fLO0fXrs=
-  dependencies:
     escape-string-regexp "^2.0.0"
     fs-extra "^8.1.0"
     gray-matter "^4.0.2"
@@ -1547,18 +1535,18 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.13.1.tgz#9c3d387341122320afb3b246a85f30e450a5595c"
-  integrity sha512-V7INdw2wWTEtxe71Y3RLx+ACy9pjcAEYBE38VlP0KgjBM7DY2yQbbTT/I+ulad+NQ12VeeKCV2uSFx4SgI5Ehg==
+"@easyops-cn/docusaurus-search-local@0.14.1":
+  version "0.14.1"
+  resolved "https://registry.npm.taobao.org/@easyops-cn/docusaurus-search-local/download/@easyops-cn/docusaurus-search-local-0.14.1.tgz#a14834b7cbad85725f70070d42129715295c855b"
+  integrity sha1-oUg0t8uthXJfcAcNQhKXFSlchVs=
   dependencies:
-    "@docusaurus/utils" "^2.0.0-alpha.66"
+    "@docusaurus/utils" "^2.0.0-alpha.68"
     "@easyops-cn/autocomplete.js" "^0.38.1"
-    "@hapi/joi" "^17.1.1"
     cheerio "^1.0.0-rc.3"
     clsx "^1.1.1"
     debug "^4.2.0"
     fs-extra "^9.0.1"
+    joi "^17.3.0"
     klaw-sync "^6.0.0"
     lunr "^2.3.9"
     lunr-languages "^1.4.0"
@@ -1601,38 +1589,10 @@
   resolved "https://registry.npm.taobao.org/@francoischalifour/autocomplete-preset-algolia/download/@francoischalifour/autocomplete-preset-algolia-1.0.0-alpha.28.tgz#a5ad7996f42e43e4acbb4e0010d663746d0e9997"
   integrity sha1-pa15lvQuQ+Ssu04AENZjdG0OmZc=
 
-"@hapi/address@^4.0.1":
-  version "4.1.0"
-  resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-4.1.0.tgz#d60c5c0d930e77456fdcde2598e77302e2955e1d"
-  integrity sha1-1gxcDZMOd0Vv3N4lmOdzAuKVXh0=
-  dependencies:
-    "@hapi/hoek" "^9.0.0"
-
-"@hapi/formula@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/@hapi/formula/download/@hapi/formula-2.0.0.tgz#edade0619ed58c8e4f164f233cda70211e787128"
-  integrity sha1-7a3gYZ7VjI5PFk8jPNpwIR54cSg=
-
 "@hapi/hoek@^9.0.0":
   version "9.1.0"
   resolved "https://registry.npm.taobao.org/@hapi/hoek/download/@hapi/hoek-9.1.0.tgz?cache=0&sync_timestamp=1599008879310&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Fhoek%2Fdownload%2F%40hapi%2Fhoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha1-bJ6vx4wVKSSPj02SsHmacStgUsY=
-
-"@hapi/joi@^17.1.1":
-  version "17.1.1"
-  resolved "https://registry.npm.taobao.org/@hapi/joi/download/@hapi/joi-17.1.1.tgz#9cc8d7e2c2213d1e46708c6260184b447c661350"
-  integrity sha1-nMjX4sIhPR5GcIxiYBhLRHxmE1A=
-  dependencies:
-    "@hapi/address" "^4.0.1"
-    "@hapi/formula" "^2.0.0"
-    "@hapi/hoek" "^9.0.0"
-    "@hapi/pinpoint" "^2.0.0"
-    "@hapi/topo" "^5.0.0"
-
-"@hapi/pinpoint@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/@hapi/pinpoint/download/@hapi/pinpoint-2.0.0.tgz#805b40d4dbec04fc116a73089494e00f073de8df"
-  integrity sha1-gFtA1NvsBPwRanMIlJTgDwc96N8=
 
 "@hapi/topo@^5.0.0":
   version "5.0.0"
@@ -6804,7 +6764,7 @@ jest-worker@^26.5.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-joi@^17.1.1, joi@^17.2.1:
+joi@^17.1.1, joi@^17.2.1, joi@^17.3.0:
   version "17.3.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-17.3.0.tgz#f1be4a6ce29bc1716665819ac361dfa139fff5d2"
   integrity sha512-Qh5gdU6niuYbUIUV5ejbsMiiFmBdw8Kcp8Buj2JntszCkCfxJ9Cz76OtHxOZMPXrt5810iDIXs+n1nNVoquHgg==
