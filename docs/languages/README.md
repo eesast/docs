@@ -13,5 +13,5 @@ slug: ./
   - [yarn](yarn.mdx)
 
 - C++
-  - [STL](./STL Overview.mdx)
+  - [STL](STL.mdx)
 ## Contributors
