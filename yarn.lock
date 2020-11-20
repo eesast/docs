@@ -7756,7 +7756,7 @@ mute-stream@0.0.8:
   resolved "https://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha1-FjDEKyJR/4HiooPelqVJfqkuXg0=
 
-nan@^2.12.1, nan@^2.14.0:
+nan@^2.12.1:
   version "2.14.2"
   resolved "https://registry.npm.taobao.org/nan/download/nan-2.14.2.tgz?cache=0&sync_timestamp=1602591605275&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnan%2Fdownload%2Fnan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha1-9TdkAGlRaPTMaUrJOT0MlYXu6hk=
@@ -7814,6 +7814,11 @@ no-case@^3.0.3:
   dependencies:
     lower-case "^2.0.1"
     tslib "^1.10.0"
+
+node-addon-api@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.2.tgz#04bc7b83fd845ba785bb6eae25bc857e1ef75681"
+  integrity sha512-+D4s2HCnxPd5PjjI0STKwncjXTUKKqm74MDMz9OPXavjsGmjkvwgLtA5yoxJUdmpj52+2u+RrXgPipahKczMKg==
 
 node-emoji@^1.10.0:
   version "1.10.0"
@@ -7890,12 +7895,12 @@ node-releases@^1.1.52, node-releases@^1.1.66:
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.66.tgz?cache=0&sync_timestamp=1604726661126&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.66.tgz#609bd0dc069381015cd982300bae51ab4f1b1814"
   integrity sha1-YJvQ3AaTgQFc2YIwC65Rq08bGBQ=
 
-nodejieba@2.4.2:
-  version "2.4.2"
-  resolved "https://registry.npm.taobao.org/nodejieba/download/nodejieba-2.4.2.tgz#15ba9032e72e89d9b68ecd9e907fcc3da3151ebc"
-  integrity sha1-FbqQMucuidm2js2ekH/MPaMVHrw=
+nodejieba@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-2.5.0.tgz#50bfac9ed7a35883284ac8295b8aa0190c03d552"
+  integrity sha512-CPnYxhhrflkMe2DMxLJIBg1Kxt16/ktr+ZHIgHZLMpK4AW8M8ZZXiPFGl1oJcikrZ+IFB6jKHVLZykABCQBz/Q==
   dependencies:
-    nan "^2.14.0"
+    node-addon-api "^3.0.2"
     node-pre-gyp "^0.14.0"
 
 nopt@^4.0.1:
