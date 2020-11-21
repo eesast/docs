@@ -3,7 +3,10 @@
   "projectOwner": "eesast",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": ["README.md", "docs/intro/contributors.mdx"],
+  "files": [
+    "README.md",
+    "docs/intro/contributors.mdx"
+  ],
   "imageSize": 50,
   "commit": true,
   "commitConvention": "eslint",
@@ -14,49 +17,76 @@
       "name": "Campbell He",
       "avatar_url": "https://avatars2.githubusercontent.com/u/20477228?v=4",
       "profile": "https://github.com/duskmoon314",
-      "contributions": ["code", "doc", "infra", "maintenance"]
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "maintenance"
+      ]
     },
     {
       "login": "boltma",
       "name": "Xiaoyang Ma",
       "avatar_url": "https://avatars0.githubusercontent.com/u/6150748?v=4",
       "profile": "https://github.com/boltma",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "zxdclyz",
       "name": "lyz",
       "avatar_url": "https://avatars2.githubusercontent.com/u/44538240?v=4",
       "profile": "https://github.com/zxdclyz",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "xxxxyu",
       "name": "Xiangyu Li",
       "avatar_url": "https://avatars3.githubusercontent.com/u/47287680?v=4",
       "profile": "https://github.com/xxxxyu",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "hukz18",
       "name": "hukz18",
       "avatar_url": "https://avatars3.githubusercontent.com/u/49591637?v=4",
       "profile": "https://github.com/hukz18",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "Sweetnow",
       "name": "Jun Zhang",
       "avatar_url": "https://avatars2.githubusercontent.com/u/34758767?v=4",
       "profile": "https://github.com/Sweetnow",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "BowmanChow",
       "name": "Bowman",
       "avatar_url": "https://avatars1.githubusercontent.com/u/43898302?v=4",
       "profile": "https://github.com/BowmanChow",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "DreamDraw",
+      "name": "DreamDraw Pan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/21218323?v=4",
+      "profile": "https://github.com/DreamDraw",
+      "contributions": [
+        "doc"
+      ]
     }
-  ]
+  ],
+  "skipCi": true
 }
