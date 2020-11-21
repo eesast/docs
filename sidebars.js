@@ -23,6 +23,11 @@ module.exports = {
         "languages/yarn",
       ],
     },
+    {
+      "C/C++" : [
+        "languages/STL",
+      ],
+    },
   ],
   tools: [
     "tools/README",
