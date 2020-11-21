@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-实际上，vector类还有第二个模板参数，默认为allocator<int>。vector类内部会实例化一个allocator<int>来管理内存，负责对象的构造和析构。如果我们按照STL要求的接口实现自己的allocators，那么也可以指定它为vector分配空间。
+实际上，vector类还有第二个模板参数，默认为`allocator<int>`。vector类内部会实例化一个`allocator<int>`来管理内存，负责对象的构造和析构。如果我们按照STL要求的接口实现自己的allocators，那么也可以指定它为vector分配空间。
 
 ### 2.3 接口
 
@@ -421,9 +421,9 @@ int main(){
 
 STL提供的许多方法都支持传入仿函数作为算法执行的参数。<stl_functional.h>头文件中定义的常用仿函数如下。
 
-+ 算术类仿函数：如plus<T>, minus<T>, multiplies<T>, divides<T>, modulus<T>, negate<T>；
-+ 关系运算类仿函数：如equal_to<T>, not_equal_to<T>, greater<T>, less<T>, greater_equal<T>, less_equal<T>；
-+ 逻辑运算类仿函数：如logical_and<T>, logical_or<T>, logical_not<T>等；
++ 算术类仿函数：如`plus<T>`, `minus<T>`, `multiplies<T>`, `divides<T>`, `modulus<T>`, `negate<T>`；
++ 关系运算类仿函数：如`equal_to<T>`, `not_equal_to<T>`, `greater<T>`, `less<T>`, `greater_equal<T>`, `less_equal<T>`；
++ 逻辑运算类仿函数：如`logical_and<T>`, `logical_or<T>`, `logical_not<T>`等；
 
 ### 6.4 拓展
 
