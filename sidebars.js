@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       "C/C++" : [
-        "language/STL",
+        "languages/STL",
       ],
     },
   ],
