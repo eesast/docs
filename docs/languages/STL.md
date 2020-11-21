@@ -224,7 +224,7 @@ int main(){
 }
 ```
 
-除此之外，STL的<iterator>头文件中还定义有以下函数 
+除此之外，STL的`<iterator>`头文件中还定义有以下函数 
 
 ```c++
 void advance (Iterator& it, Distance n); //将迭代器向后移动n个元素
@@ -306,7 +306,7 @@ STL提供了大量极具复用价值的数值/非数值算法，如排序、复�
 
 stl提供的算法极为繁杂，下面仅对一些常见算法分类做简单介绍。
 
-### 5.2 数值算法<stl_numeric.h>
+### 5.2 数值算法`<stl_numeric.h>`
 
 + accumulate()：累加迭代器first到last区间（下同）的元素。
 + adjacent_difference()：求区间的差分。
@@ -315,9 +315,9 @@ stl提供的算法极为繁杂，下面仅对一些常见算法分类做简单�
 + power()：计算某数的n幂次方。
 + iota()：将区间内填充顺序递增的元素
 
-### 5.3 基本算法<stl_algobase.h>
+### 5.3 基本算法`<stl_algobase.h>`
 
-STL标准中并没有区分所谓基本或复杂算法，但SGI却把一些基本算法中定义于<stl_algobase.h>中，其他定义在<stl_algo.h>中。
+STL标准中并没有区分所谓基本或复杂算法，但SGI却把一些基本算法中定义于`<stl_algobase.h>`中，其他定义在`<stl_algo.h>`中。
 
 + equal()：比较两个序列在区间内是否相等。
 + fill()：将区间内所有元素改填新值
@@ -386,7 +386,7 @@ struct binary_function{
 };
 ```
 
-继承了该基类的greater<>()、less<>()实现如下。
+继承了该基类的`greater<>()`、`less<>()`实现如下。
 
 ```c++	
 template <class T>
@@ -419,7 +419,7 @@ int main(){
 
 ### 6.3 STL的仿函数
 
-STL提供的许多方法都支持传入仿函数作为算法执行的参数。<stl_functional.h>头文件中定义的常用仿函数如下。
+STL提供的许多方法都支持传入仿函数作为算法执行的参数。`<stl_functional.h>`头文件中定义的常用仿函数如下。
 
 + 算术类仿函数：如`plus<T>`, `minus<T>`, `multiplies<T>`, `divides<T>`, `modulus<T>`, `negate<T>`；
 + 关系运算类仿函数：如`equal_to<T>`, `not_equal_to<T>`, `greater<T>`, `less<T>`, `greater_equal<T>`, `less_equal<T>`；
