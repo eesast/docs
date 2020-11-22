@@ -28,7 +28,7 @@
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.68",
     "@easyops-cn/docusaurus-search-local": "0.14.1",
     "@mdx-js/react": "1.6.21",
-    "antd": "4.8.4",
+    "antd": "4.8.5",
     "clsx": "1.1.1",
     "lint-staged": "10.5.1",
     "nodejieba": "2.5.0",
