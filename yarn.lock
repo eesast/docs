@@ -7894,10 +7894,10 @@ node-releases@^1.1.52, node-releases@^1.1.66:
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.66.tgz?cache=0&sync_timestamp=1604726661126&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.66.tgz#609bd0dc069381015cd982300bae51ab4f1b1814"
   integrity sha1-YJvQ3AaTgQFc2YIwC65Rq08bGBQ=
 
-nodejieba@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-2.5.0.tgz#50bfac9ed7a35883284ac8295b8aa0190c03d552"
-  integrity sha512-CPnYxhhrflkMe2DMxLJIBg1Kxt16/ktr+ZHIgHZLMpK4AW8M8ZZXiPFGl1oJcikrZ+IFB6jKHVLZykABCQBz/Q==
+nodejieba@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-2.5.1.tgz#626cc93a104b96de6ce85f59b640fb316d4b763c"
+  integrity sha512-VnJBQSl2G8swDf3ZAXMbXrMCrGFO+kVKbkB93OaBthGbEG5BrxfD8I2m7auaRX8E5C1t+hlwo3HCmQOWKkiZ9A==
   dependencies:
     node-addon-api "^3.0.2"
     node-pre-gyp "^0.14.0"
