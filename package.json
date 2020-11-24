@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.69",
-    "@docusaurus/preset-classic": "2.0.0-alpha.68",
+    "@docusaurus/preset-classic": "2.0.0-alpha.69",
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.69",
     "@easyops-cn/docusaurus-search-local": "0.14.1",
     "@mdx-js/react": "1.6.21",
