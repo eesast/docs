@@ -1494,16 +1494,6 @@
     joi "^17.2.1"
     lodash "^4.17.19"
 
-"@docusaurus/types@2.0.0-alpha.68":
-  version "2.0.0-alpha.68"
-  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.0.0-alpha.68.tgz#8709de8b7e6a535f3e835ef20b04b6f12bf328af"
-  integrity sha512-UcUuwJx2cjwbWBeXi2vNgpNn8XK1UheQ9v+DPWkHwcYHK4fgNuihf2BoA/PYmd8faclZTYuYV14waje31zmxbA==
-  dependencies:
-    "@types/webpack" "^4.41.0"
-    commander "^4.0.1"
-    querystring "0.2.0"
-    webpack-merge "^4.2.2"
-
 "@docusaurus/types@2.0.0-alpha.69":
   version "2.0.0-alpha.69"
   resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.0.0-alpha.69.tgz#05d1a28f325600185b3cb4088326c865fb4b54a9"
@@ -1523,7 +1513,7 @@
     chalk "^3.0.0"
     joi "^17.2.1"
 
-"@docusaurus/utils@2.0.0-alpha.69":
+"@docusaurus/utils@2.0.0-alpha.69", "@docusaurus/utils@^2.0.0-alpha.69":
   version "2.0.0-alpha.69"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-alpha.69.tgz#9532cd489742beede570575ab70265dacecb3f24"
   integrity sha512-RpxqcjPT0L+MxLyS/4QOHp/2hlKPcPoDyvfqtTJiS9DPtUzkH573a5/yMbfzz8IbPeYWRCPL2qxWtmN7XCZ/sQ==
@@ -1537,20 +1527,6 @@
     lodash.kebabcase "^4.1.1"
     resolve-pathname "^3.0.0"
 
-"@docusaurus/utils@^2.0.0-alpha.68":
-  version "2.0.0-alpha.68"
-  resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-alpha.68.tgz#2c806521edb0ef27c612c0d6380319cb9d8ded4a"
-  integrity sha512-Lp4LV2j4wkZtG2GofL3fnLF+Fmj+NAZjt3i0EyPE0dAyW6SW0oyoZQFtoZoEcxFGVViEM3VhXtsHdJxA6TDlFw==
-  dependencies:
-    "@docusaurus/types" "2.0.0-alpha.68"
-    chalk "^3.0.0"
-    escape-string-regexp "^2.0.0"
-    fs-extra "^8.1.0"
-    gray-matter "^4.0.2"
-    lodash.camelcase "^4.3.0"
-    lodash.kebabcase "^4.1.1"
-    resolve-pathname "^3.0.0"
-
 "@easyops-cn/autocomplete.js@^0.38.1":
   version "0.38.1"
   resolved "https://registry.npm.taobao.org/@easyops-cn/autocomplete.js/download/@easyops-cn/autocomplete.js-0.38.1.tgz#46dff5795a9a032fa9b9250fdf63ca6c61c07629"
@@ -1559,12 +1535,12 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@0.14.1":
-  version "0.14.1"
-  resolved "https://registry.npm.taobao.org/@easyops-cn/docusaurus-search-local/download/@easyops-cn/docusaurus-search-local-0.14.1.tgz#a14834b7cbad85725f70070d42129715295c855b"
-  integrity sha1-oUg0t8uthXJfcAcNQhKXFSlchVs=
+"@easyops-cn/docusaurus-search-local@0.14.2":
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.14.2.tgz#0de6b46c325a6f0e288cc6c8af212a07879c7592"
+  integrity sha512-BNhAe+dZf37Ovr00UZGh+V1nCe+eDUXHcF0SvPnvz3LAP3Sj24UiGmXZdCVD4EIacdJqKvyZRZdqjO4GN8BDGQ==
   dependencies:
-    "@docusaurus/utils" "^2.0.0-alpha.68"
+    "@docusaurus/utils" "^2.0.0-alpha.69"
     "@easyops-cn/autocomplete.js" "^0.38.1"
     cheerio "^1.0.0-rc.3"
     clsx "^1.1.1"
@@ -5421,15 +5397,6 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.npm.taobao.org/fs-extra/download/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
-  integrity sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
-
 fs-extra@^9.0.1:
   version "9.0.1"
   resolved "https://registry.npm.taobao.org/fs-extra/download/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
@@ -6893,13 +6860,6 @@ json5@^2.1.2:
   integrity sha1-ybD3+pIzv+WAf+ZvzzpWF+1ZfUM=
   dependencies:
     minimist "^1.2.5"
-
-jsonfile@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz?cache=0&sync_timestamp=1604164898625&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
-  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
-  optionalDependencies:
-    graceful-fs "^4.1.6"
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -11896,11 +11856,6 @@ unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.1, unist-
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
-
-universalify@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.npm.taobao.org/universalify/download/universalify-0.1.2.tgz?cache=0&sync_timestamp=1603180142234&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Funiversalify%2Fdownload%2Funiversalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
-  integrity sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=
 
 universalify@^1.0.0:
   version "1.0.0"
