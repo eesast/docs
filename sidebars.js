@@ -11,7 +11,10 @@ module.exports = {
   languages: [
     "languages/README",
     {
-      "C/C++": ["languages/STL"],
+      "C/C++": [
+        "languages/STL",
+        "languages/c_cpp_windows"
+      ],
     },
     {
       "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread"],
