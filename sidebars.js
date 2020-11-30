@@ -33,6 +33,7 @@ module.exports = {
     "tools/git",
     "tools/os",
     "tools/shell",
+    "tools/git_instance"
   ],
   game: ["game/README", "game/unity"],
   web: [
