@@ -21,6 +21,28 @@ module.exports = {
           activeBasePath: "docs",
           label: "Docs",
           position: "left",
+          items: [
+            {
+              label: "About",
+              to: "docs/",
+            },
+            {
+              label: "Languages",
+              to: "docs/languages",
+            },
+            {
+              label: "Tools",
+              to: "docs/tools",
+            },
+            {
+              label: "Game",
+              to: "docs/game",
+            },
+            {
+              label: "Web",
+              to: "docs/web",
+            },
+          ],
         },
         { to: "blog", label: "Blog", position: "left" },
         {
