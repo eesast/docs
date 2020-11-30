@@ -35,6 +35,20 @@ const features = [
     description: (
       <>
         大到C#开发与网站搭建，小到编辑器的实用技巧，我们致力于提供全方面的实用知识分享
+        <ul>
+          <li>
+            <Link to="/docs/languages">Languages</Link>: 较为主流的编程语言介绍
+          </li>
+          <li>
+            <Link to="/docs/tools">Tools</Link>: 实用的开发工具介绍
+          </li>
+          <li>
+            <Link to="/docs/game">Game</Link>: 以 Unity3D 为主的游戏开发介绍
+          </li>
+          <li>
+            <Link to="/docs/web">Web</Link>: 以 JS/TS 为主的 Web 开发介绍
+          </li>
+        </ul>
       </>
     ),
   },

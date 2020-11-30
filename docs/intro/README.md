@@ -14,6 +14,11 @@ EESΛST Docs 为电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具�
 
 ## 内容列表
 
+- [Languages](../languages/README.md): 较为主流的编程语言介绍
+- [Tools](../tools/README.md): 实用的开发工具介绍
+- [Game](../game/README.md): 以 Unity3D 为主的游戏开发介绍
+- [Web](../web/README.md): 以 JS/TS 为主的 Web 开发介绍
+
 ## 如何参与
 
 我们欢迎所有人参与此项目，包括且不限于：Issue、Pull Request

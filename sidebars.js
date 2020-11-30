@@ -11,6 +11,9 @@ module.exports = {
   languages: [
     "languages/README",
     {
+      "C/C++": ["languages/STL"],
+    },
+    {
       "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread"],
     },
     "languages/Html",
@@ -21,11 +24,6 @@ module.exports = {
         "languages/Nodejs",
         "languages/npm",
         "languages/yarn",
-      ],
-    },
-    {
-      "C/C++" : [
-        "languages/STL",
       ],
     },
   ],

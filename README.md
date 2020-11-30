@@ -1,7 +1,9 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
@@ -76,6 +78,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
