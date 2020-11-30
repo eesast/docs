@@ -1,7 +1,7 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
@@ -74,6 +74,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Yang-Xijie"><img src="https://avatars3.githubusercontent.com/u/57952362?v=4" width="50px;" alt=""/><br /><sub><b>Yang-Xijie</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Yang-Xijie" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Timothy-LiuXuefeng"><img src="https://avatars3.githubusercontent.com/u/65613511?v=4" width="50px;" alt=""/><br /><sub><b>Liu Xuefeng</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-LiuXuefeng" title="Documentation">📖</a></td>
   </tr>
 </table>
 
