@@ -101,7 +101,7 @@ typedef WCHAR TCHAR
 typedef CHAR TCHAR
 #endif
 ```
-8
+
 ```c
 #ifdef _UNICODE
 #define _tcslen strlen
