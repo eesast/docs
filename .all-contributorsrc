@@ -86,6 +86,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Yang-Xijie",
+      "name": "Yang-Xijie",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/57952362?v=4",
+      "profile": "https://github.com/Yang-Xijie",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Timothy-LiuXuefeng",
+      "name": "Liu Xuefeng",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/65613511?v=4",
+      "profile": "https://github.com/Timothy-LiuXuefeng",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
