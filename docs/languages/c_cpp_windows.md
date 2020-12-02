@@ -1,7 +1,6 @@
 ---
 title: C/C++ Windows编程
 ---
-# C/C++ Windows 编程
 
 ## 目录
 
@@ -9,9 +8,9 @@ title: C/C++ Windows编程
 > 一、看前必读  
 > 二、背景介绍  
 > 三、计算机与C语言补充知识  
-> 四、C语言Windows API窗体程序
-> 五、C++对窗口的类封装
-> 六、结语
+> 四、C语言Windows API窗体程序  
+> 五、C++对窗口的类封装  
+> 六、结语  
 
 ## 一、看前必读
 
@@ -102,7 +101,7 @@ typedef WCHAR TCHAR
 typedef CHAR TCHAR
 #endif
 ```
-8
+
 ```c
 #ifdef _UNICODE
 #define _tcslen strlen
