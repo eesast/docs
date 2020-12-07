@@ -2,8 +2,6 @@
 title: Git基础
 ---
 
-# Git基础
-
 ## Git简介
 
 - Git是一个开源的分布式版本控制系统。
@@ -20,13 +18,13 @@ title: Git基础
 
 - 前面说过，Git是一个分布式版本控制系统，它最初由Linus Torvalds为了帮助管理Linux内核开发而开发。
 
-- 而GitHub[https://github.com/](https://github.com/)是全球最大的~~同性交友网站~~，提供基于Git的源代码托管服务，并且在此基础上提供了图形界面。除此之外，GitHub还提供了更加丰富的功能，如issue，wiki，organization等。软件部的项目基本都托管在GitHub，方便大家协同开发。
+- 而GitHub[https://github.com/](https://github.com/) 是全球最大的~~同性交友网站~~，提供基于Git的源代码托管服务，并且在此基础上提供了图形界面。除此之外，GitHub还提供了更加丰富的功能，如issue，wiki，organization等。软件部的项目基本都托管在GitHub，方便大家协同开发。
 
 ## Git基本操作
 
 ### Git安装与配置
 
-- 下载地址：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+- 下载地址：[https://git-scm.com/downloads](https://git-scm.com/downloads) 
 
 - 安装完成后（一路默认配置就可以），通过开始菜单找到Git Bash；首先，Git需要知道一些个人信息：名字和email。
 
@@ -97,7 +95,7 @@ title: Git基础
 
 - `git stash`：将当前工作区内的内容暂存起来，通过`git stash pop`可以恢复工作区。从而你可以先去解决其他分支的问题。
 
-<img src="./assets/branch.png" style="zoom:48%;" />
+![](./assets/branch.png)
 
 ### Git远程操作
 
