@@ -6,7 +6,7 @@ slug: ./
 ## List
 
 - [Docker](docker.mdx)
-- [Git](git.mdx)
+- [Git](git.md)
 - [Linux](shell.mdx)
 - [OS](os.mdx)
 - [Git 实例](git_instance.md)
