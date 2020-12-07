@@ -95,7 +95,7 @@ title: Git基础
 
 - `git stash`：将当前工作区内的内容暂存起来，通过`git stash pop`可以恢复工作区。从而你可以先去解决其他分支的问题。
 
-<img src="./assets/branch.png" style="zoom:48%;" />
+![](./assets/branch.png)
 
 ### Git远程操作
 
