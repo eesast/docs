@@ -49,10 +49,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: run deploy.sh
-        env:
-          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      - name: docker log in
+        run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{DOCKER_USERNAME}}" --password-stdin
+
+      - name: build and deploy image
         shell: bash
         run: |
-          sudo bash scripts/deploy.sh
+          docker build -t eesast/docs:latest .
+          docker push eesast/docs:latest
