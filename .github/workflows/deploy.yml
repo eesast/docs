@@ -55,4 +55,4 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         shell: bash
         run: |
-          scripts/deploy.sh
+          sudo bash scripts/deploy.sh
