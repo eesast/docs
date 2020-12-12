@@ -17,7 +17,7 @@ pull_request_rules:
   - name: automatic merge for ImgBot pull requests
     conditions:
       - author=imgbot[bot]
-      - check-success=Travis CI - Pull Request
+      - check-success=deploy
     actions:
       merge:
         method: rebase
@@ -25,7 +25,7 @@ pull_request_rules:
   - name: automatic approve for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success=Travis CI - Pull Request
+      - check-success=deploy
       - "-conflict"
       - "-closed"
     actions:
@@ -36,7 +36,7 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success=Travis CI - Pull Request
+      - check-success=deploy
     actions:
       merge:
         method: rebase
