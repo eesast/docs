@@ -1,0 +1,55 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{matrix.node-version}}
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: get yarn cache path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{steps.yarn-cache-dir-path.outputs.dir}}
+          key: ${{runner.os}}-yarn-${{hashFiles('**/yarn.lock')}}
+          restore-keys: |
+            ${{runner.os}}-yarn-
+
+      - name: install dependencies
+        run: yarn
+
+      - name: build test
+        run: yarn build
+
+  deploy:
+    needs: test
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: docker log in
+        run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
+
+      - name: build and deploy image
+        shell: bash
+        run: |
+          docker build -t eesast/docs:latest .
+          docker push eesast/docs:latest
