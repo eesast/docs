@@ -42,6 +42,10 @@ module.exports = {
               label: "Web",
               to: "docs/web",
             },
+            {
+              label: "Machine Learning",
+              to: "docs/machine_learning",
+            },
           ],
         },
         { to: "blog", label: "Blog", position: "left" },
@@ -77,6 +81,10 @@ module.exports = {
             {
               label: "Web",
               to: "docs/web",
+            },
+            {
+              label: "Machine Learning",
+              to: "docs/machine_learning",
             },
           ],
         },

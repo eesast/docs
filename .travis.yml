@@ -1,17 +1,17 @@
-language: node_js
-node_js:
-  - 14
-cache:
-  yarn: true
-before_install:
-  - npm i -g yarn
-install:
-  - yarn
-script:
-  - yarn build
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: bash scripts/deploy.sh
-  on:
-    branch: master
+# language: node_js
+# node_js:
+#   - 14
+# cache:
+#   yarn: true
+# before_install:
+#   - npm i -g yarn
+# install:
+#   - yarn
+# script:
+#   - yarn build
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script: bash scripts/deploy.sh
+#   on:
+#     branch: master

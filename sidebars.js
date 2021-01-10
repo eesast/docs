@@ -11,10 +11,7 @@ module.exports = {
   languages: [
     "languages/README",
     {
-      "C/C++": [
-        "languages/STL",
-        "languages/c_cpp_windows"
-      ],
+      "C/C++": ["languages/STL", "languages/c_cpp_windows"],
     },
     {
       "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread"],
@@ -36,7 +33,7 @@ module.exports = {
     "tools/git",
     "tools/os",
     "tools/shell",
-    "tools/git_instance"
+    "tools/git_instance",
   ],
   game: ["game/README", "game/unity"],
   web: [
@@ -57,4 +54,5 @@ module.exports = {
       部署: ["web/CI&CD"],
     },
   ],
+  "machine-learning": ["machine_learning/README"],
 };
