@@ -1514,10 +1514,10 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@0.14.2":
-  version "0.14.2"
-  resolved "https://registry.npm.taobao.org/@easyops-cn/docusaurus-search-local/download/@easyops-cn/docusaurus-search-local-0.14.2.tgz#0de6b46c325a6f0e288cc6c8af212a07879c7592"
-  integrity sha1-Dea0bDJabw4ojMbIryEqB4ecdZI=
+"@easyops-cn/docusaurus-search-local@0.14.4":
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.14.4.tgz#4c786f09980b422c58e39c00b82b3c043c36a170"
+  integrity sha512-T2GvyQR52mUSaswKa1Wel9TYs25Kzp6gYTBJHN7/YRFiAOusNPqYtGmZa5cUR8QpzYFaBsmoBvL/+x9z5ltCYA==
   dependencies:
     "@docusaurus/utils" "^2.0.0-alpha.69"
     "@easyops-cn/autocomplete.js" "^0.38.1"
