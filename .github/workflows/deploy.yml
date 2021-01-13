@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "14.x"
+          fetch-depth: 0
 
       - name: get yarn cache path
         id: yarn-cache-dir-path
