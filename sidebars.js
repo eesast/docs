@@ -4,6 +4,7 @@ module.exports = {
       "intro/README",
       "intro/style_guide",
       "intro/mdx",
+      "intro/math",
       "intro/structure",
       "intro/contributors",
     ],

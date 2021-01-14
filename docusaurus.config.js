@@ -1,3 +1,6 @@
+const math = require("remark-math");
+const katex = require("rehype-katex");
+
 module.exports = {
   title: "EESΛST Docs",
   tagline: "Docs powered by EESΛST",
@@ -8,6 +11,15 @@ module.exports = {
   organizationName: "eesast",
   projectName: "docs",
   themes: ["@docusaurus/theme-live-codeblock"],
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      crossorigin: "anonymous",
+    },
+  ],
   themeConfig: {
     navbar: {
       title: "EESΛST",
@@ -132,6 +144,8 @@ module.exports = {
           editUrl: "https://github.com/eesast/docs/edit/master",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
