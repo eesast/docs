@@ -120,7 +120,7 @@ module.exports = {
     },
     hideableSidebar: true,
     prism: {
-      additionalLanguages: ["csharp"],
+      additionalLanguages: ["csharp", "rust", "toml"],
     },
   },
   presets: [
