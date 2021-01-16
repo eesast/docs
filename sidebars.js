@@ -27,6 +27,9 @@ module.exports = {
         "languages/yarn",
       ],
     },
+    {
+      Rust: ["languages/Rust"],
+    },
   ],
   tools: [
     "tools/README",
