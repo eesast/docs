@@ -8,6 +8,7 @@ slug: ./
 - C++
   - [STL](STL.md)
   - [C/C++ Windows 编程](c_cpp_windows.md)
+  - [macOS编写C++程序](macos_cpp.md)
 - C#
   - [基础知识](./CSharp_1_basic.mdx)
   - [多线程](CSharp_2_multithread.mdx)
