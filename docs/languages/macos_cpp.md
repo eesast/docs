@@ -1,8 +1,7 @@
 ---
-title: EESΛST Docs 的文件结构
+title: macOS编写C++代码
 ---
 
-# 在macOS上用VS Code写C++代码
 ## 简介
 系列教程——如何在`macOS`上使用`VS Code`优雅的写`C++`代码。教你从零开始配置你自己的`C++`编程环境。
 
@@ -18,7 +17,7 @@ title: EESΛST Docs 的文件结构
 6. 介绍`VS Code`的调试（`debug`）功能
 
 
-在我的个人主页查看[讲稿](https://yang-xijie.github.io/vscode_cpp_macos/1_前言和课程说明.html)
+在我的个人主页查看[讲稿](https://yang-xijie.github.io)
 
 
 ## 在Bilibili查看视频教程
