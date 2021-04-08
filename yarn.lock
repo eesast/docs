@@ -1727,10 +1727,10 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.15.0.tgz#456c5f01dec115fe38b02c33b18ba3145f5bf3ad"
-  integrity sha512-g5Y2lo73TLpyLXJqo1rIC2bq76sBLqOd2K/FmO4Ha/Ww+VaTav0vHRid0ciZ0hJSf2ZJjthQnCFR6/un7fUKJw==
+"@easyops-cn/docusaurus-search-local@0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.15.1.tgz#699ff52f92c0eaa1b32b2c94978bee636867aa02"
+  integrity sha512-6GwvXPbBx2Q9P2I8wJIwWzy5F5e+npzmNMZkvh9DC6/qbGaQCOIaGQgM0Kfi8gnIhO8YYacvpouDVKqe7zzO3A==
   dependencies:
     "@docusaurus/utils" "^2.0.0-alpha.69"
     "@easyops-cn/autocomplete.js" "^0.38.1"
