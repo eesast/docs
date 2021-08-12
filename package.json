@@ -23,19 +23,19 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.fd17476c3",
-    "@docusaurus/preset-classic": "2.0.0-alpha.fd17476c3",
-    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.fd17476c3",
-    "@easyops-cn/docusaurus-search-local": "0.14.4",
+    "@docusaurus/core": "2.0.0-beta.4",
+    "@docusaurus/preset-classic": "2.0.0-beta.4",
+    "@docusaurus/theme-live-codeblock": "2.0.0-beta.4",
+    "@easyops-cn/docusaurus-search-local": "0.19.1",
     "@mdx-js/react": "1.6.22",
-    "antd": "4.12.3",
+    "antd": "4.16.11",
     "clsx": "1.1.1",
-    "lint-staged": "10.5.4",
-    "nodejieba": "2.5.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "rehype-katex": "4.0.0",
-    "remark-math": "3.0.1"
+    "lint-staged": "11.1.2",
+    "nodejieba": "2.5.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rehype-katex": "5.0.0",
+    "remark-math": "4.0.0"
   },
   "browserslist": {
     "production": [
@@ -50,23 +50,23 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-alpha.fd17476c3",
-    "@tsconfig/docusaurus": "1.0.2",
-    "@types/react": "17.0.2",
-    "@types/react-helmet": "6.1.0",
-    "@types/react-router-dom": "5.1.7",
-    "@typescript-eslint/eslint-plugin": "4.15.2",
-    "@typescript-eslint/parser": "4.15.2",
+    "@docusaurus/module-type-aliases": "2.0.0-beta.4",
+    "@tsconfig/docusaurus": "1.0.3",
+    "@types/react": "17.0.17",
+    "@types/react-helmet": "6.1.2",
+    "@types/react-router-dom": "5.1.8",
+    "@typescript-eslint/eslint-plugin": "4.29.1",
+    "@typescript-eslint/parser": "4.29.1",
     "all-contributors-cli": "6.20.0",
-    "eslint": "7.20.0",
-    "eslint-config-prettier": "7.2.0",
-    "eslint-config-standard": "16.0.2",
-    "eslint-plugin-import": "2.22.1",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.24.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.3.1",
-    "eslint-plugin-react": "7.22.0",
-    "husky": "5.1.1",
-    "prettier": "2.2.1",
-    "typescript": "4.1.5"
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-react": "7.24.0",
+    "husky": "7.0.1",
+    "prettier": "2.3.2",
+    "typescript": "4.3.5"
   }
 }
