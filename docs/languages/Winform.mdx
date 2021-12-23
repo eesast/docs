@@ -1,0 +1,81 @@
+---
+title: Winform
+---
+
+## 项目结构
+
+- Program.cs：整个项目的入口（main），控制逻辑
+- Form1：带设计器的窗口
+  - Form1.cs源码：手动设计部分，调用Form1.designer.cs中的`InitializeComponent()` 方法
+  - Form1.designer.cs：界面设计器自动生成部分，一般不要动
+- Form2 ...
+
+## 窗口
+
+- 创建：
+  - 设计器自动生成设计
+  - 手动创建窗口
+- 设置窗口的各类属性
+  - Name：唯一标识
+  - BackColor、Height、Width、Location
+  - 其余参考自设计器
+- 添加元素
+  - this.Controls.Add()
+  
+    可以由设计器自动生成在.designer.cs文件中，也可以手动在窗体类的构造函数.cs中添加
+
+## 控件
+
+- 常用控件：
+  - Label
+  - TextBox
+  - Button
+  - CheckBox
+  - ListBox
+  - ComoboBox
+  
+- 添加控件
+
+  ```c#
+  Button testButton = new Button();
+  this.Controls.Add(testButton);
+  testButton.Location = new Point(40, 40);
+  testButton.Size = new Size(100, 40);
+  ```
+
+## 布局
+
+- 可视化布局：在设计器里拖放操作
+
+- 手工布局：
+
+  - 可重写 `override void OnLayout (LayoutEventArgs levent)`
+  - 指定控件的`dock`或`anchor`属性
+
+  - 用panel进行多层次的布局
+
+- 布局器布局：用布局器自动布局，不讲
+
+## 事件
+
+- 自动生成事件响应函数
+- 手动添加响应函数，并且绑定至控件
+- 示例：显示当前时间 `DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")`
+
+## 绘图
+
+- 写在Form_Paint事件中，在窗体需要重绘时被调用，会一直存在
+
+  ```c#
+  Graphics graphics = this.CreateGraphics();
+  Graphics graphics = this.CreateGraphics();
+  Pen pen = new(Color.Black, 3);
+  Rectangle rectangle = new(10, 10, 100, 100);
+  graphics.DrawRectangle(pen, rectangle);
+  graphics.DrawRectangle(pen, 20, 20, 10, 10);
+  pen.Dispose();
+  ```
+
+- 绘图图层在当前控件的最底层！
+
+## Winform应用场景太少啦，大家玩玩就好，无作业

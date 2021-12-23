@@ -917,7 +917,7 @@ Task.Run(Method1);			// 无返回值的任务
 Task<TResult>.Run(Method2);	// 有返回值的任务
 ```
 
-`Run` 方法返回一个 `Task` 对象句柄。  
+`Run` 方法返回一个 `Task` 对象引用。  
 
 还可以这样创建：  
 
@@ -1184,6 +1184,108 @@ ThreadPool.ThreadCount; // 获取线程池中的线程数目
 + 回调函数的概念与 C# 定时器 `System.Threading.Timer` 与 `System.Timers.Timer`  
 
 略去上述内容不会对我们后续的学习产生太大影响，感兴趣的同学可以阅读《Computer Systems: A Programmer's Perspective》、《Modern Operating Systems》等等。  
+
+## 习题
+
+### 一、简答题（35 分）  
+
+1. 试简述冯·诺伊曼结构和哈佛结构有什么异同（5 分）  
+2. **32 位** x86 架构处理器的通用寄存器有哪些（5 分）  
+3. 在本节课所讲授的进程模型当中，进程是否可以由运行态直接进入就绪态？是否可以由就绪态进入阻塞态？为什么？（15 分）  
+4. 对于临界区互斥问题，一个良好的设计应当满足哪些条件？（5 分）  
+5. 死锁产生的条件有哪些？（5 分）  
+
+### 二、编程题（65 分）  
+
+1. 使用 C# 语言实现哲学家就餐问题。（25 分）  
+
+   要求：设计一个类，类名叫 “`DiningPhilosophers`”，命名空间名任意，含有一个共有（非静态）方法与一个共有的无参构造方法：  
+
+   ```c#
+   class DiningPhilosophers
+   {
+       public void WantsToEat(int idx, Action pickLeft, Action pickRight, Action eat, Action putLeftFork, Action putRightFork);
+       public DiningPhilosophers();
+   }
+   ```
+
+   私有字段、属性和方法可以任意定义。  
+
+   其中，`WantsToEat` 的参数意义为：`idx` 为想要吃饭的哲学家编号，值位于 `0~4` 之间；`pickLeft` 为捡起左叉子方法；`putLeftFork` 为放下左叉子方法（放下和捡起右叉子同理）；`eat` 为吃食物【但是，注意这些函数所做的工作仅仅是向外部传递了你在做什么的信息（例如向控制台打印一行字符串等），并不保证并发安全】。你需要自己定义信号量、互斥量等来保证并发安全。即，你要做的事情是把课上所展示的哲学家就餐问题的代码或伪代码翻译成 C# 代码。  
+
+2. 请使用互斥量和条件变量实现一个信号量类（40 分）  
+
+   要求：使用 C# 语言、 C++ 语言或 C 语言中的任何一种均可。C# 使用 `Monitor` 或 `lock` 关键字；C++ 使用 `std::mutex`、`srd::unique_lock`、`std::condition_variable`，也可使用 `pthread.h`；C 语言使用 `pthread.h` 中提供的互斥量和条件变量。  
+
+   P 操作为 `Down` 方法，V 操作为 `Up` 方法。构造方法接收两个参数，第一个参数是计数变量的初始值，第二个参数是计数变量的最大值。类名为 “`MySemaphore`”，命名空间名任意。  
+
+## 习题答案
+
+本答案仅作为参考，言之成理即可。  
+
+### 一、简答题  
+
+1. 同：两者都含有控制单元、算术逻辑单元、输入设备、输出设备；异：冯·诺伊曼结构的指令和数据存储器是在一起的，而哈佛结构的指令和数据存储器是分开的。  
+2. EAX、EBX、ECX、EAX、ESI、EDI、EBP、ESP  
+3. 运行态到就绪态是可以的，例如由于进程调度使得其他进程占有了 CPU；就绪态进入阻塞态是不可以的，因为就绪态的进程是在等待运行，并未在执行，不可能产生可以导致进入阻塞态的请求。  
+4. 任何两个进程不能同时处于临界区、对 CPU 的速度和数量没有要求、临界区外运行的进程不能阻塞到其他进程、不能让一个进程无限期等待进入临界区  
+5. 互斥条件、占有和等待条件、不可抢占条件、环路等待条件（具体写出每个条件的内容也可）  
+
+### 二、编程题  
+
+#### （一）参考答案  
+
+题目答案以及作业评判程序已经放在了 github 与 gitee 上，两个网站上的内容完全相同，如果无法进入其中一个网站，可以去另一个网站上查看。  
+
+|                          |                         github 地址                          |                          gitee 地址                          |
+| :----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    哲学家就餐问题答案    | [DiningPhilosophers](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/DiningPhilosophers) | [DiningPhilosophers](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/DiningPhilosophers) |
+|   信号量问题答案（C#）   | [CSharpSemaphore](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSharpSemaphore) | [CSharpSemaphore](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSharpSemaphore) |
+|  信号量问题答案（C++）   | [CppSemaphore](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/blob/master/CppSemaphore/MySemaphore.hpp) | [CppSemaphore](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/blob/master/CppSemaphore/MySemaphore.hpp) |
+|   信号量问题答案（C）    | [CSemaphore](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSemaphore) | [CSemaphore](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSemaphore) |
+|  哲学家就餐问题评判程序  | [JudgerForDiningPhilosophers](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/JudgerForDiningPhilosophers) | [JudgerForDiningPhilosophers](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/JudgerForDiningPhilosophers) |
+| 信号量问题评判程序（C#） | [CSharpSemaphoreJudger](https://github.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSharpSemaphoreJudger) | [CSharpSemaphoreJudger](https://gitee.com/Timothy-LiuXuefeng/JudgerForMultiThreading/tree/master/CSharpSemaphoreJudger) |
+
+#### （二）注意事项  
+
+在评判作业中发现一些小问题：  
+
++ 个别同学在 C# 代码中使用了 `System.Threading.Mutex`。`Mutex` 耗费的资源比较大，更多用于不同进程间的互斥，在进行多线程编程的时候建议使用 `lock` 关键字或 `Monitor`。  
+
++ 在使用互斥锁或读写锁等的过程中，要特别注意异常安全。一般将加锁到解锁之间的代码写在 `try` 块内，而将解锁的代码写在 `finally` 块内，以避免中间抛出异常导致未解锁的情况，例如：  
+
+  ```c#
+  obj.lock();
+  try
+  {
+      // codes
+  }
+  finally
+  {
+      obj.unlock();
+  }
+  ```
+
++ 由于 UNIX 信号等一系列原因，条件变量可能存在虚假唤醒的问题（参见复习资料条件变量部分），因此使用条件变量一般使用 `while` 循环判断进入等待的条件，使用 `if` 有可能会出现一些问题，由此条件变量也产生了用 `while` 进行条件判断的范式。  
+
++ 有一点在作业中忘记了说明，信号量在计数达到最大值时再进行 V 操作属于非法操作，抛出一个异常即可，不需要等待。这是本人的疏忽所致，再此表示歉意。  
+
++ 有很多同学犯了同一个错误，是关于数组的使用。下面的代码：  
+
+  ```c#
+  var arr = new object[5];
+  ```
+
+  创建了一个含有五个元素的 `object` 数组。但是，需要注意 `object` 是引用类型，数组的每个元素都是 `object` 的引用，默认值为 `null`，此时并没有创建五个 `object` 对象，因此必须为每个元素各实例化出一个 `object` 对象：  
+
+  ```c#
+  for (int i = 0; i < arr.Length; ++i)
+  {
+      arr[i] = new object();
+  }
+  ```
+
+  很多同学由于没有创建 `object` 对象，因此 `lock` 失败抛出异常。  
 
 ## 参考文献  
 

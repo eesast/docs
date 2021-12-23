@@ -15,7 +15,7 @@ module.exports = {
       "C/C++": ["languages/STL", "languages/c_cpp_windows","languages/macos_cpp"],
     },
     {
-      "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread"],
+      "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread", "languages/Winform", "languages/WPF"],
     },
     "languages/Html",
     {
