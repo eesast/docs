@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [master]
+    branches: [master, timothy]
   pull_request:
     branches: [master]
 
@@ -57,3 +57,4 @@ jobs:
         run: |
           docker build -t eesast/docs:latest .
           docker push eesast/docs:latest
+
