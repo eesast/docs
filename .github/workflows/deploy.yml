@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [master, timothyliu/revert-ci]
+    branches: [master, timothy]
   pull_request:
     branches: [master]
 
