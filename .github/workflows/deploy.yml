@@ -57,3 +57,4 @@ jobs:
         run: |
           docker build -t eesast/docs:latest .
           docker push eesast/docs:latest
+
