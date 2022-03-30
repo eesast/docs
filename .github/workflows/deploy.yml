@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [master, timothy]
+    branches: [master]
   pull_request:
     branches: [master]
 
