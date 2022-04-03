@@ -163,11 +163,11 @@ Git 分支名也是一个类似于目录一样的树结构，可以用 `/` 进�
 
 > 很多工具内置了图形化的 Git 工具，可以清晰看出冲突的情况。例如 Visual Studio Code 和 Visual Studio 分别提供不同的图形界面，可以让冲突更一目了然：  
 >
-> <img src="assets/vscconf.jpg" width=70%>
+> ![vscconf](assets/vscconf.jpg)
 >
 > 
 >
-> <img src="assets/vsconf.jpg" width=50%>
+> ![vsconf](assets/vsconf.jpg)
 
 ### gitignore
 

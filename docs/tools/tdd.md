@@ -45,7 +45,7 @@ sidebar_label: 测试
 
 传统的单元测试可以用下面这张流程图来表述：  
 
-<img src="assets/pout.png" width=70%>
+![pout](assets/pout.png)
 
 或者可以简化为下面的流程图：
 
@@ -75,7 +75,7 @@ fail-->feat
 
 测试驱动的开发流程图如下：  
 
-<img src="assets/tdd.png" width=90%>
+![tdd](assets/tdd.png)
 
 
 为了突出测试驱动开发的核心思想，我们先来看这个简易的流程图：  
@@ -102,7 +102,7 @@ writecode-->runtest
 
 然后我们回到原来的流程图：  
 
-<img src="assets/tdd.png" width=90%>
+![tdd](assets/tdd.png)
 
 这个流程图的描述更加详细，它将代码的重构考虑了进去。在我们编写新功能通过了测试后，由于我们之前的代码可能写的不是很好，有一些重复的、结构不清晰的代码，我们便可以对代码进行重构（refactor）。重构之后，仍然运行测试，如果测试不通过还要重新进行修改，直至测试通过即可。  
 
