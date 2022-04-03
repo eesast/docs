@@ -31,10 +31,13 @@ module.exports = {
   tools: [
     "tools/README",
     "tools/docker",
-    "tools/git",
+    "tools/version_control",
     "tools/os",
     "tools/shell",
     "tools/git_instance",
+    "tools/document",
+    "tools/tdd",
+    "tools/process_management"
   ],
   game: ["game/README", "game/unity"],
   web: [
