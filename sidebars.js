@@ -31,7 +31,7 @@ module.exports = {
   tools: [
     "tools/README",
     "tools/docker",
-    "tools/version_control",
+    "tools/git",
     "tools/os",
     "tools/shell",
     "tools/git_instance",
