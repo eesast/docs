@@ -35,6 +35,9 @@ module.exports = {
     "tools/os",
     "tools/shell",
     "tools/git_instance",
+    "tools/document",
+    "tools/tdd",
+    "tools/process_management"
   ],
   game: ["game/README", "game/unity"],
   web: [
