@@ -3506,15 +3506,15 @@ ansi-styles@^6.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==
 
-antd@4.21.3:
-  version "4.21.3"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.21.3.tgz#a87a5936b3fbb92c0112a6b6fc8f1305ec6d4bdc"
-  integrity sha512-TETxAqqkgzpmQl/74kG2JiY6cd6E7LmrXjU7PN3Kxs8oPfQk7CGxez4smCMdpbTI2NU2qvOw0ugnvqzES82VJQ==
+antd@4.21.4:
+  version "4.21.4"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.21.4.tgz#e246c3db02c936247de25e264a34f8fadb9913a8"
+  integrity sha512-seSXyzVwfOI0a9/HIxUQ41nVJpR8hHn+DbBlJTCOM92Q56Fvw0FlbtZuNMA2gaOkDzyPTnp4W7adlbaqkGsvog==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons" "^4.7.0"
     "@ant-design/react-slick" "~0.29.1"
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.18.3"
     "@ctrl/tinycolor" "^3.4.0"
     classnames "^2.2.6"
     copy-to-clipboard "^3.2.0"
@@ -3553,7 +3553,7 @@ antd@4.21.3:
     rc-tree-select "~5.4.0"
     rc-trigger "^5.2.10"
     rc-upload "~4.3.0"
-    rc-util "^5.20.0"
+    rc-util "^5.22.5"
     scroll-into-view-if-needed "^2.2.25"
 
 anymatch@^2.0.0:
@@ -10234,7 +10234,7 @@ rc-util@^5.15.0, rc-util@^5.16.1:
     react-is "^16.12.0"
     shallowequal "^1.1.0"
 
-rc-util@^5.17.0, rc-util@^5.20.0, rc-util@^5.20.1, rc-util@^5.21.0:
+rc-util@^5.17.0, rc-util@^5.20.1, rc-util@^5.21.0:
   version "5.21.0"
   resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.21.0.tgz#3c97bbfa3e89354746978b15d275b7b7ef007045"
   integrity sha512-5THhvHk69Mqfn9CHoqOWKFjfOrJop0364bT2NU8baMthJCiyfJs3SyDfJJbKZqw9LHhw17eMpat3g4WVFmLIng==
@@ -10256,6 +10256,15 @@ rc-util@^5.19.2:
   version "5.21.5"
   resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.21.5.tgz#6e2a5699f820ba915f43f11a4b7dfb0b0672d0fa"
   integrity sha512-ip7HqX37Cy/RDl9MlrFp+FbcKnsWZ22sF5MS5eSpYLtg5MpC0TMqGb5ukBatoOhgjnLL+eJGR6e7YAJ/dhK09A==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    react-is "^16.12.0"
+    shallowequal "^1.1.0"
+
+rc-util@^5.22.5:
+  version "5.22.5"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.22.5.tgz#d4d6d886c5ecb6a2a51dde1840d780a2b70f5179"
+  integrity sha512-awD2TGMGU97OZftT2R3JwrHWjR8k/xIwqjwcivPskciweUdgXE7QsyXkBKVSBHXS+c17AWWMDWuKWsJSheQy8g==
   dependencies:
     "@babel/runtime" "^7.18.3"
     react-is "^16.12.0"
