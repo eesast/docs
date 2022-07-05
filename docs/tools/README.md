@@ -10,6 +10,9 @@ slug: ./
 - [Linux](shell.mdx)
 - [OS](os.mdx)
 - [Git 实例](git_instance.md)
+- [文档](document.md)
+- [测试](tdd.md)
+- [软件开发过程](process_management.md)
 
 ## Recommendation
 
