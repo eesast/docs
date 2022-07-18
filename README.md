@@ -1,7 +1,7 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
@@ -63,23 +63,25 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/duskmoon314"><img src="https://avatars2.githubusercontent.com/u/20477228?v=4" width="50px;" alt=""/><br /><sub><b>Campbell He</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Code">💻</a> <a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Documentation">📖</a> <a href="#infra-duskmoon314" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-duskmoon314" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/boltma"><img src="https://avatars0.githubusercontent.com/u/6150748?v=4" width="50px;" alt=""/><br /><sub><b>Xiaoyang Ma</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=boltma" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/zxdclyz"><img src="https://avatars2.githubusercontent.com/u/44538240?v=4" width="50px;" alt=""/><br /><sub><b>lyz</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=zxdclyz" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/xxxxyu"><img src="https://avatars3.githubusercontent.com/u/47287680?v=4" width="50px;" alt=""/><br /><sub><b>Xiangyu Li</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=xxxxyu" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/hukz18"><img src="https://avatars3.githubusercontent.com/u/49591637?v=4" width="50px;" alt=""/><br /><sub><b>hukz18</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=hukz18" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Sweetnow"><img src="https://avatars2.githubusercontent.com/u/34758767?v=4" width="50px;" alt=""/><br /><sub><b>Jun Zhang</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Sweetnow" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/BowmanChow"><img src="https://avatars1.githubusercontent.com/u/43898302?v=4" width="50px;" alt=""/><br /><sub><b>Bowman</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=BowmanChow" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/DreamDraw"><img src="https://avatars2.githubusercontent.com/u/21218323?v=4" width="50px;" alt=""/><br /><sub><b>DreamDraw Pan</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=DreamDraw" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/duskmoon314"><img src="https://avatars2.githubusercontent.com/u/20477228?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Campbell He</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Code">💻</a> <a href="https://github.com/eesast/docs/commits?author=duskmoon314" title="Documentation">📖</a> <a href="#infra-duskmoon314" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-duskmoon314" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/boltma"><img src="https://avatars0.githubusercontent.com/u/6150748?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Xiaoyang Ma</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=boltma" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zxdclyz"><img src="https://avatars2.githubusercontent.com/u/44538240?v=4?s=50" width="50px;" alt=""/><br /><sub><b>lyz</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=zxdclyz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/xxxxyu"><img src="https://avatars3.githubusercontent.com/u/47287680?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Xiangyu Li</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=xxxxyu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/hukz18"><img src="https://avatars3.githubusercontent.com/u/49591637?v=4?s=50" width="50px;" alt=""/><br /><sub><b>hukz18</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=hukz18" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Sweetnow"><img src="https://avatars2.githubusercontent.com/u/34758767?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Jun Zhang</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Sweetnow" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/BowmanChow"><img src="https://avatars1.githubusercontent.com/u/43898302?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Bowman</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=BowmanChow" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/DreamDraw"><img src="https://avatars2.githubusercontent.com/u/21218323?v=4?s=50" width="50px;" alt=""/><br /><sub><b>DreamDraw Pan</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=DreamDraw" title="Documentation">📖</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/Yang-Xijie"><img src="https://avatars3.githubusercontent.com/u/57952362?v=4" width="50px;" alt=""/><br /><sub><b>Yang-Xijie</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Yang-Xijie" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Timothy-LiuXuefeng"><img src="https://avatars3.githubusercontent.com/u/65613511?v=4" width="50px;" alt=""/><br /><sub><b>Liu Xuefeng</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-LiuXuefeng" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Yang-Xijie"><img src="https://avatars3.githubusercontent.com/u/57952362?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Yang-Xijie</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Yang-Xijie" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Timothy-LiuXuefeng"><img src="https://avatars3.githubusercontent.com/u/65613511?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Liu Xuefeng</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-LiuXuefeng" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Timothy-Liuxf"><img src="https://avatars.githubusercontent.com/u/65613511?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Timothy Liu</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-Liuxf" title="Documentation">📖</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
