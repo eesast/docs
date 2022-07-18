@@ -104,6 +104,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Timothy-Liuxf",
+      "name": "Timothy Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65613511?v=4",
+      "profile": "https://github.com/Timothy-Liuxf",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
