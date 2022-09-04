@@ -1,5 +1,5 @@
 ---
-title: HTML&CSS 入门
+title: HTML/CSS
 ---
 
 > 这里介绍的知识非常基础，因为网站组的同学们在后面写网站的时候很少直接写 HTML&CSS（尤其是 HTML），这里讲只是为了让大家简单了解下网页的机制
@@ -119,22 +119,24 @@ HTML 元素可以进行嵌套，比如
 
 ## CSS
 
-> 参考：https://developer.mozilla.org/zh-CN/docs/Web/CSS
-
 ### 基础
 
-CSS 是一门基于规则的语言，他的基础结构为：由一个选择器开头，后接一对大括号，在大括号内部定义一个或多个形式为 `属性(property):值(value);` 的声明(declarations)。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。[这里](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)可以查看所有属性。
+**CSS** （Cascading Style Sheets，层叠样式表）是用来控制网页在浏览器中的显示外观的声明式语言。浏览器会根据 CSS 的样式定义将其选定的元素显示为恰当的形式。一条 CSS 的样式定义包括属性和属性值，它们共同决定网页的外观。CSS的基础结构为：由一个选择器开头，后接一对大括号，在大括号内部定义一个或多个形式为 `属性(property):值(value);` 的声明(declarations)。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。[这里](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)可以查看所有属性。
+
+HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，你可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
 
 ```css
 h1 {
-  color: red;
-  font-size: 5em;
-}
-
-p {
-  color: black;
+    color: red;
+    font-size: 5em;
 }
 ```
+
+语法由一个 选择器 (selector) 起头。它选择 (selects)了我们将要用来添加样式的 HTML 元素。在这个例子中我们为一级标题（主标题`<h1>`）添加样式。
+
+接着输入一对大括号`{ }`。在大括号内部定义一个或多个形式为 **属性 (property):值 (value);** 的 **声明 (declarations)**。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。
+
+冒号之前是属性，冒号之后是值。不同的 CSS 属性 (properties) 对应不同的合法值。在这个例子中，我们指定了 `color` 属性，它可以接受许多颜色值；还有 `font-size` 属性，它可以接收许多 size units 值。
 
 #### 元素选择器
 

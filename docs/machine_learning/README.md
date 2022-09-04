@@ -1,5 +1,5 @@
 ---
-title: 机器学习相关
+title: Machine Learning
 slug: ./
 ---
 

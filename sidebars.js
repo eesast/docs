@@ -1,6 +1,6 @@
 module.exports = {
   intro: {
-    intro: [
+    Intro: [
       "intro/README",
       "intro/style_guide",
       "intro/mdx",
@@ -12,19 +12,33 @@ module.exports = {
   languages: [
     "languages/README",
     {
-      "C/C++": ["languages/STL", "languages/c_cpp_windows","languages/macos_cpp"],
+      "C/C++": [
+        "languages/C&C++/compile",
+        "languages/C&C++/makefile&cmake",
+        "languages/C&C++/modern_cpp",
+        "languages/C&C++/STL",
+        "languages/C&C++/multi-file_programming",
+        "languages/C&C++/c_cpp_windows",
+        "languages/C&C++/macos_cpp",
+        "languages/C&C++/OOP"
+      ],
     },
     {
-      "C#": ["languages/CSharp_1_basic", "languages/CSharp_2_multithread", "languages/Winform", "languages/WPF"],
+      "C#": [
+        "languages/CSharp/CSharp_1_basic",
+        "languages/CSharp/CSharp_2_multithread", 
+        "languages/CSharp/Winform", 
+        "languages/CSharp/WPF"
+      ],
     },
-    "languages/Html",
+    "languages/HTML&CSS",
     {
       "JS/TS": [
-        "languages/JavaScript",
-        "languages/TypeScript",
-        "languages/Nodejs",
-        "languages/npm",
-        "languages/yarn",
+        "languages/JS&TS/JavaScript",
+        "languages/JS&TS/TypeScript",
+        "languages/JS&TS/Nodejs",
+        "languages/JS&TS/npm",
+        "languages/JS&TS/yarn",
       ],
     },
   ],
@@ -32,30 +46,45 @@ module.exports = {
     "tools/README",
     "tools/docker",
     "tools/git",
-    "tools/os",
-    "tools/shell",
     "tools/git_instance",
+    "tools/os",
+    "tools/linux&shell",
     "tools/document",
     "tools/tdd",
     "tools/process_management"
   ],
-  game: ["game/README", "game/unity"],
+  game: [
+    "game/README",
+    "game/unity",
+    {
+      通信: [
+        "game/communication/Protobuf",
+        "game/communication/gRPC"
+      ]
+    }
+  ],
   web: [
     "web/README",
     {
-      react: [
-        "web/react",
-        "web/react_1_init",
-        "web/react_2_antd",
-        "web/react_3_game",
-        "web/react_4_history",
+      前端: [
+        "web/frontend/react_practical",
+        "web/frontend/react_detailed"
       ],
     },
     {
-      后端: ["web/express", "web/graphql"],
+      后端: [
+        "web/backend/backend",
+        "web/backend/express",
+        "web/backend/MongoDB",
+        "web/backend/graphql",
+        "web/backend/OSS_CDN"
+      ],
     },
     {
-      部署: ["web/CI&CD"],
+      部署: [
+        "web/deployment/CI&CD",
+        "web/deployment/nginx"
+      ],
     },
   ],
   "machine-learning": ["machine_learning/README"],

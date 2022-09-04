@@ -28,7 +28,7 @@ title: 多线程与异步
 
 不同厂家生产的 CPU 架构迥异，不同的架构一般也支持不同的指令集。常见的 CPU 架构有：x86（常见于 PC）、ARM（常见于手机等）、MIPS（已经停止支持）、RISC-V，等等。以 x86 架构为例，下图为 Intel Core i7 流水线结构（参考文献 2）：  
 
-![x86](assets/x86pipeline.png)
+![x86](../assets/x86pipeline.png)
 
 #### 寄存器  
 
@@ -67,7 +67,7 @@ title: 多线程与异步
 
 虚拟内存也是一个重要工作，需要 CPU 内的内存管理单元（MMU）与操作系统的紧密协作。每个进程在运行时都被分配了一块虚拟的内存，让每个进程看起来都是自己独占了整个主存。每个进程看到的内存都相同，这个内存空间就叫做”虚拟地址空间“。下面是 Linux 系统的虚拟地址空间：  
 
-![virram](assets/virram.png)
+![virram](../assets/virram.png)
 
 
 
@@ -79,7 +79,7 @@ title: 多线程与异步
 + 就绪态  
 + 阻塞态  
 
-![process](assets/process.png)
+![process](../assets/process.png)
 
 
 
@@ -736,7 +736,7 @@ Coffman 等人总结了死锁的产生条件：
 + 不可抢占条件：已经分配给一个进程的资源不能强制抢占，只能由占有它的进程自己释放  
 + 环路等待条件：死锁发生时，进程一定可以形成一个环路，环路中每一个进程都等待着下一个进程锁占有的资源  
 
-![deadlock](assets/deadlock.png)
+![deadlock](../assets/deadlock.png)
 
 #### 处理死锁问题的方法  
 
@@ -771,11 +771,11 @@ Coffman 等人总结了死锁的产生条件：
 > 链接：https://leetcode-cn.com/problems/the-dining-philosophers
 > 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。  
 >
-> ![phi](assets/phi.png)
+> ![phi](../assets/phi.png)
 
 + 方法一  
 
-  ![cjh](assets/cjh.jpg)
+  ![cjh](../assets/cjh.jpg)
 
 + 方法二  
 
