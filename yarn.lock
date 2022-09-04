@@ -1626,6 +1626,19 @@
   resolved "https://registry.npmmirror.com/@docusaurus/utils-validation/-/utils-validation-2.1.0.tgz#c8cf1d8454d924d9a564fefa86436268f43308e3"
   integrity sha512-AMJzWYKL3b7FLltKtDXNLO9Y649V2BXvrnRdnW2AA+PpBnYV78zKLSCz135cuWwRj1ajNtP4onbXdlnyvCijGQ==
   dependencies:
+<<<<<<< HEAD
+=======
+    "@docusaurus/utils" "2.0.0-beta.6"
+    chalk "^4.1.1"
+    joi "^17.4.0"
+    tslib "^2.1.0"
+
+"@docusaurus/utils-validation@^2.0.0-beta.4":
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/@docusaurus/utils-validation/-/utils-validation-2.1.0.tgz#c8cf1d8454d924d9a564fefa86436268f43308e3"
+  integrity sha512-AMJzWYKL3b7FLltKtDXNLO9Y649V2BXvrnRdnW2AA+PpBnYV78zKLSCz135cuWwRj1ajNtP4onbXdlnyvCijGQ==
+  dependencies:
+>>>>>>> f245bf4ce1c4b181b824a5dec91678bd095a15ec
     "@docusaurus/logger" "2.1.0"
     "@docusaurus/utils" "2.1.0"
     joi "^17.6.0"
@@ -1637,6 +1650,26 @@
   resolved "https://registry.npmmirror.com/@docusaurus/utils/-/utils-2.1.0.tgz#b77b45b22e61eb6c2dcad8a7e96f6db0409b655f"
   integrity sha512-fPvrfmAuC54n8MjZuG4IysaMdmvN5A/qr7iFLbSGSyDrsbP4fnui6KdZZIa/YOLIPLec8vjZ8RIITJqF18mx4A==
   dependencies:
+<<<<<<< HEAD
+=======
+    "@docusaurus/types" "2.0.0-beta.6"
+    "@types/github-slugger" "^1.3.0"
+    chalk "^4.1.1"
+    escape-string-regexp "^4.0.0"
+    fs-extra "^10.0.0"
+    globby "^11.0.4"
+    gray-matter "^4.0.3"
+    lodash "^4.17.20"
+    micromatch "^4.0.4"
+    resolve-pathname "^3.0.0"
+    tslib "^2.2.0"
+
+"@docusaurus/utils@2.1.0", "@docusaurus/utils@^2.0.0-beta.4":
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/@docusaurus/utils/-/utils-2.1.0.tgz#b77b45b22e61eb6c2dcad8a7e96f6db0409b655f"
+  integrity sha512-fPvrfmAuC54n8MjZuG4IysaMdmvN5A/qr7iFLbSGSyDrsbP4fnui6KdZZIa/YOLIPLec8vjZ8RIITJqF18mx4A==
+  dependencies:
+>>>>>>> f245bf4ce1c4b181b824a5dec91678bd095a15ec
     "@docusaurus/logger" "2.1.0"
     "@svgr/webpack" "^6.2.1"
     file-loader "^6.2.0"
@@ -4134,10 +4167,22 @@ ee-first@1.1.1:
   resolved "https://registry.npmmirror.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
+<<<<<<< HEAD
 electron-to-chromium@^1.4.202:
   version "1.4.241"
   resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.241.tgz#5aa03ab94db590d8269f4518157c24b1efad34d6"
   integrity sha512-e7Wsh4ilaioBZ5bMm6+F4V5c11dh56/5Jwz7Hl5Tu1J7cnB+Pqx5qIF2iC7HPpfyQMqGSvvLP5bBAIDd2gAtGw==
+=======
+electron-to-chromium@^1.3.564, electron-to-chromium@^1.4.202:
+  version "1.4.241"
+  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.241.tgz#5aa03ab94db590d8269f4518157c24b1efad34d6"
+  integrity sha512-e7Wsh4ilaioBZ5bMm6+F4V5c11dh56/5Jwz7Hl5Tu1J7cnB+Pqx5qIF2iC7HPpfyQMqGSvvLP5bBAIDd2gAtGw==
+
+emoji-regex@^7.0.1:
+  version "7.0.3"
+  resolved "https://registry.npmmirror.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
+  integrity sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
+>>>>>>> f245bf4ce1c4b181b824a5dec91678bd095a15ec
 
 emoji-regex@^8.0.0:
   version "8.0.0"
