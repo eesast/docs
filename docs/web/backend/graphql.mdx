@@ -6,7 +6,7 @@ title: GraphQL, Hasura, PostgreSQL, Apollo
 
 四个部分大致是如下图构成数据查询流程。即编写查询相关的 GraphQL 语句，Apollo 会生成相应的 TS 代码，经编译后运行在 Node.js 上，使用 GraphQL 的形式与 Hasura 进行交互，由 Hasura 访问 PostgreSQL 数据库存取数据。
 
-![GraphQL、Hasura、Apollo、PostgreSQL的架构](assets/gql.drawio.svg)
+![GraphQL、Hasura、Apollo、PostgreSQL的架构](../assets/gql.drawio.svg)
 
 接下来，将逐步讲解以下概念：
 
@@ -25,7 +25,7 @@ title: GraphQL, Hasura, PostgreSQL, Apollo
 
 数据库，顾名思义是存储数据的。我们常用实体-联系的方式来对数据进行抽象，其中实体是客观存在并可相互区分的事物，而联系指的是不同（类）实体之间的关系。关系型数据库指的是使用关系模型来存储数据。
 
-![实体联系例图](assets/ER.drawio.svg)
+![实体联系例图](../assets/ER.drawio.svg)
 
 不同实体间的联系一般分为“一对一”、“一对多”、“多对多”三种，可以借助三个例子理解：
 
@@ -250,7 +250,7 @@ b0b1aac0508d postgres              ... 1m ago  Up 1m  0.0.0.0:5432->5432/tcp    
 
 现在访问`localhost:23333/console`可以进入 Hasura 的控制界面
 
-![Hasura Console](assets/hasura_console.png)
+![Hasura Console](../assets/hasura_console.png)
 
 Hasura 提供许多功能，我们主要使用`GRAPHIQL`和`DATA`两个页面的功能
 
@@ -258,21 +258,21 @@ Hasura 提供许多功能，我们主要使用`GRAPHIQL`和`DATA`两个页面的
 
 在`DATA`页面可以创建“关系表”，比如创建一个`user`：
 
-![create table](assets/hasura_create_table.png)
+![create table](../assets/hasura_create_table.png)
 
 这里填入了 6 个属性，其中`_id`为主码，使用数据库的 uuid 生成器得到。`username`、`email`、`gender`皆为字符串，其中`username`也是不可重复的（我们称为候选码），而`email`和`gender`则是可以为空的普通属性。`created_at`和`updated_at`则是使用`+ Frequently used columns`添加的，分别会根据创建和更改时的时间自动添加。
 
 我们再来创建一个`article`表，加入作者的`_id`作为外码：
 
-![foreign key](assets/hasura_foreign_key.png)
+![foreign key](../assets/hasura_foreign_key.png)
 
 这里将`author`的值设为 uuid 类型，并与`user._id`严格一致。我们点开`article`的`Relationships`可以看到推荐的关系设置：
 
-![relationships](assets/hasura_relations.png)
+![relationships](../assets/hasura_relations.png)
 
 这里推荐添加`Object relationships`，而在`user`的`Relationships`可以看到推荐`Array relationships`。点击添加便是告诉 Hasura 这两个表之间是一对多的关系，即一个`user`可以有多篇`article`。我们可以在`GRAPHIQL`页面试着写一下查询语句：
 
-![graphiql](assets/hasura_graphiql.png)
+![graphiql](../assets/hasura_graphiql.png)
 
 一般限制条件不太复杂的查询或者更改操作，都可以使用最左侧的 Explorer 勾选需要的部分，由 Hasura 生成中间的语句，点击“执行”按钮可以在右边看到结果。这里因为还没有添加数据，所以是空的。
 
@@ -280,7 +280,7 @@ Hasura 提供许多功能，我们主要使用`GRAPHIQL`和`DATA`两个页面的
 
 最后我们再看一下“权限控制”。在表的`Permissions`页面可以设置不同身份用户的插入、查询、更改与删除权限。目前 Hasura 提供的权限设置自由度较小，如果要设置非常复杂的权限，需要通过添加数据表的`view`再给其设置权限等方法来实现。具体细节可以参看[Multiple column + row permissions for the same role](https://hasura.io/docs/1.0/graphql/manual/auth/authorization/role-multiple-rules.html#role-multiple-rules)
 
-![permission](assets/hasura_permissions.png)
+![permission](../assets/hasura_permissions.png)
 
 ## Apollo
 
@@ -288,7 +288,7 @@ Hasura 提供许多功能，我们主要使用`GRAPHIQL`和`DATA`两个页面的
 
 目前的前端项目中，我们在`src/api`文件夹下编写`*.graphql`文件，即填写在 Hasura 中测试过得到需要结果的`query`或`mutation`语句。之后使用 Apollo 的`codegen`编译为相应的接口，供前端页面拉取数据使用。
 
-![Apollo types.ts](assets/apollo_typests.png)
+![Apollo types.ts](../assets/apollo_typests.png)
 
 我们使用 Apollo 提供的`useQuery`和`useMutation`来进行数据的获取和更改。参考官方文档使用`useQuery`：
 
@@ -384,7 +384,7 @@ const [
 
 下面我们来看查询和更改的例子。我们在数据库里存了很多文章，现在我们要获取并用一个列表展示它们。当用户点击文章时会跳转到相应页面进行阅读，同时更改数据库中该文章的`view`属性（加 1）。
 
-![query](assets/apollo_query.png)
+![query](../assets/apollo_query.png)
 
 ```typescript
 const { data, loading, error } = useQuery<
@@ -434,7 +434,7 @@ return (
 
 这里使用`useQuery`，基于`cursor`（用来确定获取文章的时间戳，初始化为当前时间）拉取 5 篇文章，并使用`map`变为`<ArticleFeedCard />`组件接收的参数。
 
-![mutation](assets/apollo_mutation.png)
+![mutation](../assets/apollo_mutation.png)
 
 ```typescript
 const [

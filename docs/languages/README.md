@@ -1,24 +1,31 @@
 ---
-title: 语言列表
+title: Languages
 slug: ./
 ---
 
 ## List
 
-- C++
-  - [STL](STL.md)
-  - [C/C++ Windows 编程](c_cpp_windows.md)
-  - [macOS编写C++程序](macos_cpp.md)
+- C/C++
+  - [编译、链接、静态库、动态库](C&C++/compile.md)
+  - [Makefile & CMake](C&C++/makefile&cmake.md)
+  - [Modern C++ 选讲](C&C++/STL.md)
+  - [STL概览](C&C++/STL.md)
+  - [C++多文件编程](C&C++/multi-file_programming.md)
+  - [C/C++ Windows 编程](C&C++/c_cpp_windows.md)
+  - [macOS编写C++程序](C&C++/modern_cpp.md)
+  - [面向对象程序设计基础](C&C++/OOP.md)
 - C#
-  - [基础知识](./CSharp_1_basic.mdx)
-  - [多线程](CSharp_2_multithread.mdx)
-- [Html](Html.mdx)
+  - [C# 程序设计基础](CSharp/CSharp_1_basic.mdx)
+  - [多线程与异步](CSharp/CSharp_2_multithread.mdx)
+  - [Winform](CSharp/Winform.mdx)
+  - [WPF](CSharp/WPF.mdx)
+- [HTML/CSS](HTML&CSS.mdx)
 - JS/TS
-  - [JavaScript](./JavaScript.mdx)
-  - [TypeScript](./TypeScript.mdx)
-  - [Nodejs](./Nodejs.mdx)
-  - [npm](npm.mdx)
-  - [yarn](yarn.mdx)
+  - [JavaScript](JS&TS/JavaScript.mdx)
+  - [TypeScript](JS&TS/TypeScript.mdx)
+  - [Node.js](JS&TS/Nodejs.mdx)
+  - [npm](JS&TS/npm.mdx)
+  - [yarn](JS&TS/yarn.mdx)
 
 ## Recommendation
 
@@ -76,5 +83,3 @@ slug: ./
 
 - [Android Training 官方课程](http://hukai.me/android-training-course-in-chinese/index.html) ：一个手把手教你入门 Android 开发的教程
 - 《Thinking In Java》：Java 是开发 Android 使用的编程语言（没用过 Kotlin，不评价），所以好好学学 Java 还是有必要的（当然你也可以选择好好学习 JNI）。电子书网上自己应该能搜到，我就不放链接了。
-
-## Contributors

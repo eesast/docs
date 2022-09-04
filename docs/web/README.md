@@ -1,27 +1,27 @@
 ---
-title: WEB 开发简述
+title: WEB
 slug: ./
 ---
 
-## 我们所说的 WEB 指什么
-
 ## WEB 需要学习什么
 
-本部分内容基于 EESAST 目前网站方面的技术逐步完善中，目前内容主要为以下几个部分：
+本部分内容基于 EESAST 目前网站方面的技术逐步完善中，分为以下章节：
 
-- Html, CSS, JavaScript/TypeScript 基础
-- Node.js 与包管理
-- React + antd
-- Restful API 与 Express
-- GraphQL + Hasura + Apollo
-- 数据库 MongoDB 和 PostgreSQL
-- Web 测试 Mocha + Chai
-- CI/CD
+- 前端
+  - [React - Getting Started](frontend/react_practical.mdx)
+  - [React教程](frontend/react_detailed.md)
+- 后端
+  - [后端技术栈入门](backend/backend.mdx)
+  - [Express](backend/express.mdx)
+  - [MongoDB](backend/MongoDB.mdx)
+  - [GraphQL, Hasura, PostgreSQL, Apollo](backend/graphql.mdx)
+  - [OSS & CDN](backend/OSS_CDN.mdx)
 
 其中部分内容在 `Languages` 部分：
 
-- [html & css](../languages/Html.mdx)
-- [js & ts](../languages/JavaScript.mdx)
+- [HTML / CSS](../languages/HTML&CSS.mdx)
+- [JavaScript](../languages/JS&TS/JavaScript.mdx)
+- [TypeScript](../languages/JS&TS/TypeScript.mdx)
 
 需要用到的工具及相关链接如下：
 
@@ -44,5 +44,3 @@ slug: ./
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
 - [GitHub Actions](https://help.github.com/en/actions)
-
-## Contributors

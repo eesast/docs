@@ -1,17 +1,15 @@
 ---
-title: 后端技术栈入门：express mongoDB
+title: 后端技术栈入门
 ---
 
-本讲主要为使用 Node.js 结合 Express 和 Mongo 的 RESTful 后端开发入门指南。准备工作需要安装以下工具并设置环境变量。
+本讲为使用 Node.js 的 RESTful 后端开发入门指南，准备工作需要安装以下工具并设置环境变量。
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/zh-Hant/docs/install)
 - [MongoDB](https://www.mongodb.com/try/download/community)
 - [Postman](https://www.postman.com/downloads/)
 
-本讲演示样例为[清华电子系学生科协网站](https://eesast.com)在 2020 年 5 月 1 日前的前后端代码（现已从 REST 迁移至 GraphQL），代码开源于[前端代码](https://github.com/eesast/web/tree/c2e3b521b7093d9bbb67c4e74209235d1fff9808)与[后端代码](https://github.com/eesast/api/tree/ba7cce4a4a773fc2ce35bb137be9d02cd581d4b5)，可在协议许可的范围内学习使用。
-
-相关内容可参考[MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)中的相关资料继续深入学习，本讲参考资料部分来自 EESAST 2019 培训内容。
+相关内容可参考[MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)中的相关资料继续深入学习。
 
 ## RESTful
 
@@ -293,7 +291,7 @@ isMemberValid =
 ## Express
 
 - Express 是一种保持最低程度规模的灵活 Node.js Web 应用程序框架，为 Web 和移动应用程序提供一组强大的功能。
-- 简单的来讲，Express 是一个用来做 webapp 脚手架工具。详细请参阅[官方网站](https://expressjs.com/)。
+- 简单的来讲，Express 是一个用来做 webapp 脚手架工具。后面的文章将会对 Express 进行详解，可参阅[官方网站](https://expressjs.com/)。
 
 `yarn global add express-generator`可添加项目的 generator 以快速生成项目（类似 create-react-app）。
 
@@ -346,7 +344,7 @@ condx(yes)->serv->e
 - Object
 - 异步`find`和`save`
 
-详细文档请参阅[Mongoose 官方文档](http://www.mongoosejs.net/docs/guide.html)。
+后续文章将会对MongoDB进行详解，文档请参阅[Mongoose 官方文档](http://www.mongoosejs.net/docs/guide.html)。
 
 MongoDB 环境配置：
 

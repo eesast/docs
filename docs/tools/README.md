@@ -1,18 +1,18 @@
 ---
-title: 实用工具列表
+title: Tools
 slug: ./
 ---
 
 ## List
 
 - [Docker](docker.mdx)
-- [Git](git.md)
-- [Linux](shell.mdx)
-- [OS](os.mdx)
-- [Git 实例](git_instance.md)
-- [文档](document.md)
-- [测试](tdd.md)
-- [软件开发过程](process_management.md)
+- [版本管理与 Git 基础](git.md)
+- [Git 开发实例](git_instance.md)
+- [操作系统](os.mdx)
+- [Linux & Shell](linux&shell.mdx)
+- [文档：需求文档、设计文档、产品文档](document.md)
+- [测试：单元测试、测试驱动的开发（TDD）](tdd.md)
+- [软件开发过程：软件过程、敏捷开发、DevOps](process_management.md)
 
 ## Recommendation
 
@@ -35,5 +35,3 @@ slug: ./
 #### 菜鸟教程
 
 [菜鸟教程-Linux 教程](http://www.runoob.com/linux/linux-tutorial.html)，内容不多，简单易懂，花一两天快速看完就能了解 Linux 的基本日常使用了
-
-## Contributors
