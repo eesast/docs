@@ -2,25 +2,25 @@
 title: MongoDB
 ---
 
-## 1.MongoDB简介
+## 1.MongoDB 简介
 
 ### 下载与安装
 
-可以在官网上下载并安装MongoDB：https://www.mongodb.com/try/download/community。我们用Windows版本的MongoDB来做演示。
+可以在官网上下载并安装 MongoDB：https://www.mongodb.com/try/download/community。我们用Windows版本的MongoDB来做演示。
 
-### 何为MongoDB？
+### 何为 MongoDB？
 
-大家之前已经学习过了Hasura，知道Hasura引擎可以让用户使用非关系型的GraphQL来操作关系型数据库如PostgreSQL。今天要学习的MongoDB介于关系型和非关系型数据库之间，采用的查询语言是不同于关系型数据库的，也称为NoSQL( = Not Only SQL)。NoSQL并不是统一的标准，不同的数据库实现并不一样，MongoDB采用类似json格式的“文档”存储。这样也就有机会对某些字段建立索引，实现关系数据库的某些功能。因此，MongoDB是非关系型数据库当中最像关系型数据库的。
+大家之前已经学习过了 Hasura，知道 Hasura 引擎可以让用户使用非关系型的 GraphQL 来操作关系型数据库如 PostgreSQL。今天要学习的 MongoDB 介于关系型和非关系型数据库之间，采用的查询语言是不同于关系型数据库的，也称为 NoSQL( = Not Only SQL)。NoSQL 并不是统一的标准，不同的数据库实现并不一样，MongoDB 采用类似 json 格式的“文档”存储。这样也就有机会对某些字段建立索引，实现关系数据库的某些功能。因此，MongoDB 是非关系型数据库当中最像关系型数据库的。
 
-### MongoDB基础概念
+### MongoDB 基础概念
 
-在MongoDB当中，mongod程序是数据库的主守护进程。它处理数据请求，管理数据访问，并执行后台管理操作。在启动MongoDB服务，也就是运行mongod时，必须设定数据库地址的参数“--dbpath”，否则会启动失败。
+在 MongoDB 当中，mongod 程序是数据库的主守护进程。它处理数据请求，管理数据访问，并执行后台管理操作。在启动 MongoDB 服务，也就是运行 mongod 时，必须设定数据库地址的参数“--dbpath”，否则会启动失败。
 
-MongoDB既有命令行的管理工具，也有图形界面的管理工具。MongoDB Compass 是一个图形界面管理工具，我们可以到官网下载安装，下载地址：https://www.mongodb.com/download-center/compass。MongoDB的命令行工具采用JavaScript语言。在Windows系统上，打开mongo.exe以进入命令行界面连接MongoDB服务；在Linux系统上，运行mongodb安装目录的下的bin目录中的mongo文件以连接MongoDB服务。
+MongoDB 既有命令行的管理工具，也有图形界面的管理工具。MongoDB Compass 是一个图形界面管理工具，我们可以到官网下载安装，下载地址：https://www.mongodb.com/download-center/compass。MongoDB的命令行工具采用JavaScript语言。在Windows系统上，打开mongo.exe以进入命令行界面连接MongoDB服务；在Linux系统上，运行mongodb安装目录的下的bin目录中的mongo文件以连接MongoDB服务。
 
-可以将MongoDB的概念同我们熟悉的SQL数据库的概念作类比：
+可以将 MongoDB 的概念同我们熟悉的 SQL 数据库的概念作类比：
 
-| SQL概念             | MongoDB概念         |
+| SQL 概念            | MongoDB 概念        |
 | :------------------ | :------------------ |
 | database（数据库）  | database（数据库）  |
 | table（表）         | collection（集合）  |
@@ -28,34 +28,34 @@ MongoDB既有命令行的管理工具，也有图形界面的管理工具。Mong
 | column（列）        | field（字段或域）   |
 | primary key（主键） | primary key（主键） |
 
-在一个MongoDB应用上可以建立很多的**数据库**，MongoDB有一些保留的数据库名具有特殊作用，如admin数据库。**集合**就是MongoDB文档组，一个数据库中可以有若干集合（类比数据表），集合没有固定的结构，里面可以存储任意文档，应当把有关联的文档放入同一集合当中。**文档**是由一组键值对所组成的，可看作是一条记录，不同文档间不需要设置相同的字段，并且相同的字段不需要相同的数据类型。因此，尽管MongoDB的概念同SQL数据库的概念可以类比，但二者间有着非常明显的区别。
+在一个 MongoDB 应用上可以建立很多的**数据库**，MongoDB 有一些保留的数据库名具有特殊作用，如 admin 数据库。**集合**就是 MongoDB 文档组，一个数据库中可以有若干集合（类比数据表），集合没有固定的结构，里面可以存储任意文档，应当把有关联的文档放入同一集合当中。**文档**是由一组键值对所组成的，可看作是一条记录，不同文档间不需要设置相同的字段，并且相同的字段不需要相同的数据类型。因此，尽管 MongoDB 的概念同 SQL 数据库的概念可以类比，但二者间有着非常明显的区别。
 
-### MongoDB数据类型
+### MongoDB 数据类型
 
-MongoDB的数据类型很多，我们只列举常见的几种：
+MongoDB 的数据类型很多，我们只列举常见的几种：
 
-| 数据类型    | 描述                                             |
-| :---------- | :----------------------------------------------- |
-| String      | 字符串。在MongoDB中，必须使用UTF-8编码的字符串。 |
-| Integer     | 整数。根据你所采用的服务器，可分为32位或64位。   |
-| Boolean     | 布尔值。                                         |
-| Double      | 双精度浮点值。                                   |
-| Array       | 数组。将多个数据类型按序存储为一个字段。         |
-| Timestamp   | 时间戳。记录文档修改或添加的具体时间。           |
-| Object      | 对象。将多个数据类型按键值对存储为一个字段。     |
-| Null        | 空值。                                           |
-| Date        | 日期时间。用UNIX时间格式来存储当前日期或时间。   |
-| Binary Data | 二进制数。                                       |
+| 数据类型    | 描述                                                 |
+| :---------- | :--------------------------------------------------- |
+| String      | 字符串。在 MongoDB 中，必须使用 UTF-8 编码的字符串。 |
+| Integer     | 整数。根据你所采用的服务器，可分为 32 位或 64 位。   |
+| Boolean     | 布尔值。                                             |
+| Double      | 双精度浮点值。                                       |
+| Array       | 数组。将多个数据类型按序存储为一个字段。             |
+| Timestamp   | 时间戳。记录文档修改或添加的具体时间。               |
+| Object      | 对象。将多个数据类型按键值对存储为一个字段。         |
+| Null        | 空值。                                               |
+| Date        | 日期时间。用 UNIX 时间格式来存储当前日期或时间。     |
+| Binary Data | 二进制数。                                           |
 
-MongoDB中的文档必须有一个_id键作主键。这个键的值可以是任何类型的，默认是个ObjectId类型的对象，这一对象的结构如下：
+MongoDB 中的文档必须有一个\_id 键作主键。这个键的值可以是任何类型的，默认是个 ObjectId 类型的对象，这一对象的结构如下：
 
 ![ObjectId](https://www.runoob.com/wp-content/uploads/2013/10/2875754375-5a19268f0fd9b_articlex.jpeg)
 
-## 2.MongoDB基础操作
+## 2.MongoDB 基础操作
 
 **查看数据库**
 
-查看当前MongoDB应用上的全部数据库的语法格式为：
+查看当前 MongoDB 应用上的全部数据库的语法格式为：
 
 ```
 show dbs
@@ -69,13 +69,13 @@ db
 
 **创建和切换数据库**
 
-用use命令时，如果数据库不存在，则创建数据库，否则切换到指定数据库。语法格式：
+用 use 命令时，如果数据库不存在，则创建数据库，否则切换到指定数据库。语法格式：
 
 ```javascript
 use [database name]
 ```
 
-MongoDB中默认的数据库为test，如果你没有创建新的数据库，集合将存放在test数据库中。并且，如果新创建的数据库中没有数据，则并不会被真正创建，只有在插入数据后才会被真正创建。
+MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。并且，如果新创建的数据库中没有数据，则并不会被真正创建，只有在插入数据后才会被真正创建。
 
 **删除数据库**
 
@@ -101,13 +101,13 @@ show collections
 db.createCollection([collection name], [options])
 ```
 
-options参数以对象的形式传入，可以选用的参数如：
+options 参数以对象的形式传入，可以选用的参数如：
 
-- capped（可选）：如果为true，则创建固定集合。固定集合是指有着固定大小的集合，当达到最大值时，它会自动覆盖最早的文档。
+- capped（可选）：如果为 true，则创建固定集合。固定集合是指有着固定大小的集合，当达到最大值时，它会自动覆盖最早的文档。
 - size（可选）：为固定集合指定一个最大占用空间（单位：字节）。
 - max（可选）：为固定集合指定包含文档的最大数量。
 
-在MongoDB中，其实不需要手动创建集合。当你向不存在的集合中插入文档时，MongoDB会自动创建集合。
+在 MongoDB 中，其实不需要手动创建集合。当你向不存在的集合中插入文档时，MongoDB 会自动创建集合。
 
 **删除集合**
 
@@ -119,7 +119,7 @@ db.[collection name].drop()
 
 **查看文档**
 
-在MongoDB中，使用find方法以非结构化的方式来查看所有文档，语法格式如下：
+在 MongoDB 中，使用 find 方法以非结构化的方式来查看所有文档，语法格式如下：
 
 ```
 db.[collection name].find([query], [projection])
@@ -136,7 +136,7 @@ db.[collection name].find([query], [projection]).pretty()
 
 查看文档时，筛选条件有如下格式：
 
-| 操作       | 格式                             | 范例                                              | 对应SQL语句       |
+| 操作       | 格式                             | 范例                                              | 对应 SQL 语句     |
 | :--------- | :------------------------------- | :------------------------------------------------ | :---------------- |
 | 等于       | `{<key>:<value>`}                | `db.test.find({"key":100})`                       | `where key = 100` |
 | 小于       | `{<key>:{$lt:<value>}}`          | `db.test.find({"key":{$lt:50}})`                  | `where key < 50`  |
@@ -155,7 +155,7 @@ db.[collection name].find([query], [projection]).pretty()
 db.[collection name].insert([document])
 ```
 
-若插入的数据主键已经存在，则会抛主键重复异常，不保存当前数据。document参数可以是单个文档（json格式对象），也可以是多个文档（json格式对象数组）。
+若插入的数据主键已经存在，则会抛主键重复异常，不保存当前数据。document 参数可以是单个文档（json 格式对象），也可以是多个文档（json 格式对象数组）。
 
 特别地，向集合插入一个新文档的语法格式如下：
 
@@ -176,7 +176,7 @@ db.[collection name].insertMany(
 
 参数：
 
-- ordered：指定是否按顺序写入，默认true，按顺序写入。
+- ordered：指定是否按顺序写入，默认 true，按顺序写入。
 
 **更新文档**
 
@@ -194,11 +194,11 @@ db.[collection name].update(
 
 - query：同“查看文档”中介绍的一样的查询条件，用于筛选要更新的文档。
 - update：要更新的对象和更新操作符。
-- upsert：可选，如果不存在update的记录，是否插入新的记录。默认false，不插入。
-- multi：可选，是否按条件查询出的多条记录全部更新。 默认false，只更新找到的第一条记录。
+- upsert：可选，如果不存在 update 的记录，是否插入新的记录。默认 false，不插入。
+- multi：可选，是否按条件查询出的多条记录全部更新。 默认 false，只更新找到的第一条记录。
 - writeConcern：可选，决定一个写操作落到多少个节点上才算成功。
 
-默认情况下update会使用新文档覆盖旧文档，如果不想覆盖而是仅仅想更新其中的某些字段，那么我们就需要使用update的更新操作符：
+默认情况下 update 会使用新文档覆盖旧文档，如果不想覆盖而是仅仅想更新其中的某些字段，那么我们就需要使用 update 的更新操作符：
 
 | 操作符    | 格式                                           | 描述                                           |
 | --------- | ---------------------------------------------- | ---------------------------------------------- |
@@ -208,7 +208,7 @@ db.[collection name].update(
 | $rename   | {$rename : {old_field_name :new_field_name } } | 修改字段名称                                   |
 | $push     | { $push : {field : value } }                   | 将数值追加到数组中，若数组不存在则会进行初始化 |
 | $pushAll  | {$pushAll : {field : value_array }}            | 追加多个值到一个数组字段内                     |
-| $pull     | {$pull : {field : _value } }                   | 从数组中删除指定的元素                         |
+| $pull     | {$pull : {field : \_value } }                  | 从数组中删除指定的元素                         |
 | $addToSet | {$addToSet : {field : value } }                | 添加元素到数组中，具有排重功能                 |
 | $pop      | {$pop : {field : 1 }}                          | 删除数组的第一个或最后一个元素                 |
 
@@ -244,37 +244,37 @@ db.[collection name].deleteMany({ key : "value" })
 db.[collection name].deleteOne( { key: "value" } )
 ```
 
-建议在删除文档以前，先执行find进行查询，以防误删文档。
+建议在删除文档以前，先执行 find 进行查询，以防误删文档。
 
-## 3.MongoDB数据处理方法
+## 3.MongoDB 数据处理方法
 
-**limit方法**
+**limit 方法**
 
-limit方法可用于在MongoDB中读取指定数量的数据记录，传入limit()方法的数字参数指定了要从MongoDB中读取的记录条数。limit方法的语法格式如下：
+limit 方法可用于在 MongoDB 中读取指定数量的数据记录，传入 limit()方法的数字参数指定了要从 MongoDB 中读取的记录条数。limit 方法的语法格式如下：
 
 ```
 db.[collection name].find([query], [projection]).limit([number])
 ```
 
-**skip方法**
+**skip 方法**
 
-skip方法可用于在MongoDB中跳过指定数量的数据记录，传入skip()方法的数字参数指定了要从MongoDB中跳过的记录条数。skip方法的语法格式如下：
+skip 方法可用于在 MongoDB 中跳过指定数量的数据记录，传入 skip()方法的数字参数指定了要从 MongoDB 中跳过的记录条数。skip 方法的语法格式如下：
 
 ```javascript
 db.[collection name].find([query], [projection]).skip([number])
 ```
 
-**sort方法**
+**sort 方法**
 
-sort方法可用于在MongoDB中对查询到的数据进行排序，可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而 -1 是用于降序排列。
+sort 方法可用于在 MongoDB 中对查询到的数据进行排序，可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而 -1 是用于降序排列。
 
 ```javascript
 db.[collection name].find([query], [projection]).sort({[key]:[1 or -1]})
 ```
 
-**aggregate方法**
+**aggregate 方法**
 
-aggregate方法可用于“聚合”MongoDB中的数据，实际上就是对数据进行统计，语法格式如下：
+aggregate 方法可用于“聚合”MongoDB 中的数据，实际上就是对数据进行统计，语法格式如下：
 
 ```
 db.[collection name].aggregate([aggregate operation])
@@ -282,81 +282,84 @@ db.[collection name].aggregate([aggregate operation])
 
 常用的操作如下：
 
-| 表达式    | 描述                                                         | 实例                                                         |
-| :-------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| $sum      | 计算总和                                                     | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}]) |
-| $avg      | 计算平均值                                                   | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}]) |
-| $min      | 获取集合中所有文档对应值的最小值                             | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}]) |
-| $max      | 获取集合中所有文档对应值的最大值                             | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}]) |
-| $push     | 将值加入一个数组中，不会判断是否有重复的值                   | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}]) |
-| $addToSet | 将值加入一个数组中，会判断是否有重复的值，若相同的值在数组中已经存在了，则不加入 | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}]) |
+| 表达式    | 描述                                                                             | 实例                                                                                  |
+| :-------- | :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| $sum      | 计算总和                                                                         | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}]) |
+| $avg      | 计算平均值                                                                       | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}]) |
+| $min      | 获取集合中所有文档对应值的最小值                                                 | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}]) |
+| $max      | 获取集合中所有文档对应值的最大值                                                 | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}]) |
+| $push     | 将值加入一个数组中，不会判断是否有重复的值                                       | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])            |
+| $addToSet | 将值加入一个数组中，会判断是否有重复的值，若相同的值在数组中已经存在了，则不加入 | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])       |
 
 ## 4.Mongoose
 
 ### 安装和导入
 
-由于在网络应用中我们不能总是手动操作MongoDB，因此我们需要学习MongoDB在不同开发环境下的API，我们用yarn包管理器来安装MongoDB在Node.js下的API。
+由于在网络应用中我们不能总是手动操作 MongoDB，因此我们需要学习 MongoDB 在不同开发环境下的 API，我们用 yarn 包管理器来安装 MongoDB 在 Node.js 下的 API。
 
 ```bash
 yarn add mongoose
 ```
 
-接下来导入mongoose包并连接MongoDB数据库：
+接下来导入 mongoose 包并连接 MongoDB 数据库：
 
 ```typescript
 import mongoose from "mongoose";
 
-mongoose.connect(`mongodb://localhost/test`, {		// 假设连接本地的test数据库，也可以连接远程数据库
-  user: [用户名],				// 本地数据库可能不需要用户名和密码
-  pass: [密码]
+mongoose.connect(`mongodb://localhost/test`, {
+  // 假设连接本地的test数据库，也可以连接远程数据库
+  user: [用户名], // 本地数据库可能不需要用户名和密码
+  pass: [密码],
 });
 
-const db = mongoose.connection;						// 数据库实例
-db.on("error", (error) => {							// 连接失败
+const db = mongoose.connection; // 数据库实例
+db.on("error", (error) => {
+  // 连接失败
   console.log("Database connection error: " + error);
 });
-db.once("open", () => {								// 连接成功
+db.once("open", () => {
+  // 连接成功
   console.log("Database connected");
 });
 ```
 
 ### Schema
 
-mongoose的基本概念同MongoDB类似，但使用方法同MongoDB的CLI有所不同。在mongoose当中，Schema是一个重要概念，Schema定义了数据库集合当中文档的构成。我们来定义第一个Schema：
+mongoose 的基本概念同 MongoDB 类似，但使用方法同 MongoDB 的 CLI 有所不同。在 mongoose 当中，Schema 是一个重要概念，Schema 定义了数据库集合当中文档的构成。我们来定义第一个 Schema：
 
 ```typescript
 const blogSchema = new mongoose.Schema({
-    title:  String,
-    author: String,
-    body:   String,
-    comments: [{ body: String, date: Date }],
-    date: { type: Date, default: Date.now },
-    hidden: Boolean,
-    meta: {
-        votes: Number,
-        favs:  Number
-    }
+  title: String,
+  author: String,
+  body: String,
+  comments: [{ body: String, date: Date }],
+  date: { type: Date, default: Date.now },
+  hidden: Boolean,
+  meta: {
+    votes: Number,
+    favs: Number,
+  },
 });
 ```
 
 ### Model
 
-Model是schema生成的构造函数，model的实例就代表着可以从数据库保存和读取的document。从数据库创建和读取Document的所有操作都是通过model进行的。也可以认为，model对应着MongoDB中的一个集合（Collection），用model可以生成其中的文档。
+Model 是 schema 生成的构造函数，model 的实例就代表着可以从数据库保存和读取的 document。从数据库创建和读取 Document 的所有操作都是通过 model 进行的。也可以认为，model 对应着 MongoDB 中的一个集合（Collection），用 model 可以生成其中的文档。
 
 ```javascript
-var schema = new mongoose.Schema({ name: 'string', size: 'string' });
-var Tank = mongoose.model('Tank', schema);
+var schema = new mongoose.Schema({ name: "string", size: "string" });
+var Tank = mongoose.model("Tank", schema);
 ```
 
-第一个参数是model对应的集合（collection）名字的单数形式。Mongoose 会自动找到名称是 model 名字复数形式的 collection 。 对于上例，Tank 这个 model 就对应数据库中 tanks 这个 collection。
+第一个参数是 model 对应的集合（collection）名字的单数形式。Mongoose 会自动找到名称是 model 名字复数形式的 collection 。 对于上例，Tank 这个 model 就对应数据库中 tanks 这个 collection。
 
-有了model，我们就可以很方便的构建一个集合当中的文档。
+有了 model，我们就可以很方便的构建一个集合当中的文档。
 
 ```javascript
-Tank.create({ size: 'small' }, function (err, small) {
+Tank.create({ size: "small" }, function (err, small) {
   if (err) return handleError(err);
   // saved!
-})
+});
 ```
 
-时间有限，对于更多有关mongoose的内容不再介绍，大家可以参考官方文档http://www.mongoosejs.net/docs/index.html。
+时间有限，对于更多有关 mongoose 的内容不再介绍，大家可以参考官方文档http://www.mongoosejs.net/docs/index.html。

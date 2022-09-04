@@ -2,9 +2,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "packageNames": [
-        "node"
-      ],
+      "packageNames": ["node"],
       "enabled": false
     }
   ]

@@ -3,6 +3,7 @@ title: macOS编写C++代码
 ---
 
 ## 简介
+
 系列教程——如何在`macOS`上使用`VS Code`优雅的写`C++`代码。教你从零开始配置你自己的`C++`编程环境。
 
 本教程使用一台全新的`MacBook Pro`，带你从文件系统、程序、可执行文件入手，走进`VS Code`，对其进行配置获得属于你自己的`C++`代码编辑器。
@@ -16,28 +17,27 @@ title: macOS编写C++代码
 5. 插入介绍`VS Code`的一些便捷操作
 6. 介绍`VS Code`的调试（`debug`）功能
 
-
 在我的个人主页查看[讲稿](https://yang-xijie.github.io)
 
+## 在 Bilibili 查看视频教程
 
-## 在Bilibili查看视频教程
-点击下方的链接跳转[Bilibili视频教程](https://space.bilibili.com/24502827)。
+点击下方的链接跳转[Bilibili 视频教程](https://space.bilibili.com/24502827)。
 
 [1 前言和课程说明](https://www.bilibili.com/video/BV1UK4y1W7oM)
 
-[2 认识mac的文件系统](https://www.bilibili.com/video/BV1ty4y1m7pZ)
+[2 认识 mac 的文件系统](https://www.bilibili.com/video/BV1ty4y1m7pZ)
 
 [3 认识程序](https://www.bilibili.com/video/BV1Sv4y1Z7Hd)
 
-[4 认识终端和shell](https://www.bilibili.com/video/BV1X5411n7tG)
+[4 认识终端和 shell](https://www.bilibili.com/video/BV1X5411n7tG)
 
-[5 开启VS Code的大门（上）](https://www.bilibili.com/video/BV1g54y1s74Z)
+[5 开启 VS Code 的大门（上）](https://www.bilibili.com/video/BV1g54y1s74Z)
 
-[5 开启VS Code的大门（下）](https://www.bilibili.com/video/BV17U4y147eo)
+[5 开启 VS Code 的大门（下）](https://www.bilibili.com/video/BV17U4y147eo)
 
-[6 VS Code代码运行自动化](https://www.bilibili.com/video/BV14K411u7SN)
+[6 VS Code 代码运行自动化](https://www.bilibili.com/video/BV14K411u7SN)
 
-[7 用VS Code调试Cpp代码](https://www.bilibili.com/video/BV13y4y1m7WK)
+[7 用 VS Code 调试 Cpp 代码](https://www.bilibili.com/video/BV13y4y1m7WK)
 
 [8 课程回顾](https://www.bilibili.com/video/BV1Up4y1x7ve)
 
@@ -46,6 +46,7 @@ title: macOS编写C++代码
 注：所有视频录制及上传分辨率均为`3360x2100`，如果观看时感到视频模糊，请调整画质到`4K 超清`；由于视频比例为`16:10`，建议使用相同比例的显示器全屏播放以获得最佳观看体验。
 
 ## 附
+
 很用心做的一期教程，因为觉得很有这么做的必要！做这份教程的原因我在第一课和第八课都有提到～
 
 如果大家觉得有帮助，还请把这份教程推荐给身边的同学哦！

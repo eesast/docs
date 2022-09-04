@@ -258,8 +258,10 @@ before("Create admin user", async function () {
   });
 
 const applyAsync = (acc, val) => acc.then(val);
-const composeAsync = (...funcs) => (x) =>
-  funcs.reduce(applyAsync, Promise.resolve(x));
+const composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 
@@ -344,7 +346,7 @@ condx(yes)->serv->e
 - Object
 - 异步`find`和`save`
 
-后续文章将会对MongoDB进行详解，文档请参阅[Mongoose 官方文档](http://www.mongoosejs.net/docs/guide.html)。
+后续文章将会对 MongoDB 进行详解，文档请参阅[Mongoose 官方文档](http://www.mongoosejs.net/docs/guide.html)。
 
 MongoDB 环境配置：
 

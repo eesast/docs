@@ -6,7 +6,7 @@ title: Modern C++ 选讲
 
 ### nullptr
 
-替代NULL。C++11 引入了 `nullptr` 关键字，专门用来区分空指针、`0`。而 `nullptr` 的类型为 `nullptr_t`，能够隐式的转换为任何指针或成员指针的类型。
+替代 NULL。C++11 引入了 `nullptr` 关键字，专门用来区分空指针、`0`。而 `nullptr` 的类型为 `nullptr_t`，能够隐式的转换为任何指针或成员指针的类型。
 
 ```C++
 foo(0);          // 调用 foo(int)
@@ -16,7 +16,7 @@ foo(nullptr);    // 调用 foo(char*)
 
 ### constexpr
 
-显式声明常量表达式。const修饰的变量**只在一定情况下**是常量表达式，这有时可能带来困扰。C++11 提供了 `constexpr` 让用户显式的声明函数或对象构造函数**在编译期**会成为常量表达式。 从 C++14 开始，`constexpr` 函数可以在内部使用局部变量、循环和分支等简单语句。
+显式声明常量表达式。const 修饰的变量**只在一定情况下**是常量表达式，这有时可能带来困扰。C++11 提供了 `constexpr` 让用户显式的声明函数或对象构造函数**在编译期**会成为常量表达式。 从 C++14 开始，`constexpr` 函数可以在内部使用局部变量、循环和分支等简单语句。
 
 ```C++
 const int len_1 = 5; // 常量表达式
@@ -47,9 +47,9 @@ if (const std::vector<int>::iterator itr = std::find(vec.begin(), vec.end(), 3);
 }
 ```
 
-### 列表初始化⭐
+### 列表初始化 ⭐
 
-C++11 引入了列表初始化，提供了统一的初始化方式。从此，我们可以使用brace-init-list（花括号）方便地进行初始化。
+C++11 引入了列表初始化，提供了统一的初始化方式。从此，我们可以使用 brace-init-list（花括号）方便地进行初始化。
 
 ```C++
 #include <vector>
@@ -68,7 +68,7 @@ int main(){
 }
 ```
 
-此外，C++11引入了`std::initializer_list`，以支持对类的对象进行列表初始化。其允许构造函数或其他函数像参数一样使用初始化列表，还能将其作为普通函数的形参。在某些情况下，brace-init-list可以被自动推导为std::initializer_list。
+此外，C++11 引入了`std::initializer_list`，以支持对类的对象进行列表初始化。其允许构造函数或其他函数像参数一样使用初始化列表，还能将其作为普通函数的形参。在某些情况下，brace-init-list 可以被自动推导为 std::initializer_list。
 
 ```c++
 #include <vector>
@@ -101,7 +101,7 @@ int main(){
 
 ### 结构化绑定
 
-C++17给出的结构化绑定提供一种简单的方法直接从元组中拿到并定义元组中的元素。此外，还可以绑定数组、结构体。
+C++17 给出的结构化绑定提供一种简单的方法直接从元组中拿到并定义元组中的元素。此外，还可以绑定数组、结构体。
 
 ```C++
 #include <tuple>
@@ -125,7 +125,7 @@ int main(){
 }
 ```
 
-## 类型推导⭐
+## 类型推导 ⭐
 
 ### auto
 
@@ -202,7 +202,7 @@ auto add3(T x, U y){
 
 ### decltype(auto)
 
-C++14引入的`decltype(auto)` 主要用于对转发函数或封装的返回类型进行推导，它使我们无需显式指定`decltype` 的参数表达式。
+C++14 引入的`decltype(auto)` 主要用于对转发函数或封装的返回类型进行推导，它使我们无需显式指定`decltype` 的参数表达式。
 
 ```C++
 std::string  lookup1();
@@ -226,7 +226,7 @@ decltype(auto) look_up_a_string_2() {
 
 ## 控制流
 
-### 基于范围的for循环⭐
+### 基于范围的 for 循环 ⭐
 
 C++11 引入了基于范围的循环写法。
 
@@ -323,7 +323,7 @@ struct SubClass3: Base {
 
 ### 显式禁用默认函数
 
-C++11允许显式的声明采用或拒绝编译器默认生成的函数。
+C++11 允许显式的声明采用或拒绝编译器默认生成的函数。
 
 ```C++
 class Magic {
@@ -355,7 +355,7 @@ int main(){
 }
 ```
 
-## Lambda 表达式⭐
+## Lambda 表达式 ⭐
 
 Lambda 表达式是现代 C++ 中最重要的特性之一，而 Lambda 表达式，实际上就是提供了一个类似匿名函数的特性， 而匿名函数则是在需要一个函数，但是又不想费力去命名一个函数的情况下去使用的。
 
@@ -421,7 +421,7 @@ auto copy_value = [&] {
 
 #### 表达式捕获
 
-上面提到的值捕获、引用捕获都是已经在外层作用域声明的变量，因此这些捕获方式捕获的均为左值，而不能捕获右值。C++14允许捕获的成员用任意的表达式进行初始化，这就允许了右值的捕获， 被声明的捕获变量类型会根据表达式进行判断，判断方式与使用 `auto` 本质上是相同的。
+上面提到的值捕获、引用捕获都是已经在外层作用域声明的变量，因此这些捕获方式捕获的均为左值，而不能捕获右值。C++14 允许捕获的成员用任意的表达式进行初始化，这就允许了右值的捕获， 被声明的捕获变量类型会根据表达式进行判断，判断方式与使用 `auto` 本质上是相同的。
 
 ```C++
 #include <memory>  // std::make_unique
@@ -436,7 +436,7 @@ void lambda_expression_capture() {
 }
 ```
 
-### 泛型Lambda
+### 泛型 Lambda
 
 从 C++14 开始， Lambda 函数的形式参数可以使用 `auto` 关键字来自动推导参数类型。
 
@@ -507,9 +507,9 @@ auto bindFoo = std::bind(foo, std::placeholders::_1, 1, 2);
 bindFoo(1);
 ```
 
-C++14之后，lambda表达式可以完全替代`std::bind`，详见https://stackoverflow.com/questions/17363003/why-use-stdbind-over-lambdas-in-c14，此处不再多叙。
+C++14 之后，lambda 表达式可以完全替代`std::bind`，详见https://stackoverflow.com/questions/17363003/why-use-stdbind-over-lambdas-in-c14，此处不再多叙。
 
-## 右值引用⭐
+## 右值引用 ⭐
 
 右值引用是 C++11 引入的与 Lambda 表达式齐名的重要特性之一。它的引入解决了 C++ 中大量的历史遗留问题， 消除了诸如 `std::vector`、`std::string` 之类的额外开销， 也才使得函数对象容器 `std::function` 成为了可能。
 
@@ -527,7 +527,7 @@ C++14之后，lambda表达式可以完全替代`std::bind`，详见https://stack
 
 ### 右值引用和左值引用
 
-顾名思义，右值引用可以引用一切右值（包括纯右值和亡值）：`T &&`，其中`T`为非左值引用类型（若T为左值引用类型，则结果仍是左值引用）。 **右值引用的声明让这个临时对象的生命周期得以延长，只要右值引用生命期还未结束，那么这个临时对象的生命期也不会结束。**
+顾名思义，右值引用可以引用一切右值（包括纯右值和亡值）：`T &&`，其中`T`为非左值引用类型（若 T 为左值引用类型，则结果仍是左值引用）。 **右值引用的声明让这个临时对象的生命周期得以延长，只要右值引用生命期还未结束，那么这个临时对象的生命期也不会结束。**
 
 C++11 提供了 `std::move` 这个方法将左值参数无条件的转换为右值， 有了它我们就能够方便的获得一个右值引用（匿名右值引用）。
 
@@ -563,26 +563,26 @@ int main(){
 
 ### 移动语义
 
-右值引用的出现恰好解决了传统C++没有区分『移动』和『拷贝』的概念的问题。
+右值引用的出现恰好解决了传统 C++没有区分『移动』和『拷贝』的概念的问题。
 
 ```C++
 #include <iostream>
 class A {
 public:
     int *pointer;
-    A():pointer(new int(1)) { 
-        std::cout << "构造" << pointer << std::endl; 
+    A():pointer(new int(1)) {
+        std::cout << "构造" << pointer << std::endl;
     }
-    A(A& a):pointer(new int(*a.pointer)) { 
-        std::cout << "拷贝" << pointer << std::endl; 
+    A(A& a):pointer(new int(*a.pointer)) {
+        std::cout << "拷贝" << pointer << std::endl;
     } // 无意义的对象拷贝
-    A(A&& a):pointer(a.pointer) { 
+    A(A&& a):pointer(a.pointer) {
         a.pointer = nullptr;
-        std::cout << "移动" << pointer << std::endl; 
+        std::cout << "移动" << pointer << std::endl;
     }
-    ~A(){ 
-        std::cout << "析构" << pointer << std::endl; 
-        delete pointer; 
+    ~A(){
+        std::cout << "析构" << pointer << std::endl;
+        delete pointer;
     }
 };
 A return_rvalue(bool test) {
@@ -677,10 +677,10 @@ int main(){
 }
 ```
 
- `std::forward` 不会造成任何多余的拷贝，同时**完美转发**函数的实参给内部调用的其他函数：
+`std::forward` 不会造成任何多余的拷贝，同时**完美转发**函数的实参给内部调用的其他函数：
 
-当实参是右值（int、或者int 的引用），T被推导为 int，T&& 是 int&&；
-当实参是左值（int、或者int 的引用），T被推导为 int&，T&& 是 int&。
+当实参是右值（int、或者 int 的引用），T 被推导为 int，T&& 是 int&&；
+当实参是左值（int、或者 int 的引用），T 被推导为 int&，T&& 是 int&。
 
 `std::forward` 和 `std::move` 一样，只是类型转换，`std::move` 单纯的将左值转化为右值， `std::forward` 也只是单纯的将参数做了一个类型的转换，从现象上来看， `std::forward<T>(v)` 和 `static_cast<T&&>(v)` 是完全一样的。
 
@@ -703,14 +703,14 @@ std::unique_ptr<int> pointer = std::make_unique<int>(10); // make_unique 从 C++
 std::unique_ptr<int> pointer2 = pointer; // 非法
 ```
 
->`make_unique` 并不复杂，C++11 没有提供 `std::make_unique`，可以自行实现：
+> `make_unique` 并不复杂，C++11 没有提供 `std::make_unique`，可以自行实现：
 >
->```C++
->template<typename T, typename ...Args>
->std::unique_ptr<T> make_unique( Args&& ...args ) {
+> ```C++
+> template<typename T, typename ...Args>
+> std::unique_ptr<T> make_unique( Args&& ...args ) {
 >  return std::unique_ptr<T>( new T( std::forward<Args>(args)... ) );
->}
->```
+> }
+> ```
 
 既然是独占，换句话说就是不可复制。但是，我们可以利用 `std::move` 将其转移给其他的 `unique_ptr`。
 
@@ -830,7 +830,7 @@ int main() {
 
 解决这个问题的办法就是使用弱引用指针 `std::weak_ptr`，`std::weak_ptr`是一种弱引用（相比较而言 `std::shared_ptr` 就是一种强引用）。弱引用不会引起引用计数增加。
 
-对于上面的代码，将A或B中的任意一个`std::shared_ptr` 改为 `std::weak_ptr`即可解决问题。
+对于上面的代码，将 A 或 B 中的任意一个`std::shared_ptr` 改为 `std::weak_ptr`即可解决问题。
 
 ```C++
 struct A {
@@ -936,7 +936,7 @@ void critical_section(int change_v) {
 }
 ```
 
-### 期值future
+### 期值 future
 
 如果我们的主线程 A 希望新开辟一个线程 B 去执行某个我们预期的任务，并返回一个结果。 而这时候，线程 A 可能正在忙其他的事情，无暇顾及 B 的结果， 所以我们会很自然的希望能够在某个特定的时间获得线程 B 的结果。
 
@@ -944,7 +944,7 @@ void critical_section(int change_v) {
 
 而 C++11 提供的 `std::future` 简化了这个流程，可以用来获取异步任务的结果。 自然地，我们很容易能够想象到把它作为一种简单的线程同步手段，即屏障（barrier）。
 
-标准库中的`std::async`可在其中调用的函数执行完成前就返回其`std::future`对象，对该对象使用get()即可阻塞程序到函数执行完成时取得返回值：
+标准库中的`std::async`可在其中调用的函数执行完成前就返回其`std::future`对象，对该对象使用 get()即可阻塞程序到函数执行完成时取得返回值：
 
 ```C++
 #include <iostream>
@@ -1137,7 +1137,7 @@ int main() {
 
 ## Reference
 
-[欧长坤 Modern C++ Tutorial](https://github.com/changkun/modern-cpp-tutorial)（内含很多错误0.0）（如果欲深入学习建议另寻他道）
+[欧长坤 Modern C++ Tutorial](https://github.com/changkun/modern-cpp-tutorial)（内含很多错误 0.0）（如果欲深入学习建议另寻他道）
 
 ## 鸣谢
 
