@@ -20,15 +20,15 @@ module.exports = {
         "languages/C&C++/multi-file_programming",
         "languages/C&C++/c_cpp_windows",
         "languages/C&C++/macos_cpp",
-        "languages/C&C++/OOP"
+        "languages/C&C++/OOP",
       ],
     },
     {
       "C#": [
         "languages/CSharp/CSharp_1_basic",
-        "languages/CSharp/CSharp_2_multithread", 
-        "languages/CSharp/Winform", 
-        "languages/CSharp/WPF"
+        "languages/CSharp/CSharp_2_multithread",
+        "languages/CSharp/Winform",
+        "languages/CSharp/WPF",
       ],
     },
     "languages/HTML&CSS",
@@ -51,25 +51,19 @@ module.exports = {
     "tools/linux&shell",
     "tools/document",
     "tools/tdd",
-    "tools/process_management"
+    "tools/process_management",
   ],
   game: [
     "game/README",
     "game/unity",
     {
-      通信: [
-        "game/communication/Protobuf",
-        "game/communication/gRPC"
-      ]
-    }
+      通信: ["game/communication/Protobuf", "game/communication/gRPC"],
+    },
   ],
   web: [
     "web/README",
     {
-      前端: [
-        "web/frontend/react_practical",
-        "web/frontend/react_detailed"
-      ],
+      前端: ["web/frontend/react_practical", "web/frontend/react_detailed"],
     },
     {
       后端: [
@@ -77,14 +71,11 @@ module.exports = {
         "web/backend/express",
         "web/backend/MongoDB",
         "web/backend/graphql",
-        "web/backend/OSS_CDN"
+        "web/backend/OSS_CDN",
       ],
     },
     {
-      部署: [
-        "web/deployment/CI&CD",
-        "web/deployment/nginx"
-      ],
+      部署: ["web/deployment/CI&CD", "web/deployment/nginx"],
     },
   ],
   "machine-learning": ["machine_learning/README"],

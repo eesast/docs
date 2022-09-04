@@ -9,7 +9,7 @@ slug: ./
 
 - 前端
   - [React - Getting Started](frontend/react_practical.mdx)
-  - [React教程](frontend/react_detailed.md)
+  - [React 教程](frontend/react_detailed.md)
 - 后端
   - [后端技术栈入门](backend/backend.mdx)
   - [Express](backend/express.mdx)

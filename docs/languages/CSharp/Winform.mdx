@@ -6,7 +6,7 @@ title: Winform
 
 - Program.cs：整个项目的入口（main），控制逻辑
 - Form1：带设计器的窗口
-  - Form1.cs源码：手动设计部分，调用Form1.designer.cs中的`InitializeComponent()` 方法
+  - Form1.cs 源码：手动设计部分，调用 Form1.designer.cs 中的`InitializeComponent()` 方法
   - Form1.designer.cs：界面设计器自动生成部分，一般不要动
 - Form2 ...
 
@@ -20,9 +20,10 @@ title: Winform
   - BackColor、Height、Width、Location
   - 其余参考自设计器
 - 添加元素
+
   - this.Controls.Add()
-  
-    可以由设计器自动生成在.designer.cs文件中，也可以手动在窗体类的构造函数.cs中添加
+
+    可以由设计器自动生成在.designer.cs 文件中，也可以手动在窗体类的构造函数.cs 中添加
 
 ## 控件
 
@@ -33,7 +34,6 @@ title: Winform
   - CheckBox
   - ListBox
   - ComoboBox
-  
 - 添加控件
 
   ```c#
@@ -52,7 +52,7 @@ title: Winform
   - 可重写 `override void OnLayout (LayoutEventArgs levent)`
   - 指定控件的`dock`或`anchor`属性
 
-  - 用panel进行多层次的布局
+  - 用 panel 进行多层次的布局
 
 - 布局器布局：用布局器自动布局，不讲
 
@@ -64,7 +64,7 @@ title: Winform
 
 ## 绘图
 
-- 写在Form_Paint事件中，在窗体需要重绘时被调用，会一直存在
+- 写在 Form_Paint 事件中，在窗体需要重绘时被调用，会一直存在
 
   ```c#
   Graphics graphics = this.CreateGraphics();
@@ -78,7 +78,7 @@ title: Winform
 
 - 绘图图层在当前控件的最底层！
 
-## Winform应用场景太少啦，大家玩玩就好，无作业
+## Winform 应用场景太少啦，大家玩玩就好，无作业
 
 ---
 

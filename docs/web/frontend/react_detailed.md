@@ -10,18 +10,18 @@ Please visit [`React's official docs site`](https://reactjs.org/docs/getting-sta
 
 :::
 
-React是用于构建用户界面的JavaScript库，起源于Facebook的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。
+React 是用于构建用户界面的 JavaScript 库，起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。
 
 框架特点：
 
-- 声明式设计：React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态设计简洁的视图，当数据变动时 React能高效更新并渲染合适的组件。
+- 声明式设计：React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态设计简洁的视图，当数据变动时 React 能高效更新并渲染合适的组件。
 - 组件化: 构建管理自身状态的封装组件，然后对其组合以构成复杂的 UI。、
-- 高效：React通过对DOM的模拟，最大限度地减少与DOM的交互。
-- 灵活：无论你现在使用什么技术栈，在无需重写现有代码的前提下，通过引入React来开发新功能。
+- 高效：React 通过对 DOM 的模拟，最大限度地减少与 DOM 的交互。
+- 灵活：无论你现在使用什么技术栈，在无需重写现有代码的前提下，通过引入 React 来开发新功能。
 
 ## 使用 create-react-app 初始化项目
 
-**创建React应用**
+**创建 React 应用**
 
 npm：
 
@@ -29,7 +29,7 @@ npm：
 npx create-react-app react-tutorial --typescript
 ```
 
-**进入create-react-app创建的文件夹并安装typescript**
+**进入 create-react-app 创建的文件夹并安装 typescript**
 
 npm：
 
@@ -63,9 +63,9 @@ tsconfig.json
 yarn.lock
 ```
 
-我们的结构代码主要放在src文件夹内。
+我们的结构代码主要放在 src 文件夹内。
 
-**启动React**
+**启动 React**
 
 npm：
 
@@ -81,7 +81,7 @@ yarn start
 
 在浏览器打开`localhost:3000`查看应用
 
-## JSX简介
+## JSX 简介
 
 考虑如下变量声明：
 
@@ -94,13 +94,10 @@ const element = <h1>Hello, world!</h1>;
 ### 在 JSX 中嵌入表达式
 
 ```jsx
-const name = 'Josh Perez';
+const name = "Josh Perez";
 const element = <h1>Hello, {name}</h1>;
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById("root"));
 ```
 
 在 JSX 语法中，你可以在大括号内放置任何有效的 JavaScript 表达式。
@@ -120,7 +117,7 @@ function getGreeting(user) {
 }
 ```
 
-### JSX特定属性
+### JSX 特定属性
 
 你可以通过使用引号，来将属性值指定为字符串字面量：
 
@@ -140,25 +137,21 @@ const element = <img src={user.avatarUrl}></img>;
 >
 > 例如，JSX 里的 `class` 变成了 `className`，而 `tabindex` 则变为 `tabIndex`。
 
-### JSX表示对象
+### JSX 表示对象
 
 Babel 会把 JSX 转译成一个名为 `React.createElement()` 函数调用。
 
 以下两种示例代码完全等效：
 
 ```jsx
-const element = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
+const element = <h1 className="greeting">Hello, world!</h1>;
 ```
 
 ```jsx
 const element = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello, world!'
+  "h1",
+  { className: "greeting" },
+  "Hello, world!"
 );
 ```
 
@@ -166,11 +159,11 @@ const element = React.createElement(
 
 ```jsx
 const element = {
-  type: 'h1',
+  type: "h1",
   props: {
-    className: 'greeting',
-    children: 'Hello, world!'
-  }
+    className: "greeting",
+    children: "Hello, world!",
+  },
 };
 ```
 
@@ -182,7 +175,7 @@ const element = {
 
 与浏览器的 DOM 元素不同，React 元素是创建开销极小的普通对象。React DOM 会负责更新 DOM 来与 React 元素保持一致。
 
-### 将一个元素渲染为DOM
+### 将一个元素渲染为 DOM
 
 假设你的 HTML 文件某处有一个 `<div>`：
 
@@ -198,7 +191,7 @@ const element = {
 
 ```jsx
 const element = <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(element, document.getElementById("root"));
 ```
 
 页面上会展示出 “Hello, world”。
@@ -219,13 +212,13 @@ function tick() {
       <h2>It is {new Date().toLocaleTimeString()}.</h2>
     </div>
   );
-  ReactDOM.render(element, document.getElementById('root'));
+  ReactDOM.render(element, document.getElementById("root"));
 }
 
 setInterval(tick, 1000);
 ```
 
-这个例子会在 `setInterval()`回调函数，每秒都调用 `ReactDOM.render()`。也就是说，它每秒都渲染一个新的React元素，并将其传入`ReactDOM.render()`中。
+这个例子会在 `setInterval()`回调函数，每秒都调用 `ReactDOM.render()`。也就是说，它每秒都渲染一个新的 React 元素，并将其传入`ReactDOM.render()`中。
 
 ### React 只更新它需要更新的部分
 
@@ -285,10 +278,7 @@ function Welcome(props) {
 }
 
 const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById("root"));
 ```
 
 > **注意：** 组件名称必须以大写字母开头。
@@ -316,10 +306,7 @@ function App() {
   );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 通常来说，每个新的 React 应用程序的顶层组件都是 `App` 组件。但是，如果你将 React 集成到现有的应用程序中，你可能需要使用像 `Button` 这样的小组件，并自下而上地将这类组件逐步应用到视图层的每一处。
@@ -335,20 +322,15 @@ function Comment(props) {
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <img className="Avatar"
+        <img
+          className="Avatar"
           src={props.author.avatarUrl}
           alt={props.author.name}
         />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
+        <div className="UserInfo-name">{props.author.name}</div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
@@ -363,10 +345,7 @@ function Comment(props) {
 ```jsx
 function Avatar(props) {
   return (
-    <img className="Avatar"
-      src={props.user.avatarUrl}
-      alt={props.user.name}
-    />
+    <img className="Avatar" src={props.user.avatarUrl} alt={props.user.name} />
   );
 }
 ```
@@ -383,16 +362,10 @@ function Comment(props) {
     <div className="Comment">
       <div className="UserInfo">
         <Avatar user={props.author} />
-        <div className="UserInfo-name">
-          {props.author.name}
-        </div>
+        <div className="UserInfo-name">{props.author.name}</div>
       </div>
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
@@ -405,9 +378,7 @@ function UserInfo(props) {
   return (
     <div className="UserInfo">
       <Avatar user={props.user} />
-      <div className="UserInfo-name">
-        {props.user.name}
-      </div>
+      <div className="UserInfo-name">{props.user.name}</div>
     </div>
   );
 }
@@ -420,18 +391,14 @@ function Comment(props) {
   return (
     <div className="Comment">
       <UserInfo user={props.author} />
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
 ```
 
-### Props的只读性
+### Props 的只读性
 
 组件无论是使用函数声明还是通过 class 声明，都决不能修改自身的 props。
 
@@ -446,10 +413,7 @@ function Comment(props) {
 理想情况下，我们希望只编写一次代码，便可以让 `Clock` 组件自我更新：
 
 ```jsx
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
 我们需要在 `Clock` 组件中添加 “state” 来实现这个功能。
@@ -508,7 +472,7 @@ class Clock extends React.Component {
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   render() {
@@ -536,10 +500,7 @@ Class 组件应该始终使用 `props` 参数来调用父类的构造函数。
 3. 移除 `<Clock />` 元素中的 `date` 属性：
 
 ```jsx
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
 我们之后会将计时器相关的代码添加到组件中。
@@ -550,7 +511,7 @@ ReactDOM.render(
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   render() {
@@ -563,10 +524,7 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
 接下来，我们会设置 `Clock` 的计时器并每秒更新它。
@@ -585,11 +543,11 @@ ReactDOM.render(
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
-  componentDidMount() {  }
-  componentWillUnmount() {  }
+  componentDidMount() {}
+  componentWillUnmount() {}
   render() {
     return (
       <div>
@@ -608,9 +566,9 @@ class Clock extends React.Component {
 ```jsx
   componentDidMount() {
     this.timerID = setInterval(
-    	() => this.tick(),      
-    	1000    
-    );  
+    	() => this.tick(),
+    	1000
+    );
   }
 ```
 
@@ -622,7 +580,7 @@ class Clock extends React.Component {
 
 ```jsx
   componentWillUnmount() {
-    clearInterval(this.timerID);  
+    clearInterval(this.timerID);
   }
 ```
 
@@ -634,21 +592,20 @@ class Clock extends React.Component {
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
 
-  tick() {    this.setState({      date: new Date()    });  }
+  tick() {
+    this.setState({ date: new Date() });
+  }
   render() {
     return (
       <div>
@@ -659,35 +616,32 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
-### 正确地使用State
+### 正确地使用 State
 
 关于 `setState()` 你应该了解三件事：
 
-#### 不要直接修改State
+#### 不要直接修改 State
 
 例如，此代码不会重新渲染组件：
 
 ```jsx
 // Wrong
-this.state.comment = 'Hello';
+this.state.comment = "Hello";
 ```
 
 而是应该使用 `setState()`:
 
 ```jsx
 // Correct
-this.setState({comment: 'Hello'});
+this.setState({ comment: "Hello" });
 ```
 
 构造函数是唯一可以给 `this.state` 赋值的地方。
 
-#### State的更新可能是异步的
+#### State 的更新可能是异步的
 
 出于性能考虑，React 可能会把多个 `setState()` 调用合并成一个调用。
 
@@ -707,11 +661,11 @@ this.setState({
 ```jsx
 // Correct
 this.setState((state, props) => ({
-  counter: state.counter + props.increment
+  counter: state.counter + props.increment,
 }));
 ```
 
-#### State的更新会被合并
+#### State 的更新会被合并
 
 当你调用 `setState()` 的时候，React 会把你提供的对象合并到当前的 state。
 
@@ -721,8 +675,8 @@ this.setState((state, props) => ({
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],      
-      comments: []    
+      posts: [],
+      comments: []
     };
   }
 ```
@@ -787,17 +741,13 @@ React 元素的事件处理和 DOM 元素的很相似，但是有一点语法上
 例如，传统的 HTML：
 
 ```html
-<button onclick="activateLasers()">
-	Activate Lasers
-</button>
+<button onclick="activateLasers()">Activate Lasers</button>
 ```
 
 在 React 中略微不同：
 
 ```jsx
-<button onClick={activateLasers}>  
-	Activate Lasers
-</button>
+<button onClick={activateLasers}>Activate Lasers</button>
 ```
 
 在 React 中另一个不同点是你不能通过返回 `false` 的方式阻止默认行为。你必须显式的使用 `preventDefault` 。例如，传统的 HTML 中阻止链接默认打开一个新页面，你可以这样写：
@@ -812,13 +762,13 @@ React 元素的事件处理和 DOM 元素的很相似，但是有一点语法上
 
 ```jsx
 function ActionLink() {
-  function handleClick(e) {    
-      e.preventDefault();    
-      console.log('The link was clicked.');  
+  function handleClick(e) {
+    e.preventDefault();
+    console.log("The link was clicked.");
   }
   return (
-    <a href="#" onClick={handleClick}>      
-    	Click me
+    <a href="#" onClick={handleClick}>
+      Click me
     </a>
   );
 }
@@ -826,36 +776,33 @@ function ActionLink() {
 
 使用 React 时，你一般不需要使用 `addEventListener` 为已创建的 DOM 元素添加监听器。事实上，你只需要在该元素初始渲染的时候添加监听器即可。
 
-当你使用 ES6 class语法定义一个组件的时候，通常的做法是将事件处理函数声明为 class 中的方法。例如，下面的 `Toggle` 组件会渲染一个让用户切换开关状态的按钮：
+当你使用 ES6 class 语法定义一个组件的时候，通常的做法是将事件处理函数声明为 class 中的方法。例如，下面的 `Toggle` 组件会渲染一个让用户切换开关状态的按钮：
 
 ```jsx
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = { isToggleOn: true };
 
-    // 为了在回调中使用 `this`，这个绑定是必不可少的    
-    this.handleClick = this.handleClick.bind(this);  
+    // 为了在回调中使用 `this`，这个绑定是必不可少的
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {    
-      this.setState(state => ({      
-          isToggleOn: !state.isToggleOn    
-      }));  
+  handleClick() {
+    this.setState((state) => ({
+      isToggleOn: !state.isToggleOn,
+    }));
   }
   render() {
     return (
-      <button onClick={this.handleClick}>        
-      	{this.state.isToggleOn ? 'ON' : 'OFF'}
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? "ON" : "OFF"}
       </button>
     );
   }
 }
 
-ReactDOM.render(
-  <Toggle />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Toggle />, document.getElementById("root"));
 ```
 
 你必须谨慎对待 JSX 回调函数中的 `this`，在 JavaScript 中，class 的方法默认不会[绑定](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind) `this`。如果你忘记绑定 `this.handleClick` 并把它传入了 `onClick`，当你调用这个函数的时候 `this` 的值为 `undefined`。
@@ -866,17 +813,13 @@ ReactDOM.render(
 
 ```jsx
 class LoggingButton extends React.Component {
-  // 此语法确保 `handleClick` 内的 `this` 已被绑定。  
-  // 注意: 这是 *实验性* 语法。用箭头函数定义。  
-  handleClick = () => {    
-  	console.log('this is:', this);
-  }
+  // 此语法确保 `handleClick` 内的 `this` 已被绑定。
+  // 注意: 这是 *实验性* 语法。用箭头函数定义。
+  handleClick = () => {
+    console.log("this is:", this);
+  };
   render() {
-    return (
-      <button onClick={this.handleClick}>
-        Click me
-      </button>
-    );
+    return <button onClick={this.handleClick}>Click me</button>;
   }
 }
 ```
@@ -886,16 +829,12 @@ class LoggingButton extends React.Component {
 ```jsx
 class LoggingButton extends React.Component {
   handleClick() {
-    console.log('this is:', this);
+    console.log("this is:", this);
   }
 
   render() {
     // 此语法确保 `handleClick` 内的 `this` 已被绑定。
-    return (
-      <button onClick={() => this.handleClick()}>
-        Click me
-      </button>
-    );
+    return <button onClick={() => this.handleClick()}>Click me</button>;
   }
 }
 ```
@@ -949,7 +888,7 @@ function Greeting(props) {
 ReactDOM.render(
   // Try changing to isLoggedIn={true}:
   <Greeting isLoggedIn={false} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -961,19 +900,11 @@ ReactDOM.render(
 
 ```jsx
 function LoginButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Login
-    </button>
-  );
+  return <button onClick={props.onClick}>Login</button>;
 }
 
 function LogoutButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Logout
-    </button>
-  );
+  return <button onClick={props.onClick}>Logout</button>;
 }
 ```
 
@@ -987,32 +918,34 @@ class LoginControl extends React.Component {
     super(props);
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = {isLoggedIn: false};
+    this.state = { isLoggedIn: false };
   }
 
   handleLoginClick() {
-    this.setState({isLoggedIn: true});
+    this.setState({ isLoggedIn: true });
   }
 
   handleLogoutClick() {
-    this.setState({isLoggedIn: false});
+    this.setState({ isLoggedIn: false });
   }
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
     let button;
-    if (isLoggedIn) {      button = <LogoutButton onClick={this.handleLogoutClick} />;    } else {      button = <LoginButton onClick={this.handleLoginClick} />;    }
+    if (isLoggedIn) {
+      button = <LogoutButton onClick={this.handleLogoutClick} />;
+    } else {
+      button = <LoginButton onClick={this.handleLoginClick} />;
+    }
     return (
       <div>
-        <Greeting isLoggedIn={isLoggedIn} />        {button}      </div>
+        <Greeting isLoggedIn={isLoggedIn} /> {button}{" "}
+      </div>
     );
   }
 }
 
-ReactDOM.render(
-  <LoginControl />,
-  document.getElementById('root')
-);
+ReactDOM.render(<LoginControl />, document.getElementById("root"));
 ```
 
 ### 与运算符&&
@@ -1023,19 +956,17 @@ function Mailbox(props) {
   return (
     <div>
       <h1>Hello!</h1>
-      {unreadMessages.length > 0 &&
-        <h2>
-          You have {unreadMessages.length} unread messages.
-        </h2>
-      }
+      {unreadMessages.length > 0 && (
+        <h2>You have {unreadMessages.length} unread messages.</h2>
+      )}
     </div>
   );
 }
 
-const messages = ['React', 'Re: React', 'Re:Re: React'];
+const messages = ["React", "Re: React", "Re:Re: React"];
 ReactDOM.render(
   <Mailbox unreadMessages={messages} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -1088,15 +1019,13 @@ const doubled = numbers.map((number) => number * 2);console.log(doubled);
 
 ```jsx
 const numbers = [1, 2, 3, 4, 5];
-const listItems = numbers.map((number) =>  <li>{number}</li>);
+const listItems = numbers.map((number) => <li>{number}</li>);
 ```
 
 我们把整个 `listItems` 插入到 `<ul>` 元素中，然后渲染进 DOM：
 
 ```jsx
-ReactDOM.render(
-  <ul>{listItems}</ul>,  document.getElementById('root')
-);
+ReactDOM.render(<ul>{listItems}</ul>, document.getElementById("root"));
 ```
 
 ### 基础列表组件
@@ -1108,18 +1037,14 @@ ReactDOM.render(
 ```jsx
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
-    <li>{number}</li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
+  const listItems = numbers.map((number) => <li>{number}</li>);
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -1130,20 +1055,16 @@ ReactDOM.render(
 ```jsx
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
-    <li key={number.toString()}>
-      {number}
-    </li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
+  const listItems = numbers.map((number) => (
+    <li key={number.toString()}>{number}</li>
+  ));
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -1154,27 +1075,21 @@ key 帮助 React 识别哪些元素改变了，比如被添加或删除。因此
 一个元素的 key 最好是这个元素在列表中拥有的一个独一无二的字符串。通常，我们使用数据中的 id 来作为元素的 key：
 
 ```jsx
-const todoItems = todos.map((todo) =>
-  <li key={todo.id}>
-      {todo.text}
-  </li>
-);
+const todoItems = todos.map((todo) => <li key={todo.id}>{todo.text}</li>);
 ```
 
 当元素没有确定 id 的时候，万不得已你可以使用元素索引 index 作为 key：
 
 ```jsx
-const todoItems = todos.map((todo, index) =>
+const todoItems = todos.map((todo, index) => (
   // Only do this if items have no stable IDs
-  <li key={index}>
-    {todo.text}
-  </li>
-);
+  <li key={index}>{todo.text}</li>
+));
 ```
 
 如果列表项目的顺序可能会变化，我们不建议使用索引来用作 key 值，因为这样做会导致性能变差，还可能引起组件状态的问题。如果你选择不指定显式的 key 值，那么 React 将默认使用索引用作为列表项目的 key 值。
 
-可以参考这篇文章了解[为什么key是必须的](https://react.docschina.org/docs/reconciliation.html#recursing-on-children)
+可以参考这篇文章了解[为什么 key 是必须的](https://react.docschina.org/docs/reconciliation.html#recursing-on-children)
 
 ### 用 key 提取组件
 
@@ -1189,29 +1104,23 @@ function ListItem(props) {
   const value = props.value;
   return (
     // 错误！你不需要在这里指定 key：
-    <li key={value.toString()}>
-      {value}
-    </li>
+    <li key={value.toString()}>{value}</li>
   );
 }
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
+  const listItems = numbers.map((number) => (
     // 错误！元素的 key 应该在这里指定：
     <ListItem value={number} />
-  );
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
+  ));
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -1225,22 +1134,17 @@ function ListItem(props) {
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
+  const listItems = numbers.map((number) => (
     // 正确！key 应该在数组的上下文中被指定
-    <ListItem key={number.toString()}              value={number} />
-
-  );
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
+    <ListItem key={number.toString()} value={number} />
+  ));
+  return <ul>{listItems}</ul>;
 }
 
 const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
@@ -1259,10 +1163,9 @@ function NumberList(props) {
   const numbers = props.numbers;
   return (
     <ul>
-      {numbers.map((number) =>
-        <ListItem key={number.toString()}
-                  value={number} />
-      )}
+      {numbers.map((number) => (
+        <ListItem key={number.toString()} value={number} />
+      ))}
     </ul>
   );
 }
@@ -1270,14 +1173,14 @@ function NumberList(props) {
 
 ## Hook
 
-### Hook简介
+### Hook 简介
 
-*Hook* 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+_Hook_ 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 
 ### State Hook
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Example() {
   // 声明一个新的叫做 “count” 的 state 变量
@@ -1286,22 +1189,20 @@ function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
 ```
 
-**等价的class示例**
+**等价的 class 示例**
 
 ```jsx
 class Example extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      count: 0,
     };
   }
 
@@ -1320,7 +1221,7 @@ class Example extends React.Component {
 
 state 初始值为 `{ count: 0 }` ，当用户点击按钮后，我们通过调用 `this.setState()` 来增加 `state.count`。
 
-**那么，什么是Hook？**
+**那么，什么是 Hook？**
 
 Hook 是一些可以让你在函数组件里“钩入” React state 及生命周期等特性的函数。Hook 不能在 class 组件中使用 —— 这使得你不使用 class 也能使用 React。
 
@@ -1328,7 +1229,7 @@ Hook 是一些可以让你在函数组件里“钩入” React state 及生命�
 
 如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其转化为 class。现在你可以在现有的函数组件中使用 Hook。
 
-#### 声明State变量
+#### 声明 State 变量
 
 在函数组件中，我们没有 `this`，所以我们不能分配或读取 `this.state`。我们直接在组件中调用 `useState` Hook：
 
@@ -1346,30 +1247,28 @@ function Example() {
 
 **`useState` 方法的返回值是什么？** 返回值为：当前 state 以及更新 state 的函数。这就是我们写 `const [count, setCount] = useState()` 的原因。这与 class 里面 `this.state.count` 和 `this.setState` 类似，唯一区别就是你需要成对的获取它们（数组解构）。
 
-#### 读取State
+#### 读取 State
 
-在函数中，我们可以直接用 `count`读取State:
+在函数中，我们可以直接用 `count`读取 State:
 
 ```jsx
- <p>You clicked {count} times</p>
+<p>You clicked {count} times</p>
 ```
 
-#### 更新State
+#### 更新 State
 
 在函数中，我们已经有了 `setCount` 和 `count` 变量，所以我们不需要 `this`:
 
 ```jsx
-  <button onClick={() => setCount(count + 1)}>
-    Click me
-  </button>
+<button onClick={() => setCount(count + 1)}>Click me</button>
 ```
 
 ### Effect Hook
 
-*Effect Hook* 可以让你在函数组件中执行副作用操作
+_Effect Hook_ 可以让你在函数组件中执行副作用操作
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Example() {
   const [count, setCount] = useState(0);
@@ -1383,9 +1282,7 @@ function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
@@ -1399,7 +1296,7 @@ function Example() {
 
 在 React 组件中有两种常见副作用操作：需要清除的和不需要清除的。
 
-#### 无需清除的effect
+#### 无需清除的 effect
 
 有时候，我们只想**在 React 更新 DOM 之后运行一些额外的代码。**比如发送网络请求，手动变更 DOM，记录日志，这些都是常见的无需清除的操作。因为我们在执行完这些操作之后，就可以忽略他们了。
 
@@ -1411,7 +1308,7 @@ function Example() {
 
 > 某种意义上讲，effect 更像是渲染结果的一部分 —— 每个 effect “属于”一次特定的渲染。
 
-#### 需要清除的effect
+#### 需要清除的 effect
 
 之前，我们研究了如何使用不需要清除的副作用，还有一些副作用是需要清除的。例如**订阅外部数据源**。这种情况下，清除工作是非常重要的，可以防止引起内存泄露！现在让我们来比较一下如何用 Class 和 Hook 来实现。
 
@@ -1441,27 +1338,27 @@ class FriendStatus extends React.Component {
   }
   handleStatusChange(status) {
     this.setState({
-      isOnline: status.isOnline
+      isOnline: status.isOnline,
     });
   }
 
   render() {
     if (this.state.isOnline === null) {
-      return 'Loading...';
+      return "Loading...";
     }
-    return this.state.isOnline ? 'Online' : 'Offline';
+    return this.state.isOnline ? "Online" : "Offline";
   }
 }
 ```
 
-**使用Hook的示例**
+**使用 Hook 的示例**
 
 如何使用 Hook 编写这个组件。
 
 你可能认为需要单独的 effect 来执行清除操作。但由于添加和删除订阅的代码的紧密性，所以 `useEffect` 的设计是在同一个地方执行。如果你的 effect 返回一个函数，React 将会在执行清除操作时调用它：
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function FriendStatus(props) {
   const [isOnline, setIsOnline] = useState(null);
@@ -1478,9 +1375,9 @@ function FriendStatus(props) {
   });
 
   if (isOnline === null) {
-    return 'Loading...';
+    return "Loading...";
   }
-  return isOnline ? 'Online' : 'Offline';
+  return isOnline ? "Online" : "Offline";
 }
 ```
 
@@ -1490,7 +1387,7 @@ function FriendStatus(props) {
 
 > 并不是必须为 effect 中返回的函数命名。这里我们将其命名为 `cleanup` 是为了表明此函数的目的，但其实也可以返回一个箭头函数或者给起一个别的名字。
 
-就像你可以使用多个 *state* 的 Hook 一样，你也可以使用多个 effect。这会将不相关逻辑分离到不同的 effect 中。
+就像你可以使用多个 _state_ 的 Hook 一样，你也可以使用多个 effect。这会将不相关逻辑分离到不同的 effect 中。
 
 #### 通过跳过 Effect 进行性能优化
 
@@ -1506,19 +1403,17 @@ useEffect(() => {
 
 如果想执行只运行一次的 effect（仅在组件挂载和卸载时执行），可以传递一个空数组（`[]`）作为第二个参数。这就告诉 React 你的 effect 不依赖于 props 或 state 中的任何值，所以它永远都不需要重复执行。这并不属于特殊情况 —— 它依然遵循依赖数组的工作方式。
 
-### Hook规则
+### Hook 规则
 
 - **只在最顶层使用 Hook**：不要在循环，条件或嵌套函数中调用 Hook
 
 - **只在 React 函数中调用 Hook**：不要在普通的 JavaScript 函数中调用 Hook
 
-  
-
-## Ant Design组件库
+## Ant Design 组件库
 
 [Ant Design - 一套企业级 UI 设计语言和 React 组件库](https://ant.design/index-cn)
 
-导入antd
+导入 antd
 
 ```
 $ yarn add antd
@@ -1526,7 +1421,7 @@ $ yarn add antd
 
 具体使用方法见录屏
 
-**2022年暑期培训**
+**2022 年暑期培训**
 
 <div style={{ position: "relative", padding: "30% 45%" }}>
   <iframe
