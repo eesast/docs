@@ -35,3 +35,21 @@ slug: ./
 #### 菜鸟教程
 
 [菜鸟教程-Linux 教程](http://www.runoob.com/linux/linux-tutorial.html)，内容不多，简单易懂，花一两天快速看完就能了解 Linux 的基本日常使用了
+
+## Video Tutorials
+
+### 2022 年暑期培训
+
+import Video from '@site/src/component/video_player';
+
+**Docker**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F13.Docker.mp4" source="THU"/><br/>
+
+**Git & GitHub**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F5.C%2B%2B.mp4" source="THU"/><br/>
+
+**Linux & Shell**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F5.C%2B%2B.mp4" source="THU"/><br/>

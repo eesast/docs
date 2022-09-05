@@ -83,3 +83,33 @@ slug: ./
 
 - [Android Training 官方课程](http://hukai.me/android-training-course-in-chinese/index.html) ：一个手把手教你入门 Android 开发的教程
 - 《Thinking In Java》：Java 是开发 Android 使用的编程语言（没用过 Kotlin，不评价），所以好好学学 Java 还是有必要的（当然你也可以选择好好学习 JNI）。电子书网上自己应该能搜到，我就不放链接了。
+
+## Video Tutorials
+
+### 2022 年暑期培训
+
+import Video from '@site/src/component/video_player';
+
+**C/C++**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F5.C%2B%2B.mp4" source="THU"/><br/>
+
+**C#**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F3.C%23.mp4" source="THU"/><br/>
+
+**多线程**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F4.%E5%A4%9A%E7%BA%BF%E7%A8%8B.mp4" source="THU"/><br/>
+
+**WPF**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F7.WPF%E5%9F%BA%E7%A1%80.mp4" source="THU"/><br/>
+
+**HTML & CSS**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F9.html_css.mp4" source="THU"/><br/>
+
+**TypeScript**
+
+<Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F10.typescript.mp4" source="THU"/><br/>

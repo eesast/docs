@@ -57,13 +57,20 @@ module.exports = {
     "game/README",
     "game/unity",
     {
-      通信: ["game/communication/Protobuf", "game/communication/gRPC"],
+      通信: [
+        "game/communication/Protobuf", 
+        "game/communication/gRPC"
+      ],
     },
   ],
   web: [
     "web/README",
     {
-      前端: ["web/frontend/react_practical", "web/frontend/react_detailed"],
+      前端: [
+        "web/frontend/react_practical",
+        "web/frontend/react_detailed",
+        "web/frontend/webpack"
+      ],
     },
     {
       后端: [
@@ -75,7 +82,10 @@ module.exports = {
       ],
     },
     {
-      部署: ["web/deployment/CI&CD", "web/deployment/nginx"],
+      部署: [
+        "web/deployment/CI&CD", 
+        "web/deployment/nginx"
+      ],
     },
   ],
   "machine-learning": ["machine_learning/README"],
