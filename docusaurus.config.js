@@ -21,6 +21,11 @@ module.exports = {
     },
   ],
   themeConfig: {
+    docs: {
+      sidebar: {
+        hideable: true
+      }
+    },
     navbar: {
       title: "EESΛST",
       logo: {
@@ -130,7 +135,6 @@ module.exports = {
       },
       copyright: `Copyright © ${new Date().getFullYear()} EESΛST Docs, EESΛST. Built with Docusaurus.`,
     },
-    hideableSidebar: true,
     prism: {
       additionalLanguages: ["csharp"],
     },
