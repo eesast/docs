@@ -23,8 +23,8 @@ module.exports = {
   themeConfig: {
     docs: {
       sidebar: {
-        hideable: true
-      }
+        hideable: true,
+      },
     },
     navbar: {
       title: "EESΛST",
