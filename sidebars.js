@@ -63,7 +63,11 @@ module.exports = {
   web: [
     "web/README",
     {
-      前端: ["web/frontend/react_practical", "web/frontend/react_detailed"],
+      前端: [
+        "web/frontend/react_practical",
+        "web/frontend/react_detailed",
+        "web/frontend/webpack",
+      ],
     },
     {
       后端: [
