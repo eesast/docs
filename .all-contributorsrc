@@ -113,6 +113,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Ther-nullptr",
+      "name": "Ther",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71265304?v=4",
+      "profile": "https://github.com/Ther-nullptr",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
