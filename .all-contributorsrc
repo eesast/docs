@@ -113,6 +113,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "PLUTO-SCY",
+      "name": "PLUTO-SCY",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78310004?v=4",
+      "profile": "https://github.com/PLUTO-SCY",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true
