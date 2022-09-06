@@ -76,7 +76,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
     <td align="center"><a href="https://github.com/Yang-Xijie"><img src="https://avatars3.githubusercontent.com/u/57952362?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Yang-Xijie</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Yang-Xijie" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Timothy-LiuXuefeng"><img src="https://avatars3.githubusercontent.com/u/65613511?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Liu Xuefeng</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-LiuXuefeng" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Timothy-Liuxf"><img src="https://avatars.githubusercontent.com/u/65613511?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Timothy Liu</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Timothy-Liuxf" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/L0510410"><img src="https://avatars.githubusercontent.com/u/87233125?v=4?s=50" width="50px;" alt=""/><br /><sub><b>L0510410</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=L0510410" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/L0510410"><img src="https://avatars.githubusercontent.com/u/87233125?v=4?s=50" width="50px;" alt=""/><br /><sub><b>L0510410</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=L0510410" title="Documentation">📖</a> <a href="https://github.com/eesast/docs/commits?author=L0510410" title="Code">💻</a> <a href="#maintenance-L0510410" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
