@@ -122,6 +122,71 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "chen-yy20",
+      "name": "Roy Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84724215?v=4",
+      "profile": "https://github.com/chen-yy20",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Ther-nullptr",
+      "name": "Ther",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71265304?v=4",
+      "profile": "https://github.com/Ther-nullptr",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "birdx-007",
+      "name": "Bx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79506351?v=4",
+      "profile": "https://github.com/birdx-007",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TCL606",
+      "name": "TCL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84725343?v=4",
+      "profile": "https://github.com/TCL606",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "BryantSuen",
+      "name": "Boran Sun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65460093?v=4",
+      "profile": "https://github.com/BryantSuen",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "PLUTO-SCY",
+      "name": "PLUTO-SCY",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78310004?v=4",
+      "profile": "https://github.com/PLUTO-SCY",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "L0510410",
+      "name": "L0510410",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87233125?v=4",
+      "profile": "https://github.com/L0510410",
+      "contributions": [
+        "doc",
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "skipCi": true
