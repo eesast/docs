@@ -82,6 +82,9 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
     <td align="center"><a href="https://github.com/PLUTO-SCY"><img src="https://avatars.githubusercontent.com/u/78310004?v=4?s=50" width="50px;" alt=""/><br /><sub><b>PLUTO-SCY</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=PLUTO-SCY" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/L0510410"><img src="https://avatars.githubusercontent.com/u/87233125?v=4?s=50" width="50px;" alt=""/><br /><sub><b>L0510410</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=L0510410" title="Documentation">📖</a> <a href="https://github.com/eesast/docs/commits?author=L0510410" title="Code">💻</a> <a href="#maintenance-L0510410" title="Maintenance">🚧</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Ther-nullptr"><img src="https://avatars.githubusercontent.com/u/71265304?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Ther</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Ther-nullptr" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
