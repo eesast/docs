@@ -85,6 +85,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
   <tr>
     <td align="center"><a href="https://github.com/Ther-nullptr"><img src="https://avatars.githubusercontent.com/u/71265304?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Ther</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Ther-nullptr" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/chen-yy20"><img src="https://avatars.githubusercontent.com/u/84724215?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Roy Chen</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=chen-yy20" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/wang-zh20"><img src="https://avatars.githubusercontent.com/u/78086017?v=4?s=50" width="50px;" alt=""/><br /><sub><b>Wang Zhiheng</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=wang-zh20" title="Documentation">📖</a></td>
   </tr>
 </table>
 
