@@ -49,6 +49,7 @@ module.exports = {
     "tools/git_instance",
     "tools/os",
     "tools/linux&shell",
+    "tools/wsl",
     "tools/document",
     "tools/tdd",
     "tools/process_management",
