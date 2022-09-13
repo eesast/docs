@@ -61,7 +61,7 @@ WSL 需要 ***Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的�
 
 之后，可以在 `Win+R` 中输入 `wsl`，开始运行你的 WSL。
 
-## 安装 WSL 2  
+## 安装 WSL 2
 
 WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用；如果要使用 Linux 内核，需要安装 WSL 2。
 
@@ -73,9 +73,9 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 参见“安装 WSL 1”中的第一步。
 
-### 第二步：检查 BIOS 是否开启了虚拟化  
+### 第二步：检查 BIOS 是否开启了虚拟化
 
-按 `Ctrl+alt+delete`，打开任务管理器，进入“性能”，查看“CPU”：  
+按 `Ctrl+alt+delete`，打开任务管理器，进入“性能”，查看“CPU”：
 
 ![vir](assets/wsl/vir.png)
 
@@ -135,7 +135,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 #### 第七步：检查是否升级到了 WSL 2
 
-输入：  
+输入：
 
 ```powershell
 > wsl --list --verbose
@@ -143,7 +143,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 如果显示的 VERSION 是 2，则成功升级到了 WSL 2。
 
-### <二\> 在其他磁盘中安装 WSL 2（推荐）  
+### <二\> 在其他磁盘中安装 WSL 2（推荐）
 
 <一\> 中所述默认安装在系统盘内。实际上，WSL 2 也可以在任意磁盘下的任意目录内安装。
 
