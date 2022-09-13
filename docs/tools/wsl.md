@@ -27,8 +27,6 @@ WSL 需要 Windoes10 1709 专业版 或者 Windoes10 1803 及以上的家庭版�
 
  ![settings](assets/wsl/settings.png)
 
-
-
 点击“系统”，找到“关于”，即可查看 Windows 版本：  
 
 ![about](assets/wsl/about.png)
@@ -73,7 +71,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 此外，根据微软官方建议，WSL2 尽量使用自己的文件系统，不建议与 Windows 文件系统做交互。  
 
-#### 第一步：检查 Windows 10 版本  
+#### 第一步：检查 Windows 10 版本
 
 参见“安装 WSL1”中的第一步。  
 
@@ -113,7 +111,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 #### 第五步：安装 WSL2 内核组件  
 
-访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
+访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
 
 > 如果处理器是 ARM 架构，需要下载 [https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)（应该很少有 ARM 架构的吧 2333333）
 
@@ -125,7 +123,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 本条分支假定你已经完成了上面“安装 WSL1” 的三个步骤。  
 
-##### 第六步：将 WSL2 设置为默认版本 
+##### 第六步：将 WSL2 设置为默认版本
 
 打开 cmd 或 powershell，输入以下命令：  
 
@@ -137,7 +135,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 > wsl --set-default-version 2
 ```
 
-##### 第七步：检查是否升级到了 WSL2 
+##### 第七步：检查是否升级到了 WSL2
 
 输入：  
 
@@ -162,8 +160,6 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 在 cmd 或 powershell 中输入 `wsl --list` 可以看到已经成功安装的 Linux 分发：  
 
 ![list](assets/wsl/list.png)
-
-
 
 然后输入 `wsl` 即可进入标有”默认“字样的 Linux 版本。  
 
@@ -227,14 +223,10 @@ WSLg 需要电脑已经安装了 WSL2 内核组件。
 
 则在该文件夹将会看到已经把 CentOS7 导出为了文件 centos7.tar（文件名可以任意命名，但是应当以 .tar 作为后缀名）。然后便可以将该文件移动至其他位置或者发送到其他计算机。  
 
-### 	导入
+### 导入
 
 一旦得到了一个镜像文件（例如上面导出的 centos7.tar），便可以将其导入到 WSL 中，成为一个新的分发。命令格式：`wsl --import <分发名称> <安装位置> <tar 文件名>`。例如：  
 
 ![imp](assets/wsl/imp.png)
 
-
-
 便是将刚才导出的 centos7.tar 文件导入为一个 WSL 分发，将该分发命名为 “CentOS7-Copy”，安装路径为当前目录。然后再查看 `wsl --list`，即可看到成功导入了该分发。同时在当前目录下多出了一个虚拟磁盘文件。  
-
-
