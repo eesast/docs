@@ -11,15 +11,13 @@ sidebar_label: WSL
 
 中文版：[https://docs.microsoft.com/zh-cn/windows/wsl/install-win10](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)
 
-## 图文安装教程
-
 如果阅读官方教程有困难，可以查看下面的图文教程。  
 
 **注意**：WSL2 并不是 WSL1 的升级版本，因此安装 WSL2 不需要先安装 WSL1！  
 
-### 安装 WSL1
+## 安装 WSL1
 
-#### 第一步：检查 Windows 10 版本
+### 第一步：检查 Windows 10 版本
 
 WSL 需要 Windoes10 1709 专业版 或者 Windoes10 1803 及以上的家庭版，WSL2 需要 版本 1903（ 内部版本 18362） 或更高版本（x64）。如果版本较低，请更新 Windows10 系统。本教程采用 21H1 版本（内部版本 19043.1083）。  
 
@@ -31,7 +29,7 @@ WSL 需要 Windoes10 1709 专业版 或者 Windoes10 1803 及以上的家庭版�
 
 ![about](assets/wsl/about.png)
 
-#### 第二步：启动 WSL 功能  
+### 第二步：启动 WSL 功能  
 
 + 方法一：使用命令开启：按 Win+R，输入 powershell 或 pwsh（pwsh 需要手动安装），输入命令：  
 
@@ -51,7 +49,7 @@ WSL 需要 Windoes10 1709 专业版 或者 Windoes10 1803 及以上的家庭版�
 
   然后**重启计算机**即可。  
 
-#### 第三步：安装 ubuntu
+### 第三步：安装 ubuntu
 
 按键 Win+Q，搜索“store”找到 Microsoft Store 并打开，搜索“ubuntu”：  
 
@@ -63,7 +61,7 @@ WSL 需要 Windoes10 1709 专业版 或者 Windoes10 1803 及以上的家庭版�
 
 之后，可以在 Win+R 中输入 wsl，开始运行你的 WSL。  
 
-### 安装 WSL2  
+## 安装 WSL2  
 
 WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用；如果要使用 Linux 内核，需要安装 WSL2。  
 
@@ -71,11 +69,11 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 此外，根据微软官方建议，WSL2 尽量使用自己的文件系统，不建议与 Windows 文件系统做交互。  
 
-#### 第一步：检查 Windows 10 版本
+### 第一步：检查 Windows 10 版本
 
 参见“安装 WSL1”中的第一步。  
 
-#### 第二步：检查 BIOS 是否开启了虚拟化  
+### 第二步：检查 BIOS 是否开启了虚拟化  
 
 按 Ctrl+alt+delete，打开任务管理器，进入“性能”，查看“CPU”：  
 
@@ -93,11 +91,11 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ![b4](assets/wsl/b4.jpg)
 
-#### 第三步：启动 WSL 功能  
+### 第三步：启动 WSL 功能  
 
 参见“安装 WSL1”中的第二步。  
 
-#### 第四步：启动虚拟机平台功能  
+### 第四步：启动虚拟机平台功能  
 
 + 方法一：仍然打开 powershell，输入命令：  
 
@@ -109,7 +107,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 + 方法二：仍然打开“启用或关闭 Windows 功能”，勾选“虚拟机平台”，再**重启计算机**即可。  
 
-#### 第五步：安装 WSL2 内核组件  
+### 第五步：安装 WSL2 内核组件  
 
 访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
 
@@ -117,13 +115,13 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 然后运行 wsl_update_x64.msi，一步步全按“Next”进行安装即可。  
 
-下面将路线分为多条。如果你已经拥有了 WSL1，那么你可以直接将其升级到 WSL2。不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 \<二\> 中所述，将其安装在其他磁盘。  
+下面将路线分为多条。如果你已经拥有了 WSL1，那么你可以直接将其升级到 WSL2，不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 <二\> 中所述，将其安装在其他磁盘。  
 
-#### \<一\> 基于 WSL1 升级到 WSL2  
+### <一\> 基于 WSL1 升级到 WSL2  
 
 本条分支假定你已经完成了上面“安装 WSL1” 的三个步骤。  
 
-##### 第六步：将 WSL2 设置为默认版本
+#### 第六步：将 WSL2 设置为默认版本
 
 打开 cmd 或 powershell，输入以下命令：  
 
@@ -135,7 +133,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 > wsl --set-default-version 2
 ```
 
-##### 第七步：检查是否升级到了 WSL2
+#### 第七步：检查是否升级到了 WSL2
 
 输入：  
 
@@ -145,15 +143,15 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 如果显示的 VERSION 是 2，则成功升级到了 WSL2  
 
-#### <二\> 在其他磁盘中安装 WSL2（推荐）  
+### <二\> 在其他磁盘中安装 WSL2（推荐）  
 
-\<一\> 中所述默认安装在系统盘内。实际上，WSL2 也可以在任意磁盘下的任意目录内安装。  
+<一\> 中所述默认安装在系统盘内。实际上，WSL2 也可以在任意磁盘下的任意目录内安装。  
 
-##### 第六步：下载 WSL2 分发
+#### 第六步：下载 WSL2 分发
 
 进入 [https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)，下载任意一个 Linux 分发。  
 
-##### 第七步：安装 WSL2 分发  
+#### 第七步：安装 WSL2 分发  
 
 以 Ubuntu 20.04 为例，下载之后会得到一个 .appx 文件。将其重命名，后缀名改成 .zip，并解压。运行 ubuntu2004.exe，即可在该目录下进行安装【注：新的安装包此时并没有 ubuntu2004.exe，而是会得到一系列的 .appx 文件。选择使用自己电脑架构的 .appx 文件，重复上述操作并解压，方可得到 .exe 文件。目前市面上大部分的 Windows 系统都是 x64 架构，少数的 Windows 系统是 ARM 架构】。安装后在该目录下会生成虚拟磁盘 ext4.vhdx。然后按照提示输入用户名和密码即可。  
 
