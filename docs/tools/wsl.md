@@ -49,7 +49,7 @@ WSL 需要 ***Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的�
 
   然后**重启计算机**即可。
 
-### 第三步：安装 ubuntu
+### 第三步：安装 Ubuntu
 
 按键 `Win+Q`，搜索“store”找到 Microsoft Store 并打开，搜索“ubuntu”：
 
