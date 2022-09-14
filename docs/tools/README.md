@@ -10,6 +10,7 @@ slug: ./
 - [Git 开发实例](git_instance.md)
 - [操作系统](os.mdx)
 - [Linux & Shell](linux&shell.mdx)
+- [WSL 安装与使用](wsl.md)
 - [文档：需求文档、设计文档、产品文档](document.md)
 - [测试：单元测试、测试驱动的开发（TDD）](tdd.md)
 - [软件开发过程：软件过程、敏捷开发、DevOps](process_management.md)

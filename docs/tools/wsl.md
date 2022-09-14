@@ -1,5 +1,5 @@
 ---
-title: WSL 安装与使用教程
+title: WSL 安装与使用
 sidebar_label: WSL
 ---
 
@@ -19,7 +19,7 @@ sidebar_label: WSL
 
 ### 第一步：检查 Windows 版本
 
-WSL 需要 ***Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的家庭版**，WSL 2 需要 **Windows 10 1903** （内部版本 18362）或更高版本（x64）。如果版本较低，请更新 Windows 10 系统。本教程采用 Windows 10 21H1 家庭版（内部版本 19043.1083）和 Windows 11 21H2 家庭版（内部版本 22000.856）。
+WSL 需要 **Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的家庭版**，WSL 2 需要 **Windows 10 1903** （内部版本 18362）或更高版本（x64）。如果版本较低，请更新 Windows 10 系统。本教程采用 Windows 10 21H1 家庭版（内部版本 19043.1083）和 Windows 11 21H2 家庭版（内部版本 22000.856）。
 
 查看方法：按键 `Win+Q`（`Win` 即 Windows 徽标键），搜索“设置”：
 
