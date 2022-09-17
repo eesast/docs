@@ -951,7 +951,7 @@ void critical_section(int change_v) {
 #include <future>
 
 int main(){
-    auto result = std::async([](){return 7;});
+    auto result = std::async(std::launch::async, [](){return 7;});
     std::cout << "waiting..." << std::endl;
     std::cout << "future result is " << result.get() << std::endl;
     return 0;
