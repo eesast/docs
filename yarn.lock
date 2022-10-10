@@ -2783,10 +2783,10 @@ ansi-styles@^6.0.0, ansi-styles@^6.1.0:
   resolved "https://registry.npmmirror.com/ansi-styles/-/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==
 
-antd@4.23.4:
-  version "4.23.4"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.23.4.tgz#fafe315f1761ab80258d5569462025cc238422d5"
-  integrity sha512-2VdDSPXEjCc2m2qBgv6DKpKnsKIGyQtJBdcGn223EqHxDWHqCaRxeJIA9bcW50ntHFkwdeBa+IeWLBor377dkA==
+antd@4.23.5:
+  version "4.23.5"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.23.5.tgz#4946191ac44d762590b2dbb84a4b8cd1101ab0cf"
+  integrity sha512-AMea5NYoMeGvRxZ/rslGvRqaiuzBgQMpOdlQfNjOfMd+0ZGi+E4AiwXilR99muFOttPcr3ebeIsKiUS5p/cnig==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons" "^4.7.0"
@@ -2808,7 +2808,7 @@ antd@4.23.4:
     rc-image "~5.7.0"
     rc-input "~0.1.2"
     rc-input-number "~7.3.9"
-    rc-mentions "~1.9.1"
+    rc-mentions "~1.10.0"
     rc-menu "~9.6.3"
     rc-motion "^2.6.1"
     rc-notification "~4.6.0"
@@ -2824,7 +2824,7 @@ antd@4.23.4:
     rc-switch "~3.2.0"
     rc-table "~7.26.0"
     rc-tabs "~12.1.0-alpha.1"
-    rc-textarea "~0.3.0"
+    rc-textarea "~0.4.3"
     rc-tooltip "~5.2.0"
     rc-tree "~5.7.0"
     rc-tree-select "~5.5.0"
@@ -7556,15 +7556,15 @@ rc-input@~0.1.2:
     classnames "^2.2.1"
     rc-util "^5.18.1"
 
-rc-mentions@~1.9.1:
-  version "1.9.2"
-  resolved "https://registry.npmmirror.com/rc-mentions/-/rc-mentions-1.9.2.tgz#f264ebc4ec734dad9edc8e078b65ab3586d94a7b"
-  integrity sha512-uxb/lzNnEGmvraKWNGE6KXMVXvt8RQv9XW8R0Dqi3hYsyPiAZeHRCHQKdLARuk5YBhFhZ6ga55D/8XuY367g3g==
+rc-mentions@~1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/rc-mentions/-/rc-mentions-1.10.0.tgz#f2e4055b535d042d408e94b853b709dbd966f546"
+  integrity sha512-oMlYWnwXSxP2NQVlgxOTzuG/u9BUc3ySY78K3/t7MNhJWpZzXTao+/Bic6tyZLuNCO89//hVQJBdaR2rnFQl6Q==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.6"
     rc-menu "~9.6.0"
-    rc-textarea "^0.3.0"
+    rc-textarea "^0.4.0"
     rc-trigger "^5.0.4"
     rc-util "^5.22.5"
 
@@ -7748,10 +7748,10 @@ rc-tabs@~12.1.0-alpha.1:
     rc-resize-observer "^1.0.0"
     rc-util "^5.5.0"
 
-rc-textarea@^0.3.0, rc-textarea@~0.3.0:
-  version "0.3.7"
-  resolved "https://registry.npmmirror.com/rc-textarea/-/rc-textarea-0.3.7.tgz#987142891efdedb774883c07e2f51b318fde5a11"
-  integrity sha512-yCdZ6binKmAQB13hc/oehh0E/QRwoPP1pjF21aHBxlgXO3RzPF6dUu4LG2R4FZ1zx/fQd2L1faktulrXOM/2rw==
+rc-textarea@^0.4.0, rc-textarea@~0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/rc-textarea/-/rc-textarea-0.4.3.tgz#99b21f501e5125c3c62f99d4faa58ba2a0e36f0e"
+  integrity sha512-IrvO5TbnRIC4+8s97MCdWJHWED4u5M+Uq3jVkkUAZJYhs/JuTV2yHwtxjidHdD3dEdGvZoAb7FTyqshMmRgyyw==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.1"
