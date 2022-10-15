@@ -8,11 +8,11 @@ slug: ./
 - C/C++
   - [编译、链接、静态库、动态库](C&C++/compile.md)
   - [Makefile & CMake](C&C++/makefile&cmake.md)
-  - [Modern C++ 选讲](C&C++/STL.md)
+  - [Modern C++ 选讲](C&C++/modern_cpp.md)
   - [STL 概览](C&C++/STL.md)
   - [C++多文件编程](C&C++/multi-file_programming.md)
   - [C/C++ Windows 编程](C&C++/c_cpp_windows.md)
-  - [macOS 编写 C++程序](C&C++/modern_cpp.md)
+  - [macOS 编写 C++程序](C&C++/macos_cpp.md)
   - [面向对象程序设计基础](C&C++/OOP.md)
 - C#
   - [C# 程序设计基础](CSharp/CSharp_1_basic.mdx)
