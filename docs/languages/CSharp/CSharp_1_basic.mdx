@@ -18,13 +18,13 @@ title: C# 程序设计基础
 
 .NET 是微软公司发布的应用程序框架，用以减轻软件开发人员的工作。它包括一系列类库、运行时等内容。
 
-在生成一个 .NET 程序时，程序员编写的代码暂时不翻译成本地的机器语言，而是先翻译成一种其他的语言，叫做“微软中间语言（MSIL, Microsoft Intermediate Language）”。在执行该微软中间语言的可执行文件时，将启动对应 .NET 框架的“公共语言运行时（CLR, Common Language Runtime）”，由该 CLR 将 MSIL 转化为机器码执行。
+在生成一个 .NET 程序时，程序员编写的代码暂时不翻译成本地的机器语言，而是先翻译成一种其他的语言，叫做“微软中间语言（MSIL, Microsoft Intermediate Language）”。在执行该微软中间语言的可执行文件时，将启动对应 .NET 框架的“公共语言运行时（CLR, Common Language Runtime）”，由该 CLR 将 MSIL 编译为机器码执行，称作 **JIT 编译**（just-in-time compilation）。
 
 可见，CLR 就仿佛一台独立于物理机器的“虚拟机”，MSIL 语言的程序可以在 CLR 上运行。由于这个机制，我们可以得到很多便利，例如可以轻松实现垃圾回收（GC, Garbage Collection）、跨平台（虽然微软起初并没有这个目的），等等。
 
 ### 形形色色的 .NET
 
-起初，微软推出的框架名字叫“.NET Framework”，只能在 Windows 上运行以推广 Windows，现在 .NET Framework 也是 Windows 10 的预装品。.NET Framework 可以支持多种开发框架，例如 Winform、ASP、WPF，等等。后来，微软改变了策略，拥抱开源与跨平台，推出了“.NET Core”框架，该框架开源，并且支持多种操作系统，并且随着 .NET Core 版本的更迭，.NET Framework 支持的功能也逐渐向 .NET Core 迁移。当 .NET Core 3.1 出现后，功能已经接近完备，接近甚至超过了 .NET Framework，微软决定下个版本扔掉 Core，下个版本直接改名“.NET”，与 .NET 同名以表明它将是以后 .NET 的主要发展方向。况且考虑到 .NET Framework 最新版本已经是 4.x，因此为了防止发生混淆，.NET 版本跨过 4.x，而直接于 2020 年下半年推出 .NET5，并声称每年推出一个 .NET 版本。2021 年 2 月 17 日，微软的开发者博客中推出了 .NET6 的第一个预览版。
+起初，微软推出的框架名字叫“.NET Framework”，只能在 Windows 上运行以推广 Windows，现在 .NET Framework 也是 Windows 10 的预装品。.NET Framework 可以支持多种开发框架，例如 Winform、ASP、WPF，等等。后来，微软改变了策略，拥抱开源与跨平台，推出了“.NET Core”框架，该框架开源，并且支持多种操作系统，并且随着 .NET Core 版本的更迭，.NET Framework 支持的功能也逐渐向 .NET Core 迁移。当 .NET Core 3.1 出现后，功能已经接近完备，接近甚至超过了 .NET Framework，微软决定下个版本扔掉 Core，下个版本直接改名“.NET”，与 .NET 同名以表明它将是以后 .NET 的主要发展方向。况且考虑到 .NET Framework 最新版本已经是 4.x，因此为了防止发生混淆，.NET 版本跨过 4.x，而直接于 2020 年下半年推出 .NET 5，并在之后每年推出一个 .NET 版本。对于 .NET 来说，偶数版本的 .NET（.NET 6、.NET 8、……）为长期支持的 LTS 版本（Long Term Support），支持期限为三年；奇数版本的 .NET（.NET 5、.NET 7、……）为标准支持的 STS 版本（Standard Term Support），支持期限为 18 个月。
 
 此外，在 .NET Core 出现之前，开源社区（非微软官方）自己创造了一个支持 C# 语言的跨平台运行时，称作“mono”。为了便于管理如此繁杂的 .NET 体系，微软推出了 .NET Standard 规范，作为各个 .NET 运行时遵循的准则。不管是 .NET Framework，还是 .NET Core，还是 mono，都必须实现 .NET Standard 作为其公共子集。
 
@@ -110,6 +110,15 @@ Console.WriteLine("Hello World!");
 ```
 
 上面的程序也可以输出“Hello World!”。
+
+在顶级语句中，可以直接使用 `args` 关键字获取命令行参数：
+
+```c#
+foreach (var arg in args)
+{
+    Console.WriteLine(arg);
+}
+```
 
 ### C# 类型系统
 
@@ -261,7 +270,7 @@ I said, "I am happy."
 
 如果不想使用转义字符，那么可以使用 C# 的逐字字符串。逐字字符串以 `@` 开头，并用双引号引起。逐字字符串中 `\` 不再被解释为转义字符，而且逐字字符串中可以含有换行。唯一的例外是逐字字符串中不能由双引号 `""`。
 
-此外 C# 还支持字符串内插（C# 6.0），可以在字符串中插入变量。内插字符串以 `$` 开头，用双引号引起。插入到字符串中的变量放在一对花括号 `{}` 中。
+此外 C# 还支持字符串内插（C# 6.0），可以在字符串中插入变量。内插字符串以 `$` 开头，用双引号引起。插入到字符串中的变量放在一对花括号 `{}` 中（C# 11 开始，表示内插的花括号内可以换行，这有利于在内插中使用模式匹配等）。
 
 ```c#
 Console.WriteLine(@"D:\new\input.txt");
@@ -285,6 +294,25 @@ int main(void)
     return 0;
 }
 The position is (4, 5).
+```
+
+C# 11（.NET 7）开始支持原始字符串文本，以 `"""` 开始并以 `"""` 结束，允许多行字符串，若为多行字符串则以单独的一行 `"""` 结束，且字符串的缩进以 `"""` 的起始位置为基准。原始字符串文本不进行任何转义操作，但允许字符串内插（开头的 `$` 数量代表需要内插的花括号数）：
+
+```c#
+var x = 1;
+var y = 2;
+var code1 = """int i = 0;""";
+var code2 = $"""int x = {x};""";
+var code3 = $$"""
+    #include <stdio.h>
+    int main() {
+        const char *s = "{y} = {{y}}";  // {y} = 2
+        return 0;
+    }
+    """;
+Console.WriteLine($"code1:\n{code1}\n");
+Console.WriteLine($"code2:\n{code2}\n");
+Console.WriteLine($"code3:\n{code3}\n");
 ```
 
 #### 关于类型的几点说明
@@ -1276,6 +1304,22 @@ var output = new Action
 var getAddOne = new Func<int, int>(x => x + 1);
 ```
 
+从 C# 10（.NET 6.0）开始，lambda 表达式可以自动推导出 `Action` 或 `Func` 类型，也可以手动指定参数类型和返回值类型，因此上述代码可以用以下更简洁的方式写出：
+
+```c#
+var output = () =>
+{
+    Console.WriteLine("Hello, world!");
+};
+var getAddOne = (int x) => x + 1;
+```
+
+以及下面的代码：
+
+```c#
+var f = object (int x) => x + 1; // f 是 Func<int, object> 而非 Func<int, int>
+```
+
 ### 事件
 
 C# 提供了“事件”模式。“事件”本身是基于多播委托实现的，同时功能上和委托也有相似之处。
@@ -1467,6 +1511,16 @@ public void OutputLength(string? s)
 ```
 
 将 `null` 直接赋值给不可为空的引用类型也会导致警告，例如 `string s = null;`，需要改为 `string? s = null;`。
+
+如果我们在程序逻辑上，可以保证一个可为空的类型的值实际上不可能为空，则我们对其进行操作时可以使用 `!` 来禁止警告，例如：
+
+```c#
+int Func(string? s)
+{
+    // return s.Length; // warning CS8602: Dereference of a possibly null reference.
+    return s!.Length;
+}
+```
 
 但是，由于旧的 C# 版本并没有这个设定，因此旧的代码使用新版本的 C# 编译器可能会导致非常多的 `null` 检查警告，这个显然向前兼容性太差。因此，这个 `null` 检查的特性并不总是开启的。默认情况下，C# 编译器并不开启 `null` 检查。开启 `null` 检查有两种方式：
 
@@ -1660,26 +1714,33 @@ C# 保留了指针类型，但是我们只能定义非托管类型的指针，�
 
 ## C# 精通
 
-由于篇幅的限制和课时的影响，很多有趣且有用的内容我们没有做过多展开，例如：
+由于篇幅的限制和课时的影响，很多有趣且非常有用的内容我们没有做过多展开，例如：
 
-- 析构元组与弃元
-- 值类型元组
-- 文件读写
-- 索引器（Indexer）
-- 特性（Attribute）
-- 迭代器与可迭代对象
-- 记录（C# 9.0）
-- 语言集成查询（LINQ）
-- 表达式树
-- 序列化
-- 字符编码转换、正则表达式、JSON 文件读写（`System.Text.Json`）
+- [匿名类型](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/types/anonymous-types)、[记录类型（C# 9.0）和记录值类型（C# 10.0）](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/record)
+- [值类型元组](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/value-tuples)、[弃元](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/functional/discards)与[析构元组](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/functional/deconstruct)
+- [模式匹配](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/functional/pattern-matching)
+- [索引器（Indexer）](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/indexers/)
+- [特性（Attribute）](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/attributes/)
+- [迭代器与可迭代对象](https://learn.microsoft.com/zh-cn/dotnet/csharp/iterators)
+- [反射（Reflection）](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/reflection)
+- [语言集成查询（LINQ）](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/linq/)
+- [字符编码操作（`System.Text.Encoding`）](https://learn.microsoft.com/zh-cn/dotnet/api/system.text.encoding)、[.NET 正则表达式语法](https://learn.microsoft.com/zh-cn/dotnet/standard/base-types/anchors-in-regular-expressions)与[.NET 正则表达式库](https://learn.microsoft.com/zh-cn/dotnet/standard/base-types/regular-expressions)、[JSON 序列化（`System.Text.Json`）](https://learn.microsoft.com/zh-cn/dotnet/api/system.text.json)、[XML 文件操作](https://learn.microsoft.com/en-us/dotnet/api/system.xml)与[XML 序列化](https://learn.microsoft.com/zh-cn/dotnet/standard/serialization/how-to-serialize-an-object)
+- [.NET 的流](https://learn.microsoft.com/zh-cn/dotnet/api/system.io.stream)与[文件读写（`StreamReader`、`StreamWriter`、`BinaryReader`、`BinaryWriter`）](https://learn.microsoft.com/en-us/dotnet/api/system.io)
+- 使用栈空间提升程序性能：[`ref struct` 类型（C# 7.2）](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/ref-struct)、[`Span<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.span-1)（C# 7.2）与 [`stackalloc`](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/stackalloc)
+- 类似 C 语言的非托管代码编写：[`System.Runtime.InteropServices.Marshal`](https://learn.microsoft.com/zh-cn/dotnet/api/system.runtime.interopservices.marshal)
+- [AOT：本地代码生成](https://learn.microsoft.com/zh-cn/dotnet/core/deploying/native-aot/)（.NET 7）
+- [表达式树](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/expression-trees/)
+- [.NET HTTP 客户端框架（`System.Net.Http.HttpClient`）](https://learn.microsoft.com/zh-cn/dotnet/api/system.net.http.httpclient)
+- .NET Web 开发——[ASP.NET](https://dotnet.microsoft.com/zh-cn/apps/aspnet) 与 [Blazor](https://dotnet.microsoft.com/zh-cn/apps/aspnet/web-apps/blazor)
 - ……
 
 略去上述内容不会对我们后续的学习产生太大影响。有兴趣的同学可以查阅微软官方文档：
 
-[https://docs.microsoft.com/zh-cn/dotnet/csharp/](https://docs.microsoft.com/zh-cn/dotnet/csharp/)
+[https://learn.microsoft.com/zh-cn/dotnet/csharp/](https://learn.microsoft.com/zh-cn/dotnet/csharp/)
 
 深入学习 C#。
+
+我们将在下一节学习使用 C# 进行多线程程序与异步程序的编写。接下来请进一步学习“多线程与异步”单元。
 
 ## 参考文献
 
