@@ -31,7 +31,7 @@ WSL 需要 **Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的�
 
 ### 第二步：启动 WSL 功能
 
-+ 方法一：使用命令开启：按 `Win+R`，输入 `powershell` 或 `pwsh`（`pwsh` 需要手动安装），输入命令：
++ 方法一：使用命令开启：在开始菜单中搜索 `powershell`、`Windows Powershell` 或 `pwsh`（`pwsh` 需要手动安装），点击“以管理员身份运行”或“Run As Administrator”，输入命令：
 
   ```powershell
   > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -97,7 +97,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ### 第四步：启动虚拟机平台功能
 
-+ 方法一：仍然打开 powershell，输入命令：
++ 方法一：在开始菜单中搜索 `powershell`、`Windows Powershell` 或 `pwsh`（`pwsh` 需要手动安装），点击“以管理员身份运行”或“Run As Administrator”，输入命令：
 
   ```powershell
   > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -123,7 +123,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 #### 第六步：将 WSL 2 设置为默认版本
 
-打开 cmd 或 powershell，输入以下命令：
+打开 cmd 或 powershell（可以使用普通用户，也可以使用管理员 / Administrator 身份或 Administrator 用户），输入以下命令：
 
 ```powershell
 > wsl --set-version Ubuntu-20.04 2
@@ -183,7 +183,7 @@ WSLg 需要电脑已经安装了 WSL 2 内核组件。
 
 ### 第四步：更新 wsl 内核版本
 
-使用**管理员权限**打开 cmd 或 powershell，运行：
+使用**管理员 / Administrator 身份或 Administrator 用户**打开 cmd 或 powershell，运行：
 
 ```cmd
 > wsl --update
