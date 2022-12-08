@@ -577,7 +577,7 @@ class Person
 
 可以看到，这个 `Person` 类含有两个字段，一个是 `int` 类型的字段，一个是`string` 类型的引用作为字段。
 
-前面的 `private` 是访问修饰符，它规定了这个字段的访问级别。
+前面的 `private` 是[访问修饰符](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/access-modifiers)，它规定了这个字段的访问级别。
 
 `private` 可以换成：
 
@@ -585,7 +585,8 @@ class Person
 - `public`：这个字段可以被随意访问
 - `protected`：这个字段可以被本类及其派生类访问
 - `internal`：这个字段可以在本程序集内随意访问
-- `protected internal`：既可以被本来及其派生类访问，又可以在本程序集内随意访问
+- `protected internal`：既可以被本类及其派生类访问，又可以在本程序集内随意访问
+- `private protected`：可以被本类及其在**本程序集**内的派生类访问
 
 访问一个对象的字段需要用“对象的引用名.字段名”的方式访问。
 
@@ -961,13 +962,15 @@ class Foo
 
 其中 `Bar` 就是一个嵌套类。
 
-类也有访问权限：
+类也有访问权限。[访问修饰符](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/access-modifiers)可以为：
 
 - `public` 该类可以任意访问
 - `private`：仅限嵌套类，只能被嵌套类**所属的类**访问
 - `protected`：仅限嵌套类，只能被嵌套类**所属的类**及其派生类进行访问
 - `internal`：可以在该程序集内进行任意访问
 - `protected internal`：仅限嵌套类，可以被该类所属的类及其派生类进行访问，并可以在程序集内任意访问
+- `private protected`（C# 7.2）：仅限嵌套类，可以被该类所属的类及其在**本程序集**内的派生类访问
+- `file`（C# 11）：文件本地类型，只能在本文件内访问
 
 例如：
 
