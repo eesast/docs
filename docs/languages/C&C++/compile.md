@@ -39,7 +39,7 @@ C/C++程序生成一个可执行文件的过程可以分为 4 个步骤：**预�
   在 linux(Ubuntu)平台上，可以使用以下指令安装上述工具：
 
   ```bash
-  $ sudo apt-get install gcc g++
+  sudo apt-get install gcc g++
   ```
 
 - 此外还有 Clang、NVCC 等编译工具。不同的编译工具对 C++的支持不尽然相同，此处不再赘述。
@@ -49,7 +49,7 @@ C/C++程序生成一个可执行文件的过程可以分为 4 个步骤：**预�
 C++程序在预处理阶段会执行以下操作：宏的替换、头文件的插入、删除条件编译中不满足条件的部分。
 
 ```bash
-$ g++ –E invsqrt.cpp –o invsqrt.i
+g++ –E invsqrt.cpp –o invsqrt.i
 ```
 
 ### 2 编译 ⭐
@@ -82,13 +82,13 @@ $ g++ -c main.cpp -o main.o
 将每个源文件对应的目标.o 文件链接起来，就生成一个**可执行程序文件**。
 
 ```bash
-$ g++ invsqrt.o main.o -o main.exe
+g++ invsqrt.o main.o -o main.exe
 ```
 
 当然，如果想要使用.cpp 文件一步到位生成可执行文件，可以使用以下指令：
 
 ```bash
-$ g++ invsqrt.cpp main.cpp -o main.exe
+g++ invsqrt.cpp main.cpp -o main.exe
 ```
 
 > 实际上在 linux 系统上，可执行文件一般是没有后缀名的。此处为了方便说明添加了`.exe`文件。
@@ -157,5 +157,5 @@ $ g++ main.cpp -L . -linvsqrt -o main_shared.exe
 
 - [GCC 官网](https://gcc.gnu.org/)
 - [learn cpp](https://www.learncpp.com/) 一份新手友好的 C++入门文档。
-- [演练：使用 Visual Studio 创建并使用静态库](https://docs.microsoft.com/zh-cn/cpp/build/walkthrough-creating-and-using-a-static-library-cpp?view=msvc-170)
-- [演练：使用 Visual Studio 创建并使用动态库](https://docs.microsoft.com/zh-cn/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-170)
+- [演练：使用 Visual Studio 创建并使用静态库](https://learn.microsoft.com/zh-cn/cpp/build/walkthrough-creating-and-using-a-static-library-cpp?view=msvc-170)
+- [演练：使用 Visual Studio 创建并使用动态库](https://learn.microsoft.com/zh-cn/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-170)

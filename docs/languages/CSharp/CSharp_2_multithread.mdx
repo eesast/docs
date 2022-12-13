@@ -149,46 +149,46 @@ Windows 下使用 `CreateProcess` 进行创建，该函数位于 Kernel32.dll �
 
 ```c
 BOOL CreateProcessA(
-  LPCSTR                lpApplicationName,
-  LPSTR                 lpCommandLine,
-  LPSECURITY_ATTRIBUTES lpProcessAttributes,
-  LPSECURITY_ATTRIBUTES lpThreadAttributes,
-  BOOL                  bInheritHandles,
-  DWORD                 dwCreationFlags,
-  LPVOID                lpEnvironment,
-  LPCSTR                lpCurrentDirectory,
-  LPSTARTUPINFOA        lpStartupInfo,
-  LPPROCESS_INFORMATION lpProcessInformation
+    LPCSTR                lpApplicationName,
+    LPSTR                 lpCommandLine,
+    LPSECURITY_ATTRIBUTES lpProcessAttributes,
+    LPSECURITY_ATTRIBUTES lpThreadAttributes,
+    BOOL                  bInheritHandles,
+    DWORD                 dwCreationFlags,
+    LPVOID                lpEnvironment,
+    LPCSTR                lpCurrentDirectory,
+    LPSTARTUPINFOA        lpStartupInfo,
+    LPPROCESS_INFORMATION lpProcessInformation
 );
 ```
 
-由于这个函数的使用过于繁琐，因此不在这里做过多展开。感兴趣的同学可以查阅官方文档 [https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) 学习它的用法。
+由于这个函数的使用过于繁琐，因此不在这里做过多展开。感兴趣的同学可以查阅官方文档 [https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) 学习它的用法。
 
 这里仅提供一个笔者曾经写过的例子：
 
 ```c++
 bool SoundPlay::AllSound(int i) const
 {
-	const TCHAR* num[10] = { TEXT("0"), TEXT("1"), TEXT("2"), TEXT("3"), TEXT("4"), TEXT("5"), TEXT("6"), TEXT("7"),TEXT("8"), TEXT("9") };
-	STARTUPINFO si;
-	PROCESS_INFORMATION pi;
-	memset(&si, 0, sizeof(si));
-	memset(&pi, 0, sizeof(pi));
-	si.cb = sizeof(si);
+    const TCHAR* num[10] = { TEXT("0"), TEXT("1"), TEXT("2"), TEXT("3"), TEXT("4"), TEXT("5"), TEXT("6"),    TEXT("7"),TEXT("8"), TEXT("9") };
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
+    memset(&si, 0, sizeof(si));
+    memset(&pi, 0, sizeof(pi));
+    si.cb = sizeof(si);
 
-	TCHAR cmd[128];
-	_stprintf(cmd, TEXT("%s %s"), GAME_SOUND_EXE_NAME, num[i]);
+    TCHAR cmd[128];
+    _stprintf(cmd, TEXT("%s %s"), GAME_SOUND_EXE_NAME, num[i]);
 
-	if (!CreateProcess(NULL, cmd, NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi))
-	{
-		// Fail to create process
-		return false;
-	}
+    if (!CreateProcess(NULL, cmd, NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi))
+    {
+        // Fail to create process
+        return false;
+    }
 
-	CloseHandle(pi.hThread);
-	CloseHandle(pi.hProcess);
+    CloseHandle(pi.hThread);
+    CloseHandle(pi.hProcess);
 
-	return true;
+    return true;
 }
 ```
 
@@ -305,7 +305,7 @@ new Thread
 
 此外，`Thread` 类还有 `IsAlive` 属性用来标志该线程是否正在运行，`IsThreadPool` 属性用来标识该线程是否是托管线程池中的线程（线程池将在 稍后讲述）。
 
-此外，可以调用 `Thread ` 类的静态属性 `CurrentThread` 来得到当前线程的句柄。
+此外，可以调用 `Thread` 类的静态属性 `CurrentThread` 来得到当前线程的句柄。
 
 ##### 线程休眠
 
@@ -313,7 +313,7 @@ new Thread
 
 ```c#
 using System.Threading;
-Thread.Sleep(1000);		// 休眠 1000 毫秒，即 1 秒钟
+Thread.Sleep(1000);  // 休眠 1000 毫秒，即 1 秒钟
 ```
 
 ##### 线程池
@@ -371,16 +371,16 @@ namespace ConsoleApp1
     {
         static int n = 0;
         static void Func(object idx)
-		{
+        {
             for (int i = 0; i < 1000000; ++i)
-			{
+            {
                 ++n;
-			}
+            }
             Console.WriteLine($"Thread {idx} ended!");
-		}
+        }
 
         static void Main(string[] args)
-		{
+        {
             var thr1 = new Thread(Func);
             var thr2 = new Thread(Func);
             thr1.Start(1);
@@ -389,7 +389,7 @@ namespace ConsoleApp1
             thr2.Join();
             Console.WriteLine($"End: {n}");
         }
-	}
+    }
 }
 ```
 
@@ -556,9 +556,9 @@ void Process2()
 
 ```c#
 #define N 100
-int mutex = 1;	// 控制临界区
-int empty = N;	// 空位数目
-int full = 0;	// 满位数目
+int mutex = 1; // 控制临界区
+int empty = N; // 空位数目
+int full = 0; // 满位数目
 
 void producer(void)
 {
@@ -758,7 +758,7 @@ Coffman 等人总结了死锁的产生条件：
 > 设计一个进餐规则（并行算法）使得每个哲学家都不会挨饿；也就是说，在没有人知道别人什么时候想吃东西或思考的情况下，每个哲学家都可以在吃饭和思考之间一直交替下去。
 >
 > 来源：力扣（LeetCode）
-> 链接：https://leetcode-cn.com/problems/the-dining-philosophers
+> 链接：<https://leetcode-cn.com/problems/the-dining-philosophers>
 > 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 >
 > ![phi](../assets/phi.png)
@@ -770,12 +770,12 @@ Coffman 等人总结了死锁的产生条件：
 - 方法二
 
   ```c
-  #define N 			5
-  #define LEFT 		(i+N-1)%N
-  #define RIGHT 		(i+1)%N
-  #define THINKING 	0
-  #define HUNGRY		1
-  #define EATING		2
+  #define N    5
+  #define LEFT   (i+N-1)%N
+  #define RIGHT   (i+1)%N
+  #define THINKING  0
+  #define HUNGRY  1
+  #define EATING  2
   typedef int semaphore;
   int state[N];
   semaphore mutex = 1;
@@ -833,28 +833,28 @@ int rc = 0;
 
 void reader(void)
 {
-	while (TRUE) {
-		P(&mutex);
-		rc = rc + 1;
-		if (rc == 1) down(&db);
-		V(&mutex);
-		read_data_base();
-		P(&mutex);
-		rc = rc - 1;
-		if (rc == 0) up(&db);
-		V(&mutex);
-		use_data_read();
-	}
+    while (TRUE) {
+        P(&mutex);
+        rc = rc + 1;
+        if (rc == 1) down(&db);
+        V(&mutex);
+        read_data_base();
+        P(&mutex);
+        rc = rc - 1;
+        if (rc == 0) up(&db);
+        V(&mutex);
+        use_data_read();
+    }
 }
 
 void writer(void)
 {
-	while (TRUE) {
-		think_up_data();
-		P(&db);
-		write_data_base();
-		V(&db);
-	}
+    while (TRUE) {
+        think_up_data();
+        P(&db);
+        write_data_base();
+        V(&db);
+    }
 }
 ```
 
@@ -903,8 +903,8 @@ finally
 `System.Threading.Tasks` 命名空间内含有 `Task` 类，可以用于创建各种任务，底层是使用线程池。
 
 ```c#
-Task.Run(Method1);			// 无返回值的任务
-Task<TResult>.Run(Method2);	// 有返回值的任务
+Task.Run(Method1);   // 无返回值的任务
+Task<TResult>.Run(Method2); // 有返回值的任务
 ```
 
 `Run` 方法返回一个 `Task` 对象引用。
@@ -1279,14 +1279,14 @@ ThreadPool.ThreadCount; // 获取线程池中的线程数目
 
 ## 参考文献
 
-1. https://en.wikipedia.org/wiki/Central_processing_unit，2021 年 7 月 14 日
+1. <https://en.wikipedia.org/wiki/Central_processing_unit，2021> 年 7 月 14 日
 2. Computer Organization Design, David A. Patterson, John L. Hennessy, Fifth Edition
 3. [https://zh.wikipedia.org/zh-cn/%E5%AF%84%E5%AD%98%E5%99%A8](https://zh.wikipedia.org/zh-cn/%E5%AF%84%E5%AD%98%E5%99%A8)
 4. 《深入理解计算机系统》Randal E. Bryant、David R. O'Hallaron 著作，龚奕利、贺莲 译，机械工业出版社，2021 年 3 月第一版
 5. 《现代操作系统》Andrew S. Tanenbaum、Herbert Bos 著，陈向群、马洪兵 译，机械工业出版社，2019 年 7 月第一版
-6. https://docs.eesast.com/docs/tools/os，2021 年 7 月 14 日
-7. https://leetcode-cn.com/problemset/all/，2021 年 7 月 15 日
-8. https://docs.eesast.com/docs/languages/CSharp_2_multithread，2021 年 7 月 15 日
+6. <https://docs.eesast.com/docs/tools/os，2021> 年 7 月 14 日
+7. <https://leetcode-cn.com/problemset/all/，2021> 年 7 月 15 日
+8. <https://docs.eesast.com/docs/languages/CSharp_2_multithread，2021> 年 7 月 15 日
 
 ---
 
