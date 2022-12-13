@@ -53,6 +53,7 @@ module.exports = {
     "tools/document",
     "tools/tdd",
     "tools/process_management",
+    "tools/wsa",
   ],
   game: [
     "game/README",
