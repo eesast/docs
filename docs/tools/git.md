@@ -366,13 +366,13 @@ GitHub 为每个仓库提供了 release 功能（位于仓库页面的右侧）�
 
 ## 参考文献
 
-- [https://en.wikipedia.org/wiki/Git](https://en.wikipedia.org/wiki/Git)，2022 年 1 月 24 日
-- [https://zh.wikipedia.org/wiki/Git)](https://zh.wikipedia.org/wiki/Git)，2022 年 1 月 24 日
-- [https://missing.csail.mit.edu/2020/version-control/](https://missing.csail.mit.edu/2020/version-control/)，2022 年 1 月 24 日
+- <https://en.wikipedia.org/wiki/Git>，2022 年 1 月 24 日
+- <https://zh.wikipedia.org/wiki/Git>，2022 年 1 月 24 日
+- <https://missing.csail.mit.edu/2020/version-control/>，2022 年 1 月 24 日
 - 《软件工程》，Ian Sommerville 著，彭鑫、赵文耘 译，机械工业出版社，北京，2020 年 11 月 第 1 版
-- [https://docs.eesast.com/docs/tools/git](https://docs.eesast.com/docs/tools/git)，2022 年 1 月 25 日
-- [https://en.wikipedia.org/wiki/GitHub](https://en.wikipedia.org/wiki/GitHub)，2022 年 1 月 25 日
-- [https://docs.gitlab.com/ee/topics/gitlab_flow.html](https://docs.gitlab.com/ee/topics/gitlab_flow.html)，2022 年 1 月 26 日
-- [https://bbs.huaweicloud.com/blogs/281789](https://bbs.huaweicloud.com/blogs/281789)，2022 年 1 月 26 日
-- [https://weihongyu.com/基于 gitlab 的工作流程设计/](https://weihongyu.com/基于gitlab的工作流程设计/)，2022 年 1 月 26 日
+- <https://docs.eesast.com/docs/tools/git>，2022 年 1 月 25 日
+- <https://en.wikipedia.org/wiki/GitHub>，2022 年 1 月 25 日
+- <https://docs.gitlab.com/ee/topics/gitlab_flow.html>，2022 年 1 月 26 日
+- <https://bbs.huaweicloud.com/blogs/281789>，2022 年 1 月 26 日
+- <https://weihongyu.com/基于gitlab的工作流程设计/>，2022 年 1 月 26 日
 - 《复变函数与数理方程》课件，吴昊
