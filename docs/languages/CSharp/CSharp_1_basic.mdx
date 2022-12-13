@@ -181,7 +181,7 @@ public enum Color
     Blue = 1,
     Yello = 2,
     Purple = 8,
-    Black	// Equivalent to "Black = 9", 8 + 1 by default.
+    Black // Equivalent to "Black = 9", 8 + 1 by default.
 }
 ```
 
@@ -190,11 +190,11 @@ public enum Color
 定义一个结构类型变量有两种方式，一是直接使用“类型名+变量名”的方式，二是使用 `new` 关键字，两者完全等价。
 
 ```c#
-int x;				// Equivalent to "int x = 0;" or "int x = default(int);"
-int y = new int();	// Equivalent to "int y;"
+int x;                      // Equivalent to "int x = 0;" or "int x = default(int);"
+int y = new int();          // Equivalent to "int y;"
 int z = 4;
 Point pt1;
-Point pt2 = new Point();	// Equivalent to "Point pt2;"
+Point pt2 = new Point();    // Equivalent to "Point pt2;"
 ```
 
 如果值类型变量具有构造方法，可以用 `new` 关键字。
@@ -225,9 +225,9 @@ Point pt = new Point(2, 3);
 引用类型与值类型不同。引用类型分两部分，一个是部分是存储真正数据的部分，是开辟在“托管堆”上的，另一个是指向该数据块的“引用”，是在内存栈或其他任何位置的。我们创建引用类型的对象时，需要通过 `new` 关键字来在内存堆上开辟数据空间（不过又时可以省略）。例如字符串类型（`string`）就是一个引用类型：
 
 ```c#
-string s1 = new string("Hello, world");	// s1 是一个引用，指向一个 string 对象，该对象为 "Hello, world".
-string s2 = "Hello, world";		// string s2 = new string("Hello, world"); 的简略写法
-string s3;		// 仅仅定义了一个 string 引用，并没有指向任何 string 对象！
+string s1 = new string("Hello, world");     // s1 是一个引用，指向一个 string 对象，该对象为 "Hello, world".
+string s2 = "Hello, world";                 // string s2 = new string("Hello, world"); 的简略写法
+string s3;                                  // 仅仅定义了一个 string 引用，并没有指向任何 string 对象！
 ```
 
 没有指向任何对象的引用的值是默认值 `null`，即上述代码等价于 `string s3 = null;`。
@@ -340,9 +340,9 @@ string s3 = new string("");
 使用 `var` 关键字可以让编译器自动推导变量类型：
 
 ```c#
-var x = 4;	// x 是 int 类型
-var s = "Hello, world";	// s 是 string 类型的引用
-var o = new object();	//  o 是 object 类型的引用
+var x = 4;              // x 是 int 类型
+var s = "Hello, world"; // s 是 string 类型的引用
+var o = new object();   //  o 是 object 类型的引用
 ```
 
 ##### 类型转换
@@ -351,9 +351,9 @@ C# 默认可以将低精度类型隐式转换到高精度类型，而将高精�
 
 ```C#
 int x; ulong y;
-y = x;		// ok
-// x = y;  	// error
-x = (int)y;	// ok
+y = x;      // ok
+// x = y;   // error
+x = (int)y; // ok
 ```
 
 ##### 关于赋值
@@ -367,7 +367,7 @@ C# 变量名只能包含数字、字母、下划线（汉字等文字也属于�
 C# 包含一系列关键字（Keyword），例如 `int`、`double`、`if`、`while`，等等，如果要把变量名定义成关键字，则必须加上 `@`：
 
 ```c#
-int @int;	// 一个名字叫 int 的 int 型变量
+int @int; // 一个名字叫 int 的 int 型变量
 ```
 
 ##### 关于垃圾回收
@@ -392,7 +392,7 @@ System.Console.WriteLine("world!");
 ```c#
 // using System;
 int x = 4, y = 5, z = 6;
-Console.WriteLine("z = {2}, x = {0}, y = {1}", x, y, z);	// {n} 代表该处应换成第 n 个参数的值
+Console.WriteLine("z = {2}, x = {0}, y = {1}", x, y, z); // {n} 代表该处应换成第 n 个参数的值
 ```
 
 输出：
@@ -406,7 +406,7 @@ z = 6, x = 4, y = 5
 ```c#
 // using System;
 int x = 4, y = 5, z = 6;
-Console.WriteLine($"z = {z}, x = {x}, y = {y}");	// {n} 代表该处应换成第 n 个参数的值
+Console.WriteLine($"z = {z}, x = {x}, y = {y}"); // {n} 代表该处应换成第 n 个参数的值
 ```
 
 #### 输入
@@ -429,14 +429,14 @@ C# 的运算符：算术运算符、逻辑运算符、位运算符、三目运�
   ```c#
   static public void Func(SomeType foo)
   {
-      foo?.DoSomething();	// 如果 foo 不为 null，则调用 DoSomething 方法
+      foo?.DoSomething(); // 如果 foo 不为 null，则调用 DoSomething 方法
   }
   ```
 
 - null 合并运算符：`??`。如果左边的表达式不为 `null`，则值为左边的值；若左边的表达式为 `null`，则值为右边的值
 
   ```c#
-  static public void PrintString(string? s)	// string? 目前可暂时当成 string 类型，后文将进行讲解
+  static public void PrintString(string? s) // string? 目前可暂时当成 string 类型，后文将进行讲解
   {
       Console.WriteLine(s ?? "Null string");
   }
@@ -474,10 +474,10 @@ C# 控制结构：
 
 ```c#
 // type[] arr = new type[array_size];
-int[] arr1 = new int[5];		// 定义一个长度为 5 的数组，每个元素初始值均为默认值 0
-int[] arr2 = new int[5] { 1, 2, 3, 4, 5 };	// 定义一个长度为 5 的数组，初始值分别为 1, 2, 3, 4, 5
-var arr3 = new int[] { 1, 2, 3, 4, 5 };	// 数组的长度可以由编译器自动推导
-int[] arr4 = { 1, 2, 3, 4, 5 };				// 简略写法
+int[] arr1 = new int[5];                    // 定义一个长度为 5 的数组，每个元素初始值均为默认值 0
+int[] arr2 = new int[5] { 1, 2, 3, 4, 5 };  // 定义一个长度为 5 的数组，初始值分别为 1, 2, 3, 4, 5
+var arr3 = new int[] { 1, 2, 3, 4, 5 };     // 数组的长度可以由编译器自动推导
+int[] arr4 = { 1, 2, 3, 4, 5 };             // 简略写法
 ```
 
 其中，各个数组的类型均为 `int[]`。可以通过 `[]` 访问其元素，`Length` 获取元素个数：
@@ -528,10 +528,10 @@ C# 支持嵌套的数组，即数组的每个元素都是一个数组。这样�
 
 ```c#
 int[][] arr = new int[2][]
-			{
-				new int[3]{ 1, 2, 3 },
-				new int[2]{ 4, 5 }
-			};
+   {
+        new int[3]{ 1, 2, 3 },
+        new int[2]{ 4, 5 }
+   };
 ```
 
 上述定义了一个具有两个元素的交错数组。
@@ -713,9 +713,9 @@ class Utility
 Person p = new Person(), q = new Person();
 p.age = 555; q.age = 666;
 Utility.Swap(p, q);
-Console.WriteLine($"{p.age} {q.age}");	// 555 666
+Console.WriteLine($"{p.age} {q.age}"); // 555 666
 Utility.SwapAge(p, q);
-Console.WriteLine($"{p.age} {q.age}");	// 666 555
+Console.WriteLine($"{p.age} {q.age}"); // 666 555
 ```
 
 此外，参数可以改成按引用方式传递，需要加上关键字 `ref`。如果加上关键字 `ref`，则值类型的形参和实参指代的是同一个值类型对象，而引用类型的实参和形参指代的是同一个引用，例如上述代码改成：
@@ -734,8 +734,8 @@ static public void Swap(ref Person x, ref Person y)
 ```c#
 Person p = new Person(), q = new Person();
 p.age = 555; q.age = 666;
-Utility.Swap(ref p, ref q);		// 调用时也必须加 ref 关键字！
-Console.WriteLine($"{p.age} {q.age}");	// 666 555
+Utility.Swap(ref p, ref q);  // 调用时也必须加 ref 关键字！
+Console.WriteLine($"{p.age} {q.age}"); // 666 555
 ```
 
 ###### 输出参数
@@ -761,9 +761,9 @@ class MathTool
 调用时，默认会把末尾未赋实参的参数赋以缺省值。但是也可以自行指定：
 
 ```c#
-MathTool.Div(5);		// x = 5, y = 1
-Math.Div(y: 9);			// x = 1, y = 9
-Math.Div(y: 5, x: 4);	// x = 4, y = 5
+MathTool.Div(5);        // x = 5, y = 1
+Math.Div(y: 9);         // x = 1, y = 9
+Math.Div(y: 5, x: 4);   // x = 4, y = 5
 ```
 
 ###### 构造方法
@@ -845,11 +845,11 @@ class Person
     }
     public Person(int age_)
     {
-        Age = age_;		// 调用 set 访问器
+        Age = age_;  // 调用 set 访问器
     }
     public void AddAge()
     {
-        ++Age;		// 调用 set 和 get 访问器，等价于 Age = Age + 1;
+        ++Age;  // 调用 set 和 get 访问器，等价于 Age = Age + 1;
     }
 }
 ```
@@ -892,11 +892,11 @@ class WebPage
     private readonly string url;
     public WebPage(string url)
     {
-        this.url = url;		// 形参 url 覆盖了字段 url，需要用 this 引用访问字段
+        this.url = url;                 // 形参 url 覆盖了字段 url，需要用 this 引用访问字段
     }
     private void Test()
     {
-        // url = "http://www.4399.com";	// 编译错误！url 是只读的！
+        // url = "http://www.4399.com"; // 编译错误！url 是只读的！
     }
 }
 ```
@@ -911,11 +911,11 @@ class WebPage
     public string Url { get; private init; }
     public WebPage(string url)
     {
-        Url = url;     // 形参 url 覆盖了字段 url，需要用 this 引用访问字段
+        Url = url;                      // 形参 url 覆盖了字段 url，需要用 this 引用访问字段
     }
     private void Test()
     {
-        // Url = "http://www.4399.com";	// 编译错误！
+        // Url = "http://www.4399.com"; // 编译错误！
     }
 }
 ```
@@ -1042,11 +1042,11 @@ public sealed class Foo {}
 // Animal ani2 = dog;  // 用 ani2 引用指向 dog 指向的对象
 // object o = 1;   // 将整数 1 装箱
 
-Console.WriteLine(ani is Animal);	// True，ani 是 Animal 类的对象
-Console.WriteLine(ani is Dog);		// False，ani 不是 Dog 类的对象
-Console.WriteLine(dog is Animal);	// True，Animal 是 Dog 类的基类
-Console.WriteLine(ani2 is Dog);		// True，ani2 指向的确实是 Dog 类的对象
-Console.WriteLine(o is int);		// True，拆箱
+Console.WriteLine(ani is Animal);   // True，ani 是 Animal 类的对象
+Console.WriteLine(ani is Dog);      // False，ani 不是 Dog 类的对象
+Console.WriteLine(dog is Animal);   // True，Animal 是 Dog 类的基类
+Console.WriteLine(ani2 is Dog);     // True，ani2 指向的确实是 Dog 类的对象
+Console.WriteLine(o is int);        // True，拆箱
 ```
 
 在 C# 9.0 中，还可以用 `is not` 判断改对象是否不是该类的对象。
@@ -1095,8 +1095,8 @@ public sealed class Dog : Animal
 
 ```c#
 Animal ani = new Dog();
-ani.Call();		// 输出 Wang wang
-// Animal ani2 = new Animal();	// 编译错误，Animal 是抽象类
+ani.Call();                     // 输出 Wang wang
+// Animal ani2 = new Animal();  // 编译错误，Animal 是抽象类
 ```
 
 ##### 虚属性与抽象属性
@@ -1148,7 +1148,7 @@ public class Cat : ICallable, INamable
     private string name;
     public string Name
     {
-        get => name;		// 实现接口中 Name 的 get 访问器
+        get => name;  // 实现接口中 Name 的 get 访问器
         private set
         {
             name = value;
@@ -1232,14 +1232,14 @@ delegate int BinaryFunctor(int x, int y);
 与其他引用类型一样，我们需要用 `new` 关键字创建一个委托，并将一个方法赋给这个委托。
 
 ```c#
-// int Add(int a, int b) => a + b; 	// Add 方法的定义
+// int Add(int a, int b) => a + b;  // Add 方法的定义
 BinaryFunctor bf = new BinaryFunctor(Add);
 ```
 
 然后我们便可以像调用方法一样调用这个委托所绑定的方法：
 
 ```c#
-Console.WriteLine(bf(3, 5));	// 输出 8
+Console.WriteLine(bf(3, 5)); // 输出 8
 ```
 
 #### 内置委托
@@ -1263,7 +1263,7 @@ Console.WriteLine(bf(3, 5));	// 输出 8
 var caller = new Action(Call1);
 caller += Call2;
 caller = caller + Call3;
-caller.Invoke();	// 等价于 caller();
+caller.Invoke(); // 等价于 caller();
 ```
 
 同样也可以用 `-` 或 `-=` 来讲方法从委托中删除，例如 `caller -= Call1;`。但是这样，多播委托就存在不绑定任何一个方法的情况。在这种情况下，调用委托是非法的，我们可以使用 `caller?.Invoke();` 来达到这个目的。它会先判断委托是否绑定了方法，如果是再调用 `Invoke` 方法。
@@ -1298,12 +1298,12 @@ lambda 表达式可以直接当作方法赋值给委托，例如：
 
 ```c#
 var output = new Action
-    (
-    	() =>
-        {
-			Console.WriteLine("Hello, world!");
-        }		// 或 () => Console.WriteLine("Hello, world!");
-	);
+(
+    () =>
+    {
+        Console.WriteLine("Hello, world!");
+    }  // 或 () => Console.WriteLine("Hello, world!");
+);
 var getAddOne = new Func<int, int>(x => x + 1);
 ```
 
@@ -1436,10 +1436,10 @@ catch (Exception e)
 
 ```c#
 try {}
-catch		// 捕获全部异常
+catch  // 捕获全部异常
 {
     Console.WriteLine("Caught");
-    throw;	// 将捕获到的异常再次抛出
+    throw; // 将捕获到的异常再次抛出
 }
 ```
 
@@ -1449,12 +1449,12 @@ C# 支持 `finally` 语句块，放在所有 `catch` 块之后。无论是否抛
 // var rwlock = new ReaderWriterLockSlim();
 try
 {
-    rwlock.EnterWriteLock();		// 锁住
+    rwlock.EnterWriteLock();  // 锁住
     /*Some code*/
 }
 finally
 {
-    rwlock.ExitWriteLock();			// 解锁
+    rwlock.ExitWriteLock();   // 解锁
 }
 ```
 
@@ -1475,7 +1475,7 @@ C# 8.0 支持可为空的引用类型。在 C# 8.0 之前，普通的引用类�
 使用可为空的引用类型的好处是，编译器会在编译期间为你检查是否进行了 `null` 判断。如果没有进行 `null` 的判断，会在编译期间给出警告。因此建议大家在引用可能为 `null` 的情况下使用这个特性，能够一定程度上避免 bug 的发生。例如下面的代码会给出警告：
 
 ```c#
-public void OutputLength(string? s) => Console.WriteLine(s.Length);	// 警告，s 可能为 null
+public void OutputLength(string? s) => Console.WriteLine(s.Length); // 警告，s 可能为 null
 ```
 
 很容易想到可以改成如下形式来消除警告：
@@ -1509,7 +1509,7 @@ public void OutputLengthNotNull(string s) => Console.WriteLine(s.Length);
 ```c#
 public void OutputLength(string? s)
 {
-    OutputLengthNotNull(s);		// 警告！未经过 null 检查便将 `string?` 赋值给 `string`
+    OutputLengthNotNull(s);  // 警告！未经过 null 检查便将 `string?` 赋值给 `string`
 }
 ```
 
@@ -1574,7 +1574,7 @@ int Func(string? s)
 ```c#
 class Foo
 {
-    ~Foo()	// 终结器
+    ~Foo() // 终结器
     {
 
     }
@@ -1636,7 +1636,7 @@ public void Draw()
     // Do something
     using (var dc = new DeviceContext())
     {
-    	/*Use dc to draw pictures*/
+        /* Use dc to draw pictures */
 
         // 跳出 using 块前调用 Dispose 方法
     }
@@ -1747,7 +1747,7 @@ C# 保留了指针类型，但是我们只能定义非托管类型的指针，�
 
 ## 参考文献
 
-1. https://docs.microsoft.com/en-us/
+1. [https://learn.microsoft.com/en-us/](https://learn.microsoft.com/en-us/)
 2. 《复变函数与数理方程》教案，吴昊（男）
 
 ---

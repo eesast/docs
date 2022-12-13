@@ -428,26 +428,26 @@ class BasicWindow
 
 protected:
 
-	//关于窗口
+    //关于窗口
 
-	HINSTANCE m_hInst;					//当前实例
-	HWND m_hWnd = NULL;				    //主窗口句柄
+    HINSTANCE m_hInst;     //当前实例
+    HWND m_hWnd = NULL;        //主窗口句柄
 
-	//创建窗口
-	BOOL Init
-	(
-		HINSTANCE hInstance, int nCmdShow,
-		int x, int y, int cx, int cy, DWORD dwStyle,
-		LPCTSTR c_lpszWndTitle, WNDCLASSEX wcex
-	);
+    //创建窗口
+    BOOL Init
+    (
+    HINSTANCE hInstance, int nCmdShow,
+    int x, int y, int cx, int cy, DWORD dwStyle,
+    LPCTSTR c_lpszWndTitle, WNDCLASSEX wcex
+    );
 
-	//处理了消息返回true，没有处理则返回false
-	virtual bool MessageProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) = 0;
+    //处理了消息返回true，没有处理则返回false
+    virtual bool MessageProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) = 0;
 
 private:
 
-	BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, int x, int y, int cx, int cy, DWORD dwStyle, LPCTSTR c_lpszWndClassName, LPCTSTR c_c_lpszWndTitle);
-	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+    BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, int x, int y, int cx, int cy, DWORD dwStyle, LPCTSTR c_lpszWndClassName, LPCTSTR c_c_lpszWndTitle);
+    static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 };
 
@@ -484,7 +484,7 @@ BOOL BasicWindow::Init
         return FALSE;
     }
 
-	return TRUE;
+    return TRUE;
 }
 
 
@@ -546,6 +546,6 @@ LRESULT CALLBACK BasicWindow::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 
 ## 六、结语
 
-非常感谢你有足够的耐心和兴趣看到了这里。现在不妨假设你已经学会了 C/C++建立空白窗口的过程（虽然我知道理解它是一个极其艰难的过程，需要反复练习）。如果想要做出声情并茂的 Win32 程序，还需要了解很多知识，例如 GDI 绘图、键鼠消息处理、键鼠钩子、菜单与加速键的使用、位图、图标与光标的使用、gdiplus 绘图、按钮等控件的创建……值得一提的是，按钮、文本框这样的控件本质上也是一个窗口，也是用`CreateWindow`函数来创建的。此外，感兴趣的读者也可以学习对话框的建立，使得你的程序能够更简单地与使用者进行交互，甚至以对话框作为主界面和用户进行交互。学会这些都是一个极其漫长且艰难的过程。如果你真的像我一样对这些古老又无用的东西感兴趣，那就去学吧！不过在学习的过程中离不开微软的官方文档：Microsoft Docs，网址：[https://docs.microsoft.com/zh-cn/](https://docs.microsoft.com/zh-cn/)。国内很多人把它称之为“MSDN”，但实际上“Microsoft Docs”、“MSDN”和“MSDN，我告诉你”是三个不同的东西，有很多人都把它们混淆了。有兴趣的读者也可以自己翻阅资料了解一下。
+非常感谢你有足够的耐心和兴趣看到了这里。现在不妨假设你已经学会了 C/C++建立空白窗口的过程（虽然我知道理解它是一个极其艰难的过程，需要反复练习）。如果想要做出声情并茂的 Win32 程序，还需要了解很多知识，例如 GDI 绘图、键鼠消息处理、键鼠钩子、菜单与加速键的使用、位图、图标与光标的使用、gdiplus 绘图、按钮等控件的创建……值得一提的是，按钮、文本框这样的控件本质上也是一个窗口，也是用`CreateWindow`函数来创建的。此外，感兴趣的读者也可以学习对话框的建立，使得你的程序能够更简单地与使用者进行交互，甚至以对话框作为主界面和用户进行交互。学会这些都是一个极其漫长且艰难的过程。如果你真的像我一样对这些古老又无用的东西感兴趣，那就去学吧！不过在学习的过程中离不开微软的官方文档：Microsoft Learn（原名 Microsoft Docs），网址：<https://learn.microsoft.com/zh-cn/>。国内很多人把它称之为“MSDN”，但实际上“Microsoft Learn”、“MSDN”和“MSDN，我告诉你”是三个不同的东西，有很多人都把它们混淆了。有兴趣的读者也可以自己翻阅资料了解一下。
 
-最后再推荐一些讲解 Win32 API 的书籍吧：《Windows 程序设计（第 5 版）》、《Windows 高级编程》，等等。不过，这些书都不是用来看的，是遇到哪里不会就来查阅的。但是就现在而言，最好的书籍只有两个：一个是 Microsoft Docs，另一个就是百度！查阅这两本网络神书远比纸质书籍快捷得多。
+最后再推荐一些讲解 Win32 API 的书籍吧：《Windows 程序设计（第 5 版）》、《Windows 高级编程》，等等。不过，这些书都不是用来看的，是遇到哪里不会就来查阅的。但是就现在而言，最好的书籍只有两个：一个是 Microsoft Learn，另一个就是百度！查阅这两本网络神书远比纸质书籍快捷得多。
