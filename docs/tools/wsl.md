@@ -3,6 +3,12 @@ title: WSL 安装与使用
 sidebar_label: WSL
 ---
 
+## WSL 简介
+
+WSL（Windows Subsyetem for Linux，适用于 Linux 的 Windows 子系统），是 Microsoft 公司于 2016 年在 Windows 10 平台发布的一项功能，其使得用户可以在 Windows 操作系统上运行 ELF 格式的 Linux 可执行文件。
+
+WSL 目前已发布两代产品：WSL 1 和 WSL 2。WSL 1 实现了 Linux 兼容层，将 Linux 系统调用转换为 Windows NT 系统调用；而 WSL 2 则利用 Windows 的 Hyper-V 功能，通过虚拟化技术直接运行 Linux 虚拟机，更接近原生 Linux 操作系统体验。
+
 ## 微软官方文档安装教程
 
 安装 WSL 2 的微软官方教程链接：
