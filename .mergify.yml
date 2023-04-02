@@ -40,7 +40,6 @@ pull_request_rules:
     actions:
       merge:
         method: rebase
-        rebase_fallback: squash
   - name: delete head branch after merge
     conditions:
       - merged
