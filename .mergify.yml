@@ -21,7 +21,6 @@ pull_request_rules:
     actions:
       merge:
         method: rebase
-        rebase_fallback: squash
   - name: automatic approve for Renovate pull requests
     conditions:
       - author=renovate[bot]
