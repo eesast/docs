@@ -4,7 +4,9 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南。
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+
+使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，电子系科协以 [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 授权开放的一系列工具与框架的使用指南。
 
 ## 命令
 
