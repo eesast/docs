@@ -6,6 +6,11 @@ slug: ./
 ## List
 
 - [Unity](unity.mdx)
+- Minecraft
+  - 红石
+    - [官方红石教程——红石测验](minecraft/redstone/redstone_testing/README.md)
+      - [写在前面](minecraft/redstone/redstone_testing/README.md)
+      - [（一）红石基础](minecraft/redstone/redstone_testing/redstone_basic1.md)
 - 通信
   - [Protobuf](communication/Protobuf.md)
   - [gRPC](communication/gRPC.md)

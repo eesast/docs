@@ -59,6 +59,20 @@ module.exports = {
     "game/README",
     "game/unity",
     {
+      Minecraft: [
+        {
+          红石: [
+            {
+              官方红石教程: [
+                "game/minecraft/redstone/redstone_testing/README",
+                "game/minecraft/redstone/redstone_testing/redstone_basic1",
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
       通信: ["game/communication/Protobuf", "game/communication/gRPC"],
     },
   ],
