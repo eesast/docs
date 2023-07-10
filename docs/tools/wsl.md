@@ -206,6 +206,14 @@ WSLg 需要电脑已经安装了 WSL 2 内核组件。
 
 打开自己的 WSL 2，任意寻找一款 GUI 程序（例如 gedit），观察是否能够启动成功（每次开机初次启动可能会有较长的冷启动时间，需要耐心等待）。
 
+以 gedit 为例，执行：
+
+```cmd
+> sudo apt update -y
+> sudo apt install -y gedit
+> gedit
+```
+
 ## WSL 镜像的导入与导出
 
 使用 WSL 可以导出发行版的镜像，进而实现对任意一个发行版的复制和迁移（甚至可以与 Docker 镜像互通，导入 Docker 导出的镜像或导出 Docker 可以导入的镜像）。
