@@ -11,13 +11,12 @@ WSL 目前已发布两代产品：WSL 1 和 WSL 2。WSL 1 实现了 Linux 兼容
 
 ## 微软官方文档安装教程
 
-安装 WSL 2 的微软官方教程链接：
+本教程部分参考了安装 WSL 2 的微软官方教程链接：
 
-英文版：<https://learn.microsoft.com/en-us/windows/wsl/install>
++ 英文版：<https://learn.microsoft.com/en-us/windows/wsl/install>
++ 中文版：<https://learn.microsoft.com/zh-cn/windows/wsl/install>
 
-中文版：<https://learn.microsoft.com/zh-cn/windows/wsl/install>
-
-如果阅读官方教程有困难，可以查看下面的图文教程。
+按照官方教程的步骤安装可能发生一系列问题，因此建议读者参考下面的图文教程进行安装。
 
 **注意**：WSL 2 并不是 WSL 1 的升级版本，因此安装 WSL 2 不需要先安装 WSL 1！
 
