@@ -1449,10 +1449,10 @@ C# 支持 `finally` 语句块，放在所有 `catch` 块之后。无论是否抛
 
 ```c#
 // var rwlock = new ReaderWriterLockSlim();
+rwlock.EnterWriteLock();    // 锁住
 try
 {
-    rwlock.EnterWriteLock();  // 锁住
-    /*Some code*/
+    /* Some code */
 }
 finally
 {
