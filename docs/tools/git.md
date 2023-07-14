@@ -252,8 +252,10 @@ Gitattributes 用于设置文件的属性。和 gitignore 类似，gitattributes
 
 - 如果 `url` 使用 HTTPS 链接，则可能由于一些特殊的原因出现无法联网的情况。此时需要进行下面的设置（其中 `port` 是主机的网络的代理端口）：
 
-  - git config --global http.proxy http://127.0.0.1:\<port\>
-  - git config --global https.proxy https://127.0.0.1:\<port\>
+  ```bash
+  $ git config --global http.proxy http://127.0.0.1:<port>
+  $ git config --global https.proxy https://127.0.0.1:<port>
+  ```
 
 - 如果 `url` 使用 SSH 链接，则需要配置 ssh：
 
