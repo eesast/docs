@@ -233,9 +233,9 @@ C++11 引入了基于范围的循环写法。
 ```C++
 std::vector<int> vec = {1, 2, 3, 4};
 for (auto element : vec)
-    std::cout << element << std::endl; // 不会改变vec的元素，用于读
+    std::cout << element << std::endl; // `auto` 被推导为 `int`，`element` 是 `vec` 内每个元素的拷贝
 for (auto &element : vec)
-    element += 1;                      // 可以改变vec的元素，用于写
+    element += 1;                      // `auto` 被推导为 `int`，`auto&` 则为 `int&`，`element` 是 `vec` 内每个元素的引用
 ```
 
 ## 面向对象
