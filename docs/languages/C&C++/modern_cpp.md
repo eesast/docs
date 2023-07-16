@@ -9,10 +9,22 @@ title: Modern C++ 选讲
 替代 NULL。C++11 引入了 `nullptr` 关键字，专门用来区分空指针、`0`。而 `nullptr` 的类型为 `nullptr_t`，能够隐式的转换为任何指针或成员指针的类型。
 
 ```C++
+void foo(int);
+void foo(char*);
+
 foo(0);          // 调用 foo(int)
-// foo(NULL);    // 该行不能通过编译
+// foo(NULL);    // 该行在不同编译器下会有不同的行为，可以参考下面的说明。
 foo(nullptr);    // 调用 foo(char*)
 ```
+
+> 在 C++11 之后的标准中，`NULL` 可以是一个整数类型的 0，也可以是一个 `std::nullptr_t`。因此，类似下面的两种编译器实现都是可以的。
+> ```c++
+> #define NULL 0
+> #define NULL nullptr
+> ```
+> 在 msvc 中，`NULL` 的实现为 `#define NULL 0`，因此上面的代码是可以通过编译的；而在 gcc 和 clang 中，`NULL` 的实现为 `#define NULL __null`，此处 `__null` 是一个 `long` 类型的 0，同样是符合标准的。
+>
+> 因此，对于 `foo(NULL)` 而言，`foo(int)` 和 `foo(char*)` 都不是精确的参数类型匹配，因此不能通过编译（会提示 `foo` 的调用是不明确的）；而如果加入 `void foo(long);` 的声明，则 `foo(NULL)` 精确地匹配到了 `foo(long)`，因此可以通过编译。
 
 ### constexpr
 
