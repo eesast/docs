@@ -178,7 +178,17 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "DragonAura",
+      "name": "DragonAura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32223554?v=4",
+      "profile": "https://github.com/DragonAura",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "skipCi": true
+  "skipCi": true,
+  "commitType": "docs"
 }
