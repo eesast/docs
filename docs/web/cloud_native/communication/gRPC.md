@@ -25,7 +25,7 @@ Client-Server 结构是一种经典的通信模型。它通常采取两层结构
 
 [THUAI5](https://github.com/eesast/THUAI5)就是一个应用了 Client-Server model 的典型实例：
 
-![THUAI5架构](../assets/THUAI5_structure.png)
+![THUAI5架构](../../assets/cloud_native/communication/THUAI5_structure.png)
 
 在游戏中，玩家通过在 Client 端编写 C++代码来制定游戏策略，而 Server 端由 Csharp 语言写成，用于分析处理游戏逻辑。编译生成的 Client 端可执行文件将向 Server 端发送请求，请求处理完毕后 Server 端再向 Client 端发送处理后的结果，这样 Client 端就可以接受到游戏实况，以供下一步决策。
 
