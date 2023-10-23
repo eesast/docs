@@ -44,7 +44,6 @@ module.exports = {
   ],
   tools: [
     "tools/README",
-    "tools/docker",
     "tools/git",
     "tools/git_instance",
     "tools/os",
@@ -72,9 +71,6 @@ module.exports = {
         },
       ],
     },
-    {
-      通信: ["game/communication/Protobuf", "game/communication/gRPC"],
-    },
   ],
   web: [
     "web/README",
@@ -96,6 +92,15 @@ module.exports = {
     },
     {
       部署: ["web/deployment/CI&CD", "web/deployment/nginx"],
+    },
+    {
+      云原生: [
+        "web/cloud_native/README",
+        "web/cloud_native/docker",
+        {
+          通信: ["web/cloud_native/communication/Protobuf", "web/cloud_native/communication/gRPC"],
+        },
+      ],
     },
   ],
   "machine-learning": ["machine_learning/README"],

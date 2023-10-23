@@ -16,6 +16,15 @@ slug: ./
   - [MongoDB](backend/MongoDB.mdx)
   - [GraphQL, Hasura, PostgreSQL, Apollo](backend/graphql.mdx)
   - [OSS & CDN](backend/OSS_CDN.mdx)
+- 部署
+  - [Web 测试 + CI/CD](deployment/CI&CD.mdx)
+  - [Web 服务器](deployment/nginx.mdx)
+- [云原生（Cloud Native）](cloud_native/README.md)
+  - [Docker](./cloud_native/docker.mdx)
+  - Kubernetes
+  - 通信
+    - [Protobuf](./cloud_native/communication/Protobuf.md)
+    - [gRPC](./cloud_native/communication/gRPC.md)
 
 其中部分内容在 `Languages` 部分：
 
