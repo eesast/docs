@@ -189,6 +189,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Rosist-Sallina",
+      "name": "Rosist Sallina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89177626?v=4",
+      "profile": "https://github.com/Rosist-Sallina",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
