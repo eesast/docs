@@ -70,7 +70,7 @@ WSL 需要 **Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的�
 
 WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用；如果要使用 Linux 内核，需要安装 WSL 2。
 
-需要注意的是，对于旧版一旦使用 WSL 2，便无法使用安卓模拟器，以及旧版的 VMWare Workstation。对于有使用虚拟机需求的同学（例如电电 CAD），需要使用新版 VMWare Workstation，但是可能会有一些性能损失。
+需要注意的是，WSL 2 基于 Windows 的 Hyper-V 功能。一旦使用 WSL 2，便无法使用安卓模拟器，以及旧版的 VMWare Workstation。对于有使用虚拟机需求的同学（例如电电 CAD），需要使用新版 VMWare Workstation（版本要求为 15.5.5 及以上，其他要求参见 [VMware Workstation 15.5.5 Pro Release Notes](https://docs.vmware.com/en/VMware-Workstation-Pro/15.5/rn/VMware-Workstation-1555-Pro-Release-Notes.html#Whatsnew)），但是可能会有一些性能损失。
 
 此外，根据微软官方建议，WSL 2 尽量使用自己的文件系统，不建议与 Windows 文件系统做交互。
 
