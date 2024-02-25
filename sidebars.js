@@ -53,6 +53,16 @@ module.exports = {
     "tools/tdd",
     "tools/process_management",
     "tools/wsa",
+    {
+      ROS: [
+        "tools/ROS/basic",
+        "tools/ROS/communication",
+        "tools/ROS/visualization",
+        "tools/ROS/gazebo",
+        "tools/ROS/packages",
+        "tools/ROS/reference",
+      ],
+    }
   ],
   game: [
     "game/README",

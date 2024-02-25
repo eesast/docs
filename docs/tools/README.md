@@ -13,6 +13,14 @@ slug: ./
 - [文档：需求文档、设计文档、产品文档](document.md)
 - [测试：单元测试、测试驱动的开发（TDD）](tdd.md)
 - [软件开发过程：软件过程、敏捷开发、DevOps](process_management.md)
+- [WSA](wsa.md)
+- ROS
+  - [basic](ROS/basic)
+  - [communication](ROS/communication)
+  - [visualization](ROS/visualization)
+  - [gazebo](ROS/gazebo)
+  - [packages](ROS/packages)
+  - [reference](ROS/reference)
 
 ## Recommendation
 
