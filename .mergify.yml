@@ -52,7 +52,7 @@ pull_request_rules:
         add:
           - "dependency"
           - "bot"
-  - name: automatic label Renovate pull requests
+  - name: automatic label ImgBot pull requests
     conditions:
       - author=imgbot[bot]
     actions:
