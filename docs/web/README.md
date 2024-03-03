@@ -1,9 +1,9 @@
 ---
-title: WEB
+title: Web
 slug: ./
 ---
 
-## WEB 需要学习什么
+## Web 需要学习什么
 
 本部分内容基于 EESAST 目前网站方面的技术逐步完善中，分为以下章节：
 
