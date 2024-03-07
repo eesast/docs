@@ -3,7 +3,15 @@ title: Windows Subsystem for Android™️ 教程
 sidebar_label: WSA
 ---
 
-## WSA 的安装
+## WSA 简介
+
+WSA，即 Windows Subsystem for Android (TM)，是微软在 Windows 11 中推出的一项基于 Hyper-V 虚拟机的功能，用于运行 Android 应用程序。
+
+## WSA 被弃用
+
+北京时间 2024 年 3 月 6 日，微软[在 Microsoft Learn 上正式宣布将于 2025 年 3 月 5 日停止对 WSA 的支持](https://learn.microsoft.com/en-us/windows/android/wsa/)，并在 [GitHub 上引发了一系列讨论](https://github.com/microsoft/WSA/discussions/536)，一位工作人员[在 Microsoft Learn 上对此作出了解释](https://learn.microsoft.com/en-us/answers/questions/1609737/why-is-windows-subsystem-for-android-wsa-being-dep)。
+
+## WSA 安装步骤
 
 ### 操作系统要求
 
