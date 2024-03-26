@@ -191,13 +191,15 @@ Protobuf 中常见的基础数据类型与若干编程语言的对应关系如�
 
 `repeated`关键字可以定义重复多次的信息（即数组），其顺序是有序的。
 
-#### 命名法
+#### 命名规范
 
-为了便于阅读，protobuf 规定了一系列命名法：
+为了便于阅读，protobuf 规定了一系列命名规范：
 
 - message、enum 采用大驼峰命名法，如`message StudentInfo`。
-- 字段采用下划线分割法，且全部小写，如`string student_name`。
-- 枚举值采用下划线分割法，且全部大写，如`FIRST_VALUE`。
+- 字段采用下划线命名法，且全部小写，如`string student_name`。
+- 枚举值采用下划线命名法，且全部大写，如`FIRST_VALUE`。
+
+更多命名规范可以参考[官方文档](https://protobuf.dev/programming-guides/style/)。
 
 ### 进阶使用
 
