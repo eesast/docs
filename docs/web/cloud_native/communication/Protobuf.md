@@ -4,7 +4,7 @@ title: "Protobuf"
 
 :::tip
 
-- 本节内容及例程已上传至[Github 仓库](https://github.com/Ther-nullptr/Communication-tutorial)。
+- 本节内容及例程已上传至 [Github 仓库](https://github.com/Ther-nullptr/Communication-tutorial)。
 
 :::
 
