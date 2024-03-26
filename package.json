@@ -52,7 +52,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.3",
     "@tsconfig/docusaurus": "2.0.2",
-    "@types/react": "18.2.71",
+    "@types/react": "18.2.72",
     "@types/react-helmet": "6.1.11",
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "5.62.0",
