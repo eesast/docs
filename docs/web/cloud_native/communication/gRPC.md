@@ -6,7 +6,7 @@ title: "gRPC"
 
 :::tip
 
-- 本节内容及例程已上传至[Github 仓库](https://github.com/Ther-nullptr/Communication-tutorial)。
+- 本节内容及例程已上传至 [Github 仓库](https://github.com/Ther-nullptr/Communication-tutorial)。
 
 :::
 
@@ -368,7 +368,7 @@ public static void Main()
 {
     try
     {
-        // 对于【有状态】应用，应当注意要【禁止复用端口】！！！（SoReuseport 置为 0）
+        // 对于【有状态】应用，应当注意要【禁止复用端口】（SoReuseport 置为 0），否则请求将被随机发送到共用端口的其中一个进程上！！！
         Grpc.Core.Server server = new Grpc.Core.Server(new[] { new ChannelOption(ChannelOptions.SoReuseport, 0) })
         {
             Services = { Calculator.BindService(new CalculatorImpl()) },
