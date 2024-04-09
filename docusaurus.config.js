@@ -63,6 +63,10 @@ module.exports = {
               label: "Machine Learning",
               to: "docs/machine_learning",
             },
+            {
+              label: "THUAI7",
+              to: "docs/thuai7",
+            },
           ],
         },
         { to: "blog", label: "Blog", position: "left" },
@@ -102,6 +106,10 @@ module.exports = {
             {
               label: "Machine Learning",
               to: "docs/machine_learning",
+            },
+            {
+              label: "THUAI7",
+              to: "docs/thuai7",
             },
           ],
         },
