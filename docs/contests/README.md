@@ -9,4 +9,4 @@ slug: ./
 
 ## List
 
-+ [THUAI7](thuai7/README.md)
++ [THUAI7](thuai7/README.md)：清华大学第七届人工智能挑战赛电子系赛道（原电子系第 25 届队式程序设计大赛 teamstyle25）
