@@ -117,6 +117,14 @@ module.exports = {
   Contests: [
     "contests/README",
     {
+      "THUAI5": [
+        "contests/thuai5/README",
+        "contests/thuai5/GameRules",
+        "contests/thuai5/CAPI",
+        "contests/thuai5/Tool_tutorial"
+      ]
+    },
+    {
       "THUAI6": [
         "contests/thuai6/README",
         "contests/thuai6/GameRules",
