@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
     virtual std::future<bool> MoveLeft(int64_t timeInMilliseconds) = 0;
     virtual std::future<bool> MoveDown(int64_t timeInMilliseconds) = 0;
 
-    // 基地
+    // 大本营
     virtual std::future<bool> InstallModule(std::shared_ptr<const THUAI7::Ship>,int32_t Module)`
     virtual std::vector<std::shared_ptr<const THUAI7::Ship>> GetShipInformation()`
     virtual std::future<bool> BuildShip(int32_t shipType)`

@@ -171,7 +171,7 @@ module.exports = {
             "contests/thuai7/ship/civilship",
             "contests/thuai7/ship/warship",
             "contests/thuai7/ship/flagship",
-            "contests/thuai7/ship/team",
+            "contests/thuai7/ship/base",
           ],
         },
         {
