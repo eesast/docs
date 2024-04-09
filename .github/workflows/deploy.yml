@@ -57,3 +57,8 @@ jobs:
         run: |
           docker build -t eesast/docs:latest .
           docker push eesast/docs:latest
+
+      - name: Trigger watchtower on server
+        run: |
+          curl "http://eesast.com:6543/v1/update?image=eesast%2Fdocs" \
+               -H "Authorization: Bearer ${{ secrets.WATCHTOWER_HTTP_API_TOKEN }}"
