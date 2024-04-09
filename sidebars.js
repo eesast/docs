@@ -114,4 +114,55 @@ module.exports = {
     },
   ],
   "machine-learning": ["machine_learning/README"],
+  "THUAI7": [
+    "thuai7/README",
+    {
+      "引入": [
+        "thuai7/intro/README",
+        "thuai7/intro/rule",
+        "thuai7/intro/guide",
+        "thuai7/intro/programming",
+      ],
+    },
+    {
+      "地图": [
+        "thuai7/map/map",
+        "thuai7/map/placetype",
+        "thuai7/map/home",
+        "thuai7/map/wormhole",
+      ],
+    },
+    {
+      "舰船": [
+        "thuai7/ship/ship",
+        "thuai7/ship/civilship",
+        "thuai7/ship/warship",
+        "thuai7/ship/flagship",
+        "thuai7/ship/team",
+      ],
+    },
+    {
+      "机制": [
+        "thuai7/mechanics/mechanics",
+        "thuai7/mechanics/construction",
+        "thuai7/mechanics/module",
+        "thuai7/mechanics/view",
+        "thuai7/mechanics/attack",
+        "thuai7/mechanics/score",
+      ],
+    },
+    {
+      "接口": [
+        "thuai7/interface/interface",
+        "thuai7/interface/cpp",
+        "thuai7/interface/python",
+      ],
+    },
+    {
+      "常见问题": [
+        "thuai7/faq/README",
+        "thuai7/faq/cpptips",
+      ]
+    }
+  ]
 };
