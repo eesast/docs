@@ -13,7 +13,7 @@ A:
 应该是还没有编译，打开CAPI\cpp目录，在里面打开CAPI.sln，然后点击生成，对代码进行编译
 
 Q：为什么CAPI.sln打开后会找不到项目
-![zip](../assets/thuai6/zip.png)
+![zip](../assets/THUAI6/zip.png)
 
 A:要先解压
 
@@ -27,34 +27,34 @@ Q:卡死在第一帧不动
 A：大概率是你的代码死循环了
 
 Q：
-![wrongType](../assets/thuai6/wrongType.png)
+![wrongType](../assets/THUAI6/wrongType.png)
 
 A:命令行参数的type设置有误
 
 ## C++ 
 
 Q:显示API项目已卸载
-![Nocplus](../assets/thuai6/Nocplus.png)
+![Nocplus](../assets/THUAI6/Nocplus.png)
 
 A:可能是没有安装C++
 
 Q:CAPI.sln编译不通过(第一种)
 情况1：
-![std_find_trivial](../assets/thuai6/std_find_trivial.jpg)
+![std_find_trivial](../assets/THUAI6/std_find_trivial.jpg)
 情况2：
-![LNK1000](../assets/thuai6/LNK1000.png)
+![LNK1000](../assets/THUAI6/LNK1000.png)
 
 A:
 1. 应该是没使用VS2022
 2. 对于VS2022依旧报错，先考虑是否版本过旧（应当在 17.5.x 版本）
    用Visual Studio Installer（在开始菜单搜索）更新
-   ![VsUpdate](../assets/thuai6/VSUpdate.png)
+   ![VsUpdate](../assets/THUAI6/VSUpdate.png)
 3. 
-   ![项目属性](../assets/thuai6/项目属性.png)
+   ![项目属性](../assets/THUAI6/项目属性.png)
    确保上图项目属性中平台工具集在 v143，C++17 标准
 
 Q:CAPI编译不通过（第二种）
-![lib](../assets/thuai6/lib.png)
+![lib](../assets/THUAI6/lib.png)
 
 A:查看`.\win\CAPI\cpp\`文件夹下是否有`lib`文件夹，没有则https://cloud.tsinghua.edu.cn/d/6972138f641d4e81a446/ 下载并复制粘贴
 
@@ -64,10 +64,10 @@ A：
 1. 尽量不要改其他文件，甚至连点下保存都别点
 2. 不要点重新生成，要点生成
 3. 开启下图选项
-![CompileFaster](../assets/thuai6/CompileFaster.png)
+![CompileFaster](../assets/THUAI6/CompileFaster.png)
 
 Q:这是什么错误啊
-![vector](../assets/thuai6/vector.png)
+![vector](../assets/THUAI6/vector.png)
 
 A:调用了容量为0的vector
 
@@ -76,7 +76,7 @@ A:调用了容量为0的vector
 ### grpc版本更新失败
 
 Q：运行GeneratePythonProto.cmd报错
-![grpcUpdate](../assets/thuai6/grpc.png)
+![grpcUpdate](../assets/THUAI6/grpc.png)
 
 A：
 - 可能措施1.

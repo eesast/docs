@@ -11,7 +11,7 @@ sidebar_label: 工具使用
 
 使用vs2022的选手，打开时弹出界面点**取消**，请注意更改默认工具集为vs2022（如图）
 
-![image-20220401221657280](../assets/thuai5/tool_4.png)
+![image-20220401221657280](../assets/THUAI5/tool_4.png)
 
 
 
@@ -19,7 +19,7 @@ sidebar_label: 工具使用
 
 菜单栏下方一行
 
-![image-20220401215621723](../assets/thuai5/tool_2.png)
+![image-20220401215621723](../assets/THUAI5/tool_2.png)
 
 可以更改生成模式为`Debug`或者为`Release`
 
@@ -27,7 +27,7 @@ sidebar_label: 工具使用
 
 左上方菜单栏`调试->调试属性`
 
-![image-20220401221918506](../assets/thuai5/tool_1.png)
+![image-20220401221918506](../assets/THUAI5/tool_1.png)
 
 在空格中加入命令行参数进行调试
 
@@ -39,7 +39,7 @@ sidebar_label: 工具使用
 
 以client.cmd文件为例，选中文件，右键单击，弹出菜单
 
-![image-20220401220024022](../assets/thuai5/tool_3.png)
+![image-20220401220024022](../assets/THUAI5/tool_3.png)
 
 
 

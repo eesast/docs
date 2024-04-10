@@ -7,7 +7,7 @@
 > A: 应该是还没有编译，打开 `CAPI\cpp` 目录，在里面打开 `CAPI.sln`，然后点击生成，对代码进行编译。
 
 > Q: 为什么 `CAPI.sln` 打开后会找不到项目？
-> ![zip](../../assets/thuai7/faq/zip.png)
+> ![zip](../../assets/THUAI7/faq/zip.png)
 >
 > A: 要先解压。
 
@@ -20,34 +20,34 @@
 > A: 大概率是你的代码死循环了。
 
 > Q:
-> ![wrongType](../../assets/thuai7/faq/wrongType.png)
+> ![wrongType](../../assets/THUAI7/faq/wrongType.png)
 >
 > A:命令行参数的 `type` 设置有误。
 
 ## C++
 
 > Q: 显示API项目已卸载？
-> ![Nocplus](../../assets/thuai7/faq/Nocplus.png)
+> ![Nocplus](../../assets/THUAI7/faq/Nocplus.png)
 >
 > A: 可能是没有安装C++。
 
 > Q: `CAPI.sln` 编译不通过(第一种)？
 >
 > 情况1：
-> ![std_find_trivial](../../assets/thuai7/faq/std_find_trivial.jpg)
+> ![std_find_trivial](../../assets/THUAI7/faq/std_find_trivial.jpg)
 > 情况2：
-> ![LNK1000](../../assets/thuai7/faq/LNK1000.png)
+> ![LNK1000](../../assets/THUAI7/faq/LNK1000.png)
 >
 > A:
 > 1. 应该是没使用 VS 2022；
 > 2. 对于 VS 2022 依旧报错，先考虑是否版本过旧（应当在 17.5.x 版本）：
 >    用 Visual Studio Installer（在开始菜单搜索）更新；
->    ![VsUpdate](../../assets/thuai7/faq/VSUpdate.png)
-> 3. ![项目属性](../../assets/thuai7/faq/项目属性.png)
+>    ![VsUpdate](../../assets/THUAI7/faq/VSUpdate.png)
+> 3. ![项目属性](../../assets/THUAI7/faq/项目属性.png)
 >    确保上图项目属性中平台工具集在 v143，C++17 标准。
 
 > Q: CAPI编译不通过（第二种）？
-> ![lib](../../assets/thuai7/faq/lib.png)
+> ![lib](../../assets/THUAI7/faq/lib.png)
 >
 > A: 查看 `.\win\CAPI\cpp\` 文件夹下是否有 `lib` 文件夹，没有则 https://cloud.tsinghua.edu.cn/d/6972138f641d4e81a446/ 下载并复制粘贴。
 
@@ -57,10 +57,10 @@
 > 1. 尽量不要改其他文件，甚至连点下保存都别点；
 > 2. 不要点重新生成，要点生成；
 > 3. 开启下图选项。
-> ![CompileFaster](../../assets/thuai7/faq/CompileFaster.png)
+> ![CompileFaster](../../assets/THUAI7/faq/CompileFaster.png)
 
 > Q: 这是什么错误啊？
-> ![vector](../../assets/thuai7/faq/vector.png)
+> ![vector](../../assets/THUAI7/faq/vector.png)
 >
 > A: 调用了容量为 0 的 `vector`。
 
@@ -69,7 +69,7 @@
 ### grpc版本更新失败
 
 > Q: 运行 `GeneratePythonProto.cmd` 报错？
-> ![grpcUpdate](../../assets/thuai7/faq/grpc.png)
+> ![grpcUpdate](../../assets/THUAI7/faq/grpc.png)
 >
 > A: 可能措施：
 > 1. 首先保证 Python 版本在 3.9 及以上；
