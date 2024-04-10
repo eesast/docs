@@ -64,8 +64,13 @@ module.exports = {
               to: "docs/machine_learning",
             },
             {
+<<<<<<< HEAD
               label: "THUAI7",
               to: "docs/thuai7",
+=======
+              label: "Contests",
+              to: "docs/contests",
+>>>>>>> 34ecf65c9f3ef2b7fb5c5dd0c2c1f5264c0b0684
             },
           ],
         },
@@ -108,8 +113,8 @@ module.exports = {
               to: "docs/machine_learning",
             },
             {
-              label: "THUAI7",
-              to: "docs/thuai7",
+              label: "Contests",
+              to: "docs/contests",
             },
           ],
         },
