@@ -118,83 +118,83 @@ module.exports = {
     "contests/README",
     {
       "THUAI4": [
-        "contests/thuai4/README",
-        "contests/thuai4/READMEForPlayers",
-        "contests/thuai4/Introduction",
-        "contests/thuai4/API",
-        "contests/thuai4/UpdateInfo"
+        "contests/THUAI4/README",
+        "contests/THUAI4/READMEForPlayers",
+        "contests/THUAI4/Introduction",
+        "contests/THUAI4/API",
+        "contests/THUAI4/UpdateInfo"
       ]
     },
     {
       "THUAI5": [
-        "contests/thuai5/README",
-        "contests/thuai5/GameRules",
-        "contests/thuai5/CAPI",
-        "contests/thuai5/Tool_tutorial"
+        "contests/THUAI5/README",
+        "contests/THUAI5/GameRules",
+        "contests/THUAI5/CAPI",
+        "contests/THUAI5/Tool_tutorial"
       ]
     },
     {
       "THUAI6": [
-        "contests/thuai6/README",
-        "contests/thuai6/GameRules",
-        "contests/thuai6/usage",
-        "contests/thuai6/Tool_tutorial",
-        "contests/thuai6/capi_cpp",
-        "contests/thuai6/capi_python",
-        "contests/thuai6/GameUpdate",
-        "contests/thuai6/QandA",
-        "contests/thuai6/VersionUpdate"
+        "contests/THUAI6/README",
+        "contests/THUAI6/GameRules",
+        "contests/THUAI6/usage",
+        "contests/THUAI6/Tool_tutorial",
+        "contests/THUAI6/capi_cpp",
+        "contests/THUAI6/capi_python",
+        "contests/THUAI6/GameUpdate",
+        "contests/THUAI6/QandA",
+        "contests/THUAI6/VersionUpdate"
       ]
     },
     {
       "THUAI7": [
-        "contests/thuai7/README",
+        "contests/THUAI7/README",
         {
           "引入": [
-            "contests/thuai7/intro/README",
-            "contests/thuai7/intro/rule",
-            "contests/thuai7/intro/guide",
-            "contests/thuai7/intro/programming",
+            "contests/THUAI7/intro/README",
+            "contests/THUAI7/intro/rule",
+            "contests/THUAI7/intro/guide",
+            "contests/THUAI7/intro/programming",
           ],
         },
         {
           "地图": [
-            "contests/thuai7/map/map",
-            "contests/thuai7/map/placetype",
-            "contests/thuai7/map/home",
-            "contests/thuai7/map/wormhole",
+            "contests/THUAI7/map/map",
+            "contests/THUAI7/map/placetype",
+            "contests/THUAI7/map/home",
+            "contests/THUAI7/map/wormhole",
           ],
         },
         {
           "舰船": [
-            "contests/thuai7/ship/ship",
-            "contests/thuai7/ship/civilship",
-            "contests/thuai7/ship/warship",
-            "contests/thuai7/ship/flagship",
-            "contests/thuai7/ship/team",
+            "contests/THUAI7/ship/ship",
+            "contests/THUAI7/ship/civilship",
+            "contests/THUAI7/ship/warship",
+            "contests/THUAI7/ship/flagship",
+            "contests/THUAI7/ship/team",
           ],
         },
         {
           "机制": [
-            "contests/thuai7/mechanics/mechanics",
-            "contests/thuai7/mechanics/construction",
-            "contests/thuai7/mechanics/module",
-            "contests/thuai7/mechanics/view",
-            "contests/thuai7/mechanics/attack",
-            "contests/thuai7/mechanics/score",
+            "contests/THUAI7/mechanics/mechanics",
+            "contests/THUAI7/mechanics/construction",
+            "contests/THUAI7/mechanics/module",
+            "contests/THUAI7/mechanics/view",
+            "contests/THUAI7/mechanics/attack",
+            "contests/THUAI7/mechanics/score",
           ],
         },
         {
           "接口": [
-            "contests/thuai7/interface/interface",
-            "contests/thuai7/interface/cpp",
-            "contests/thuai7/interface/python",
+            "contests/THUAI7/interface/interface",
+            "contests/THUAI7/interface/cpp",
+            "contests/THUAI7/interface/python",
           ],
         },
         {
           "常见问题": [
-            "contests/thuai7/faq/README",
-            "contests/thuai7/faq/cpptips",
+            "contests/THUAI7/faq/README",
+            "contests/THUAI7/faq/cpptips",
           ]
         },
       ]

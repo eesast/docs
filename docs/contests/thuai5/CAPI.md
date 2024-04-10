@@ -12,9 +12,9 @@ sidebar_label: 用户接口
 
 在**x64**生成环境下，选手首先需要将组件包中的`HPSocket.lib`,`libprotobuf.lib`和`libprotobufd.lib`放在 `THUAI5\CAPI\API`文件夹（即与`API.vcxproj`文件相同的目录）下；
 
-![settings](../assets/thuai5/APIsettings2.png)
+![settings](../assets/THUAI5/APIsettings2.png)
 
-![settings](../assets/thuai5/APIsettings.png)
+![settings](../assets/THUAI5/APIsettings.png)
 
 
 
@@ -128,11 +128,11 @@ Where:
 
   当使用`-d`参数时，终端（或指定文件）将输出详细的函数调用情况。
 
-  ![settings](../assets/thuai5/debug.png)
+  ![settings](../assets/THUAI5/debug.png)
 
   当删除`-d`参数时，除了基础信息之外，系统将不会输出函数调用情况。
 
-  ![settings](../assets/thuai5/no-debug.png)
+  ![settings](../assets/THUAI5/no-debug.png)
 
   当选手想要查看具体的游戏信息时，可以添加`-d`属性；但如果想要追求丝滑的游戏体验，则推荐删除该参数，否则频繁的io将拖累系统速度。
 
