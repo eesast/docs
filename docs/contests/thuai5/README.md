@@ -17,7 +17,7 @@ slug: ./
 
 ## 游戏主界面
 
-![main_interface](../assets/thuai5/main_interface.jpg)
+![main_interface](../assets/THUAI5/main_interface.jpg)
 
 ## 相关链接
 
