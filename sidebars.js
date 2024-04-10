@@ -117,6 +117,20 @@ module.exports = {
   Contests: [
     "contests/README",
     {
+      "AIChallenge2": [
+        "contests/AIChallenge2/README",
+        "contests/AIChallenge2/introduction",
+        "contests/AIChallenge2/RuleMan"
+      ]
+    },
+    {
+      "THUAI3.0": [
+        "contests/THUAI3.0/README",
+        "contests/THUAI3.0/READMEForPlayers",
+        "contests/THUAI3.0/API"
+      ]
+    },
+    {
       "THUAI4": [
         "contests/THUAI4/README",
         "contests/THUAI4/READMEForPlayers",
