@@ -13,7 +13,7 @@ sidebar_label: 工具使用
 
 菜单栏下方一行
 
-![image-20230416010705076](../assets/thuai6/image-20230416010705076.png)
+![image-20230416010705076](../assets/THUAI6/image-20230416010705076.png)
 
 可以更改生成模式为 `Debug` 或 `Release`
 
@@ -21,7 +21,7 @@ sidebar_label: 工具使用
 
 左上方菜单栏 `调试->调试属性`
 
-![image-20230416010816392](../assets/thuai6/image-20230416010816392.png)
+![image-20230416010816392](../assets/THUAI6/image-20230416010816392.png)
 
 在命令参数一栏中加入命令行参数进行调试
 
