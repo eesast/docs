@@ -95,8 +95,8 @@ start python .\CAPI\python\PyAPI\main.py -I 127.0.0.1 -P 8888 -p 0 -d -o -w
 
 `start .\CAPI\cpp\x64\Debug\API.exe`或者`start python .\CAPI\python\PyAPI\main.py`为运行该目录下的程序（C++）/代码（python）
 - 可以用不同的代码编译不同的exe(**也可以不**)，需要自己更改以上路径，对于Python，需要copy整个PyAPI,具体如下图
-  ![RunCppCmd](../assets/thuai6/RunCppCmd.png)
-  ![RunPython](../assets/thuai6/RunPython.png)
+  ![RunCppCmd](../assets/THUAI6/RunCppCmd.png)
+  ![RunPython](../assets/THUAI6/RunPython.png)
 - 比赛最终要提交5份代码（可以5份一样的，现在的AI.cpp/AI.py支持一份代码对不同的PlayerID执行不同操作）
 
 `-I`为服务器IP，一般本地为`127.0.0.1`，联机的话是服务器的IP

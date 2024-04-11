@@ -17,7 +17,7 @@ slug: ./
 
 ## 游戏主界面
 
-![interface](../assets/thuai6/interface.jpg)
+![interface](../assets/THUAI6/interface.jpg)
 
 ## 相关链接
 

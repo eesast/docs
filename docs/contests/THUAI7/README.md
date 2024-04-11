@@ -15,6 +15,10 @@ slug: ./
 
 THUAI7，启动！
 
+## 游戏界面
+
+![interface](../assets/THUAI7/interface.png)
+
 ## 相关链接
 
 + THUAI7 GitHub 仓库链接：<https://github.com/eesast/THUAI7>
