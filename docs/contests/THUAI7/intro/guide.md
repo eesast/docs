@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="cpp" label="C++" default>
 
-打开 `CAPI/cpp/CAPI.sln`，然后选择源代码/`AI.cpp`，修改 `void AI::play(IShipAPI& api)` 和 `void AI::play(ITeamAPI& api)` 两个函数，进行自己的开发
+用最新版Visual Studio打开 `CAPI/cpp/CAPI.sln`，然后选择源代码/`AI.cpp`，修改 `void AI::play(IShipAPI& api)` 和 `void AI::play(ITeamAPI& api)` 两个函数，进行自己的开发，开发结束后不要忘记进行编译
 
 </TabItem>
 <TabItem value="python" label="Python">
@@ -30,4 +30,4 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-设计完自己的策略后，在启动器重选择 `Launch`，选中自己使用的语言，点击保存-启动即可。
+设计完自己的策略后，在启动器上方选择 `Launch`，选中自己使用的语言，点击保存-启动即可。
