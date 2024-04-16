@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="cpp" label="C++" default>
 
+
 用最新版Visual Studio打开 `CAPI/cpp/CAPI.sln`，然后选择源代码/`AI.cpp`，修改 `void AI::play(IShipAPI& api)` 和 `void AI::play(ITeamAPI& api)` 两个函数，进行自己的开发，开发结束后不要忘记进行编译
 
 </TabItem>
