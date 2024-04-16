@@ -79,6 +79,8 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 <TabItem value="python" label="Python">
+
+```python
     """
     选手可执行的操作，应当保证所有函数的返回值都应当为 `asyncio.Future`，例如下面的移动函数：\n
     指挥本角色进行移动：
@@ -138,5 +140,7 @@ import TabItem from '@theme/TabItem';
     ) -> Future[bool]:
     def Recycle(self, playerID: int) -> Future[bool]:
     def BuildShip(self, shipType: THUAI7.ShipType) -> Future[bool]:
+```
+
 </TabItem>
 </Tabs>
