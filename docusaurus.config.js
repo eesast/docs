@@ -1,7 +1,10 @@
-const math = require("remark-math");
-const katex = require("rehype-katex");
+// const math = require("remark-math");
+// const katex = require("rehype-katex");
 
-module.exports = {
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+
+export default {
   title: "EESΛST Docs",
   tagline: "Docs powered by EESΛST",
   url: "https://docs.eesast.com",
@@ -13,10 +16,10 @@ module.exports = {
   themes: ["@docusaurus/theme-live-codeblock"],
   stylesheets: [
     {
-      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
       type: "text/css",
       integrity:
-        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous",
     },
   ],
@@ -156,8 +159,8 @@ module.exports = {
           editUrl: "https://github.com/eesast/docs/edit/master",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -181,4 +184,7 @@ module.exports = {
       },
     ],
   ],
+  markdown: {
+    format: "detect",
+  },
 };
