@@ -25,4 +25,4 @@ slug: ./
 
 ## 相关链接
 
-+ AIChallenge2 GitHub 仓库链接：<https://github.com/eesast/AIChallenge2>
++ AIChallenge2 GitHub 仓库链接：[eesast/AIChallenge2](https://github.com/eesast/AIChallenge2)

@@ -21,5 +21,5 @@ slug: ./
 
 ## 相关链接
 
-+ THUAI5 GitHub 仓库链接：<https://github.com/eesast/THUAI5>
-+ THUAI5 Wiki：<https://github.com/eesast/THUAI5/wiki>
++ THUAI5 GitHub 仓库链接：[eesast/THUAI5](https://github.com/eesast/THUAI5)
++ THUAI5 Wiki：[eesast/THUAI5/wiki](https://github.com/eesast/THUAI5/wiki)

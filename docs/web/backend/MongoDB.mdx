@@ -138,7 +138,7 @@ db.[collection name].find([query], [projection]).pretty()
 
 | 操作       | 格式                             | 范例                                              | 对应 SQL 语句     |
 | :--------- | :------------------------------- | :------------------------------------------------ | :---------------- |
-| 等于       | `{<key>:<value>`}                | `db.test.find({"key":100})`                       | `where key = 100` |
+| 等于       | `{<key>:<value>}`                | `db.test.find({"key":100})`                       | `where key = 100` |
 | 小于       | `{<key>:{$lt:<value>}}`          | `db.test.find({"key":{$lt:50}})`                  | `where key < 50`  |
 | 小于或等于 | `{<key>:{$lte:<value>}}`         | `db.test.find({"key":{$lte:50}})`                 | `where key <= 50` |
 | 大于       | `{<key>:{$gt:<value>}}`          | `db.test.find({"key":{$gt:50}})`                  | `where key > 50`  |
@@ -200,17 +200,17 @@ db.[collection name].update(
 
 默认情况下 update 会使用新文档覆盖旧文档，如果不想覆盖而是仅仅想更新其中的某些字段，那么我们就需要使用 update 的更新操作符：
 
-| 操作符    | 格式                                           | 描述                                           |
-| --------- | ---------------------------------------------- | ---------------------------------------------- |
-| $set      | {$set:{field:value}}                           | 指定一个键并更新值，若键不存在则创建           |
-| $unset    | {$unset : {field : 1 }}                        | 删除一个键                                     |
-| $inc      | {$inc : {field : value }}                      | 对数值类型进行增减                             |
-| $rename   | {$rename : {old_field_name :new_field_name } } | 修改字段名称                                   |
-| $push     | { $push : {field : value } }                   | 将数值追加到数组中，若数组不存在则会进行初始化 |
-| $pushAll  | {$pushAll : {field : value_array }}            | 追加多个值到一个数组字段内                     |
-| $pull     | {$pull : {field : \_value } }                  | 从数组中删除指定的元素                         |
-| $addToSet | {$addToSet : {field : value } }                | 添加元素到数组中，具有排重功能                 |
-| $pop      | {$pop : {field : 1 }}                          | 删除数组的第一个或最后一个元素                 |
+| 操作符    | 格式                                            | 描述                                           |
+| --------- | ----------------------------------------------- | ---------------------------------------------- |
+| $set      | `{$set:{field:value}}`                          | 指定一个键并更新值，若键不存在则创建           |
+| $unset    | `{$unset : {field : 1 }}`                       | 删除一个键                                     |
+| $inc      | `{$inc : {field : value }}`                     | 对数值类型进行增减                             |
+| $rename   | `{$rename : {old_field_name :new_field_name }}` | 修改字段名称                                   |
+| $push     | `{$push : {field : value }}`                    | 将数值追加到数组中，若数组不存在则会进行初始化 |
+| $pushAll  | `{$pushAll : {field : value_array }}`           | 追加多个值到一个数组字段内                     |
+| $pull     | `{$pull : {field : \_value }}`                  | 从数组中删除指定的元素                         |
+| $addToSet | `{$addToSet : {field : value }}`                | 添加元素到数组中，具有排重功能                 |
+| $pop      | `{$pop : {field : 1 }}`                         | 删除数组的第一个或最后一个元素                 |
 
 **删除文档**
 
@@ -282,14 +282,14 @@ db.[collection name].aggregate([aggregate operation])
 
 常用的操作如下：
 
-| 表达式    | 描述                                                                             | 实例                                                                                  |
-| :-------- | :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
-| $sum      | 计算总和                                                                         | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}]) |
-| $avg      | 计算平均值                                                                       | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}]) |
-| $min      | 获取集合中所有文档对应值的最小值                                                 | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}]) |
-| $max      | 获取集合中所有文档对应值的最大值                                                 | db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}]) |
-| $push     | 将值加入一个数组中，不会判断是否有重复的值                                       | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])            |
-| $addToSet | 将值加入一个数组中，会判断是否有重复的值，若相同的值在数组中已经存在了，则不加入 | db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])       |
+| 表达式    | 描述                                                                             | 实例                                                                                    |
+| :-------- | :------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
+| $sum      | 计算总和                                                                         | `db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])` |
+| $avg      | 计算平均值                                                                       | `db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}])` |
+| $min      | 获取集合中所有文档对应值的最小值                                                 | `db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}])` |
+| $max      | 获取集合中所有文档对应值的最大值                                                 | `db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}])` |
+| $push     | 将值加入一个数组中，不会判断是否有重复的值                                       | `db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])`            |
+| $addToSet | 将值加入一个数组中，会判断是否有重复的值，若相同的值在数组中已经存在了，则不加入 | `db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])`       |
 
 ## 4.Mongoose
 

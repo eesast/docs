@@ -21,4 +21,4 @@ slug: ./
 
 ## 相关链接
 
-+ THUAI4 GitHub 仓库链接：<https://github.com/eesast/THUAI4>
++ THUAI4 GitHub 仓库链接：[eesast/THUAI4](https://github.com/eesast/THUAI4)
