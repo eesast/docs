@@ -21,5 +21,5 @@ slug: ./
 
 ## 相关链接
 
-+ THUAI6 GitHub 仓库链接：<https://github.com/eesast/THUAI6>
-+ THUAI6 Wiki：<https://github.com/eesast/THUAI6/wiki>
++ THUAI6 GitHub 仓库链接：[https://github.com/eesast/THUAI6](https://github.com/eesast/THUAI6)
++ THUAI6 Wiki：[https://github.com/eesast/THUAI6/wiki](https://github.com/eesast/THUAI6/wiki)

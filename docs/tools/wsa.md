@@ -23,7 +23,7 @@ WSA，即 Windows Subsystem for Android (TM)，是微软在 Windows 11 中推出
 
 ### 下载安装包
 
-首先，进入网址：<https://store.rg-adguard.net/>，在搜索框中输入 `9P3395VX91NR`，左侧选择“ProductId”，右侧选择“Slow”，如下图所示：
+首先，进入网址：[https://store.rg-adguard.net/](https://store.rg-adguard.net/)，在搜索框中输入 `9P3395VX91NR`，左侧选择“ProductId”，右侧选择“Slow”，如下图所示：
 
 ![search_wsa](./assets/wsa/search_wsa.png)
 
@@ -51,4 +51,4 @@ WSA，即 Windows Subsystem for Android (TM)，是微软在 Windows 11 中推出
 
 ## 参考文献
 
-+ <https://pureinfotech.com/install-windows-subsystem-android-wsa-windows-11/>
++ [https://pureinfotech.com/install-windows-subsystem-android-wsa-windows-11/](https://pureinfotech.com/install-windows-subsystem-android-wsa-windows-11/)

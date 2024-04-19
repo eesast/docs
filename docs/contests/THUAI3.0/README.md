@@ -19,4 +19,4 @@ slug: ./
 
 ## 相关链接
 
-+ THUAI3.0 GitHub 仓库链接：<https://github.com/eesast/THUAI3.0>
++ THUAI3.0 GitHub 仓库链接：[eesast/THUAI3.0](https://github.com/eesast/THUAI3.0)

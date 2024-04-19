@@ -21,5 +21,5 @@ THUAI7，启动！
 
 ## 相关链接
 
-+ THUAI7 GitHub 仓库链接：<https://github.com/eesast/THUAI7>
-+ THUAI7 Wiki：<https://github.com/eesast/THUAI7/wiki>
++ THUAI7 GitHub 仓库链接：[https://github.com/eesast/THUAI7](https://github.com/eesast/THUAI7)
++ THUAI7 Wiki：[https://github.com/eesast/THUAI7/wiki](https://github.com/eesast/THUAI7/wiki)
