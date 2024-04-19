@@ -66,14 +66,14 @@ IEEE 830-1998 规定需求需要有以下⼏个性质：
 
 质量属性 (Quality attribute) 规约了软件产品必须具有的⼀个性质是否达到质量⽅⾯⼀个所期望的⽔平。例如：
 
-|    属性    |                                 描述                                 |
-| :--------: | :------------------------------------------------------------------: |
-|   可靠性   |             软件系统在指定环境中没有失败而正常运⾏的概率             |
-|   存活性   | 当系统的某⼀部分系统不能运⾏时，该软件继续运⾏或⽀持关键功能的可能性 |
-|  可维护性  |     发现和改正⼀个软件故障或对特定的范围进⾏修改所要求的平均⼯作     |
-| ⽤⼾友好性 |                   学习和使⽤⼀个软件系统的容易程度                   |
-|   安全性   |              在⼀个预定的时间内，使软件系统安全的可能性              |
-|  可移植性  |                        软件系统运⾏的平台类型                        |
+|   属性   |                               描述                               |
+| :------: | :--------------------------------------------------------------: |
+|  可靠性  |           软件系统在指定环境中没有失败而正常运⾏的概率            |
+|  存活性  | 当系统的某⼀部分系统不能运⾏时，该软件继续运⾏或⽀持关键功能的可能性 |
+| 可维护性 |    发现和改正⼀个软件故障或对特定的范围进⾏修改所要求的平均⼯作     |
+| ⽤⼾友好性 |                  学习和使⽤⼀个软件系统的容易程度                  |
+|  安全性  |            在⼀个预定的时间内，使软件系统安全的可能性             |
+| 可移植性 |                      软件系统运⾏的平台类型                       |
 
 ### 需求规约（SRS）
 
@@ -153,7 +153,7 @@ API ⽂档推荐包含：
 
 在 `Method` 注释的第⼀⾏，简要说明 `Method` 执⾏的⾏为。接下来，解释为什么以及如何去调⽤此⽅法，并陈述调⽤前需要的准备，此外需要给出异常的具体信息。
 
-此外，需要写清调⽤⽅法时的依赖以及权限，并写清某⼀依赖缺失时此⽅法的⾏为。例如对于安卓开发中 [`Activity.isChangingConfigurations()`](<https://developer.android.com/reference/android/app/Activity.html#isChangingConfigurations()>) ⽅法，说明为：
+此外，需要写清调⽤⽅法时的依赖以及权限，并写清某⼀依赖缺失时此⽅法的⾏为。例如对于安卓开发中 [`Activity.isChangingConfigurations()`](https://developer.android.com/reference/android/app/Activity.html#isChangingConfigurations()) ⽅法，说明为：
 
 ```
 Checks whether this activity is in the process of being destroyed in order to be recreated with a new configuration. This is often used in onStop() to determine whether the state needs to be cleaned up or will be passed on to thenext instance of the activity via onRetainNonConfigurationInstance().

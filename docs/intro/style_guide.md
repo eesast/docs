@@ -109,7 +109,7 @@ title: 文档撰写格式指南
 
 或者留空链接并使用 [链接文字本身]
 
-`<` 和 `>` 之间的链接会自动转为链接。https://www.eesast.com/ 或 <https://www.eesast.com/>
+`<` 和 `>` 之间的链接会自动转为链接。https://www.eesast.com/ 或 [https://www.eesast.com/](https://www.eesast.com/)
 
 [任意文字]: https://www.eesast.com/
 [1]: https://www.eesast.com/
@@ -126,7 +126,7 @@ title: 文档撰写格式指南
 
 或者留空链接并使用 [链接文字本身]
 
-`<` 和 `>` 之间的链接会自动转为链接。https://www.eesast.com/ 或 <https://www.eesast.com/>
+`<` 和 `>` 之间的链接会自动转为链接。https://www.eesast.com/ 或 [https://www.eesast.com/](https://www.eesast.com/)
 
 [任意文字]: https://www.eesast.com/
 [1]: https://www.eesast.com/

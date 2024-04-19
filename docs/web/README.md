@@ -8,7 +8,7 @@ slug: ./
 本部分内容基于 EESAST 目前网站方面的技术逐步完善中，分为以下章节：
 
 - 前端
-  - [React - Getting Started](frontend/react_practical.mdx)
+  - [React - Getting Started](frontend/react_practical.md)
   - [React 教程](frontend/react_detailed.mdx)
   - [Webpack](frontend/webpack.md)
 - 后端

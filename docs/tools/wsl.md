@@ -13,8 +13,8 @@ WSL 目前已发布两代产品：WSL 1 和 WSL 2。WSL 1 实现了 Linux 兼容
 
 本教程部分参考了安装 WSL 2 的微软官方教程：
 
-+ 英文版：<https://learn.microsoft.com/en-us/windows/wsl/install>
-+ 中文版：<https://learn.microsoft.com/zh-cn/windows/wsl/install>
++ 英文版：[https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
++ 中文版：[https://learn.microsoft.com/zh-cn/windows/wsl/install](https://learn.microsoft.com/zh-cn/windows/wsl/install)
 
 按照官方教程的步骤安装可能发生一系列问题，因此建议读者参考下面的图文教程进行安装。
 
@@ -114,13 +114,13 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ### 第五步：安装 WSL 2 内核组件
 
-访问网址：<https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi> 即可开始下载，得到“wsl_update_x64.msi”。
+访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
 
-> 如果处理器是 ARM 架构，需要下载 <https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi>（应该很少有 ARM 架构的吧 2333333）
+> 如果处理器是 ARM 架构，需要下载 [https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)（应该很少有 ARM 架构的吧 2333333）
 
 然后运行 wsl_update_x64.msi，一步步全按“Next”进行安装即可。
 
-下面将路线分为多条。如果你已经拥有了 WSL 1，那么你可以直接将其升级到 WSL 2，不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 <二\> 中所述，将其安装在其他磁盘。
+下面将路线分为多条。如果你已经拥有了 WSL 1，那么你可以直接将其升级到 WSL 2，不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 \<二\> 中所述，将其安装在其他磁盘。
 
 ### <一\> 基于 WSL 1 升级到 WSL 2
 
@@ -150,11 +150,11 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ### <二\> 在其他磁盘中安装 WSL 2（推荐）
 
-<一\> 中所述默认安装在系统盘内。实际上，WSL 2 也可以在任意磁盘下的任意目录内安装。
+\<一\> 中所述默认安装在系统盘内。实际上，WSL 2 也可以在任意磁盘下的任意目录内安装。
 
 #### 第六步：下载 WSL 2 发行版
 
-进入 <https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions>，下载任意一个 Linux 发行版。
+进入 [https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)，下载任意一个 Linux 发行版。
 
 #### 第七步：安装 WSL 2 发行版
 
@@ -184,7 +184,7 @@ WSLg 需要电脑已经安装了 WSL 2 内核组件。
 
 ### 第三步：安装虚拟显卡驱动
 
-进入 <https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps#prerequisites>，安装适合自己的 GPU 的虚拟显卡驱动，并重启电脑。
+进入 [https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps#prerequisites](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps#prerequisites)，安装适合自己的 GPU 的虚拟显卡驱动，并重启电脑。
 
 ### 第四步：更新 wsl 内核版本
 
