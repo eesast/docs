@@ -198,6 +198,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Panxuc",
+      "name": "Xuc Pan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48503851?v=4",
+      "profile": "https://www.panxuc.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "skipCi": true,
