@@ -1,7 +1,7 @@
 # EESΛST Docs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
@@ -90,6 +90,7 @@ Pull Request 用于将贡献者的修改合并到本项目的主分支中。我�
       <td align="center" valign="top" width="12.5%"><a href="https://github.com/L0510410"><img src="https://avatars.githubusercontent.com/u/87233125?v=4?s=50" width="50px;" alt="L0510410"/><br /><sub><b>L0510410</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=L0510410" title="Documentation">📖</a> <a href="https://github.com/eesast/docs/commits?author=L0510410" title="Code">💻</a> <a href="#maintenance-L0510410" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="12.5%"><a href="https://github.com/DragonAura"><img src="https://avatars.githubusercontent.com/u/32223554?v=4?s=50" width="50px;" alt="DragonAura"/><br /><sub><b>DragonAura</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=DragonAura" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="12.5%"><a href="https://github.com/Rosist-Sallina"><img src="https://avatars.githubusercontent.com/u/89177626?v=4?s=50" width="50px;" alt="Rosist Sallina"/><br /><sub><b>Rosist Sallina</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Rosist-Sallina" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="12.5%"><a href="https://www.panxuc.com"><img src="https://avatars.githubusercontent.com/u/48503851?v=4?s=50" width="50px;" alt="Xuc Pan"/><br /><sub><b>Xuc Pan</b></sub></a><br /><a href="https://github.com/eesast/docs/commits?author=Panxuc" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
