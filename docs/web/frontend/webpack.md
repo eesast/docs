@@ -39,7 +39,7 @@ title: Webpack
 
 :::tip
 
-- 本节内容及例程已上传至[Github 仓库](https://github.com/chen-yy20/2022SummerTraining)。
+- 本节内容及例程已上传至 [Github 仓库](../assets/webpack.png)
 
 :::
 
