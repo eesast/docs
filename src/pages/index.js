@@ -44,10 +44,16 @@ const features = [
             <Link to="/docs/tools">Tools</Link>: 实用的开发工具介绍
           </li>
           <li>
-            <Link to="/docs/game">Game</Link>: 以 Unity3D 为主的游戏开发介绍
+            <Link to="/docs/game">Game</Link>: 游戏开发介绍
           </li>
           <li>
-            <Link to="/docs/web">Web</Link>: 以 JS/TS 为主的 Web 开发介绍
+            <Link to="/docs/web">Web</Link>: Web 开发与云服务介绍
+          </li>
+          <li>
+            <Link to="/docs/machine_learning">Machine Learning</Link>: 机器学习介绍
+          </li>
+          <li>
+            <Link to="/docs/contests">Contests</Link>: 电子系科协软件部举办的赛事文档
           </li>
         </ul>
       </>
