@@ -3,7 +3,7 @@ title: About EESΛST Docs
 slug: /
 ---
 
-EESΛST Docs 为电子系科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南，致力于为电子系同学提供实用技能的学习参考。
+EESΛST Docs 为清华大学电子工程系学生科协以 CC-BY-SA 4.0 授权开放的一系列工具与框架的使用指南，致力于为电子系同学提供实用技能的学习参考。
 
 :::info
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
