@@ -135,7 +135,30 @@ auto&& z = i; // auto 被推导为 int&，z 是 int&&&，被折叠为 int&，即
 auto&& w = 4; // auto 被推导为 int，w 是 int&& 类型
 ```
 
-### STL相关
+### `std::shared_ptr`
+
+`std::shared_ptr` 是 C++11 起提供的一种智能指针，其使用方法与裸指针类似，同样支持 `*` 和 `->` 运算符，例如：
+
+```cpp
+void print_int(std::shared_ptr<int> sp) {
+    std::cout << *sp << std::endl;
+}
+```
+
+```cpp
+struct Point {
+    int x;
+    int y;
+};
+
+void print_coord(std::shared_ptr<Point> sp) {
+    std::cout << sp->x << ' ' << sp->y << std::endl;
+}
+```
+
+关于智能指针的更多内容，请阅读 [C++ 相关小知识](../faq/cpptips.md#智能指针) 一节。
+
+### STL 容器相关
 
 #### `std::vector`
 
@@ -236,7 +259,7 @@ std::string str_fmt = fmt::format("number: {}{}", 1, teststr); // 两种方法�
 
 `fmt`库还支持更多强大的操作，例如更精确的格式化、更简便的转化等。
 
-更多用法参见（点击进入）：[fmt_index](https://fmt.dev/latest/index.html)。
+更多用法参见（点击进入）：[`{fmt}` documentation](https://fmt.dev/latest/index.html)。
 
 </TabItem>
 <TabItem value="python" label="Python">
