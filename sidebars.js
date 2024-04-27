@@ -201,8 +201,6 @@ module.exports = {
         {
           "接口": [
             "contests/THUAI7/interface/interface",
-            "contests/THUAI7/interface/cpp",
-            "contests/THUAI7/interface/python",
           ],
         },
         {
