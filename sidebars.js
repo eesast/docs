@@ -69,6 +69,8 @@ module.exports = {
     "game/unity",
     {
       Minecraft: [
+        "game/minecraft/README",
+        "game/minecraft/summer_tutorial",
         {
           红石: [
             {
