@@ -26,7 +26,7 @@
     "@docusaurus/core": "3.4.0",
     "@docusaurus/preset-classic": "3.4.0",
     "@docusaurus/theme-live-codeblock": "3.4.0",
-    "@easyops-cn/docusaurus-search-local": "0.44.1",
+    "@easyops-cn/docusaurus-search-local": "0.44.2",
     "@mdx-js/react": "3.0.1",
     "antd": "5.18.3",
     "clsx": "2.1.1",
