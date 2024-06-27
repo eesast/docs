@@ -19,6 +19,7 @@ slug: ./
   - [多线程与异步](CSharp/CSharp_2_multithread.mdx)
   - [Winform](CSharp/Winform.mdx)
   - [WPF](CSharp/WPF.mdx)
+  - [MAUI](CSharp/MAUI.mdx)
 - [HTML/CSS](HTML&CSS.mdx)
 - JS/TS
   - [JavaScript](JS&TS/JavaScript.mdx)
