@@ -18,7 +18,7 @@ slug: ./
   - [C# 程序设计基础](CSharp/CSharp_1_basic.mdx)
   - [多线程与异步](CSharp/CSharp_2_multithread.mdx)
   - [Winform](CSharp/Winform.mdx)
-  - [WPF](CSharp/WPF.mdx)
+  - [WPF](CSharp/WPF.md)
   - [MAUI](CSharp/MAUI.mdx)
 - [HTML/CSS](HTML&CSS.mdx)
 - JS/TS
