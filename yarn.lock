@@ -2473,9 +2473,9 @@
   resolved "https://registry.npmmirror.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
-"@mapbox/node-pre-gyp@^1.0.4":
+"@mapbox/node-pre-gyp@^1.0.9":
   version "1.0.11"
-  resolved "https://registry.npmmirror.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz#417db42b7f5323d79e93b34a6d7a2a12c0df43fa"
+  resolved "https://registry.yarnpkg.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz#417db42b7f5323d79e93b34a6d7a2a12c0df43fa"
   integrity sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==
   dependencies:
     detect-libc "^2.0.0"
@@ -8843,12 +8843,12 @@ node-releases@^2.0.14:
   resolved "https://registry.npmmirror.com/node-releases/-/node-releases-2.0.14.tgz#2ffb053bceb8b2be8495ece1ab6ce600c4461b0b"
   integrity sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==
 
-nodejieba@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.npmmirror.com/nodejieba/-/nodejieba-2.6.0.tgz#f56dd4f0660cd294af0e2834f9008ef92dfe36c0"
-  integrity sha512-cyEOLRGLjDuxbTuv6nuMAK3NpML4ft9i7st98TFHvXtg+m3RFhIuf4INBHGp3VhUaqPsCTfAkhHB/ZNTFiwJjg==
+nodejieba@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-3.1.0.tgz#d4fea74fe4cd151c94e14c0003d6b3f4a87ffe14"
+  integrity sha512-/MHo1lJR3hLNGElQGFRncVVBZJfnmflokE3VAbhfgicKQpshaHXa1hFCwP9IIxzgXLDEv1cK0S1yV4h4e4fQtA==
   dependencies:
-    "@mapbox/node-pre-gyp" "^1.0.4"
+    "@mapbox/node-pre-gyp" "^1.0.9"
     node-addon-api "^3.0.2"
 
 nopt@^5.0.0:
