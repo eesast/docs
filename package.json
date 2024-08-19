@@ -34,7 +34,7 @@
     "nodejieba": "3.4.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "rehype-katex": "7.0.0",
+    "rehype-katex": "7.0.1",
     "remark-math": "6.0.0"
   },
   "browserslist": {
