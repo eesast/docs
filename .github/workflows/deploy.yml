@@ -2,9 +2,9 @@ name: deploy
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   test:
@@ -22,7 +22,7 @@ jobs:
 
       - name: get yarn cache path
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
         id: yarn-cache
