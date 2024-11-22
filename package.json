@@ -23,9 +23,9 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "3.6.2",
-    "@docusaurus/preset-classic": "3.6.2",
-    "@docusaurus/theme-live-codeblock": "3.6.2",
+    "@docusaurus/core": "3.6.3",
+    "@docusaurus/preset-classic": "3.6.3",
+    "@docusaurus/theme-live-codeblock": "3.6.3",
     "@easyops-cn/docusaurus-search-local": "0.45.0",
     "@mdx-js/react": "3.1.0",
     "antd": "5.22.2",
@@ -50,7 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.6.2",
+    "@docusaurus/module-type-aliases": "3.6.3",
     "@docusaurus/tsconfig": "^3.2.1",
     "@types/react": "18.3.12",
     "@types/react-helmet": "6.1.11",
