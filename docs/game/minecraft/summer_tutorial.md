@@ -541,7 +541,7 @@ Docker 镜像：
 ## 参考文献
 
 + [红石测验第一章——红石基础 | EESΛST Docs (eesast.com)](https://docs.eesast.com/docs/game/minecraft/redstone/redstone_testing/redstone_basic1)，2023 年 7 月 24 日
-+ [《数字逻辑与处理器基础》课件](https://cloud.tsinghua.edu.cn/d/bc56c91e6b414a61bb6f/?p=%2F2-2 数字逻辑与处理器基础（数逻）%2F课件%2F理论课%2F数逻mhb课件2021&mode=list)，马洪兵，2021 年春
++ [《数字逻辑与处理器基础》课件](https://cloud.tsinghua.edu.cn/d/bc56c91e6b414a61bb6f/?p=%2F2-2%20%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E4%B8%8E%E5%A4%84%E7%90%86%E5%99%A8%E5%9F%BA%E7%A1%80%EF%BC%88%E6%95%B0%E9%80%BB%EF%BC%89%2F%E8%AF%BE%E4%BB%B6%2F%E7%90%86%E8%AE%BA%E8%AF%BE%2F%E6%95%B0%E9%80%BBmhb%E8%AF%BE%E4%BB%B62021&mode=list)，马洪兵，2021 年春
 + [Minecraft Wiki – The Ultimate Resource for Minecraft (fandom.com)](https://minecraft.fandom.com/wiki/Minecraft_Wiki)，2023 年 7 月 24 日
 + [中文Minecraft Wiki - 最详细的我的世界百科 (fandom.com)](https://minecraft.fandom.com/zh/wiki/Minecraft_Wiki)，2023 年 7 月 24 日
 + [官方网站 | Minecraft](https://www.minecraft.net/zh-hans)，2023 年 7 月 24 日
