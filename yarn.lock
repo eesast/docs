@@ -3543,10 +3543,10 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@0.48.0":
-  version "0.48.0"
-  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.48.0.tgz#17a309f7a6b40abf0c69a6809a46ba599b5087e9"
-  integrity sha512-+YZmte0H5EsqrAp9MameD7x5z55sp4pu0Iuhd0kXlEmznjH5eyg8+NCkwoEJcCUBuaUVQ9j4XMEryXiRf0u9JA==
+"@easyops-cn/docusaurus-search-local@0.48.3":
+  version "0.48.3"
+  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.48.3.tgz#7ee684da26cd651053ca1478a86c188ef247961f"
+  integrity sha512-gufenbh8rLsT4Ji793Ryb1VvU90DRfBOiy4jlwTobce3GepCY5lZhRAsHxE1emj8aaliEXRBYYv36IZcwdqr7w==
   dependencies:
     "@docusaurus/plugin-content-docs" "^2 || ^3"
     "@docusaurus/theme-translations" "^2 || ^3"
