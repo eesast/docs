@@ -30,7 +30,7 @@
     "@mdx-js/react": "3.1.0",
     "antd": "5.23.2",
     "clsx": "2.1.1",
-    "lint-staged": "15.4.1",
+    "lint-staged": "15.4.2",
     "nodejieba": "3.4.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
