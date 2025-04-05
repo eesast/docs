@@ -25,7 +25,7 @@ slug: ./
 
 ## 游戏主界面
 
-<!-- ![interface](../assets/THUAI8/interface.jpg) -->
+![interface](../assets/THUAI8/interface.png)
 
 ## 相关链接
 
