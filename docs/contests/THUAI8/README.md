@@ -30,4 +30,4 @@ slug: ./
 ## 相关链接
 
 + THUAI8 GitHub 仓库链接：[https://github.com/eesast/THUAI8](https://github.com/eesast/THUAI8)
-+ THUAI6 Wiki：[https://github.com/eesast/THUAI8/wiki](https://github.com/eesast/THUAI8/wiki)
++ THUAI8 Wiki：[https://github.com/eesast/THUAI8/wiki](https://github.com/eesast/THUAI8/wiki)
