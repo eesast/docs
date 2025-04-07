@@ -212,6 +212,24 @@ module.exports = {
           ]
         },
       ]
+    },
+    {
+      "THUAI8": [
+        "contests/THUAI8/README",
+        {
+          "引入": [
+            "contests/THUAI8/intro/rule",
+            "contests/THUAI8/intro/guide",
+            "contests/THUAI8/intro/programming",
+          ],
+        },
+        {
+          "常见问题": [
+            "contests/THUAI8/faq/README",
+            "contests/THUAI8/faq/cpptips",
+          ]
+        },
+      ]
     }
   ]
 };
