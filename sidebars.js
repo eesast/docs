@@ -227,9 +227,9 @@ module.exports = {
         {
           "地图": [
             "contests/THUAI8/map/map",
-            "contests/THUAI8/map/PlaceType",
-            "contests/THUAI8/map/Construction",
-            "contests/THUAI8/map/Resource",
+            "contests/THUAI8/map/placetype",
+            "contests/THUAI8/map/construction",
+            "contests/THUAI8/map/resource",
           ],
         },
         {
