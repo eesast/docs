@@ -218,7 +218,7 @@ module.exports = {
         "contests/THUAI8/README",
         {
           "引入": [
-            "contests/THUAI8/intro/baserule",
+            "contests/THUAI8/intro/rule",
             "contests/THUAI8/intro/guide",
             "contests/THUAI8/intro/score",
             "contests/THUAI8/intro/programming",
