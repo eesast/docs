@@ -220,7 +220,22 @@ module.exports = {
           "引入": [
             "contests/THUAI8/intro/rule",
             "contests/THUAI8/intro/guide",
+            "contests/THUAI8/intro/score",
             "contests/THUAI8/intro/programming",
+          ],
+        },
+        {
+          "地图": [
+            "contests/THUAI8/map/map",
+            "contests/THUAI8/map/placetype",
+            "contests/THUAI8/map/construction",
+            "contests/THUAI8/map/resource",
+          ],
+        },
+        {
+          "角色": [
+            "contests/THUAI8/character/character",
+            "contests/THUAI8/character/shop&&equipment",
           ],
         },
         {
