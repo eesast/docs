@@ -1,4 +1,9 @@
-#AI编写手册
+
+---
+title: THUAI8 西游真经劫 AI 编写手册
+sidebar_label: AI 编写手册
+---
+
 
 ## 目录
 
@@ -88,7 +93,9 @@
 
 ### Client配置
 - 切换Mode为Client，此时可以配置Client启动
+
 ![图片](../../assets/THUAI8/intro/image.png)
+
 - 与Server相同，选手可以配置Client启动的IP和端口（一般不需要更改）。在此基础上，选手可以加入一定数量的对战Client和旁观Client（调试界面）。
 - 点击Add加入对战Client。对于不同的Server配置，需要加入的对战Client数量也不同。对于每一支队伍人数为x的情况，需要为每支队伍各加入x+1个Client，分别对应PlayerID从0到x；teamID和SideFlag保持一致。例如，对于每支队伍人数为1的情况，客户端加入情况应该如下配置：
 
