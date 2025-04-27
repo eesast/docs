@@ -67,12 +67,12 @@
 ![图片](../../assets/THUAI8/intro/Cppbuild.png)
 - 生成成功后，**输出**窗口会提示编译成功的信息
 ![图片](../../assets/THUAI8/intro/Success.png)
-- 此后即可使用下载器进行[调试](下载器调试)
+- 此后即可使用下载器进行[调试](#下载器调试)
 
 ### Python
 - 选手编写AI代码的位置在CAPI/python/PyAPI/AI.py处
 ![图片](../../assets/THUAI8/intro/apipy.png)
-- 由于python不需要编译产生可执行文件，可直接前往[调试界面](下载器调试)
+- 由于python不需要编译产生可执行文件，可直接前往[调试界面](#下载器调试)
 
 ## 下载器调试
 
