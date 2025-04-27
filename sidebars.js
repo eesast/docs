@@ -222,7 +222,7 @@ module.exports = {
             "contests/THUAI8/intro/guide",
             "contests/THUAI8/intro/score",
             "contests/THUAI8/intro/programming",
-            "contests/THUAI8/intro/installer",
+            "contests/THUAI8/intro/ai_manual",
           ],
         },
         {
