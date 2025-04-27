@@ -1,4 +1,7 @@
-# THUAI8西游真经劫 AI编写手册
+---
+title: THUAI8 西游真经劫 AI 编写手册
+sidebar_label: AI 编写手册
+------
 
 ## 目录
 
