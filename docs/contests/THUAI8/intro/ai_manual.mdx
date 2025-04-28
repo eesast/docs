@@ -106,12 +106,12 @@ import TOCInline from '@theme/TOCInline';
 ### Client 配置
 - 切换 Mode 为 Client，此时可以配置 Client 启动
 
-
+  ![图片](../../assets/THUAI8/intro/Clientdebug.png)
 
 - 与 Server 相同，选手可以配置 Client 启动的 IP 和端口（一般不需要更改）。在此基础上，选手可以加入一定数量的对战 Client 和旁观Client（调试界面）。
 
 - 点击 Add 加入对战 Client。对于不同的 Server 配置，需要加入的对战 Client 数量也不同。对于每一支队伍人数为 `x` 的情况，需要为每支队伍各加入 `x + 1` 个 Client，分别对应 PlayerID 从 `0` 到 `x`；teamID 和 SideFlag 保持一致。例如，对于每支队伍人数为 `1` 的情况，客户端加入情况应该如下配置：
-  ![图片](../../assets/THUAI8/intro/Clientdebug.png)
+
   - 勾选 Spectator 以启用简易调试界面，并确保其 ID 大于 2025（默认 2026）
 
   - 选择正确的 Language，保存后即可启动 Client
