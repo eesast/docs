@@ -240,6 +240,11 @@ module.exports = {
           ],
         },
         {
+          "接口": [
+            "contests/THUAI8/interface/interfacecpp",
+          ],
+        },
+        {
           "常见问题": [
             "contests/THUAI8/faq/README",
             "contests/THUAI8/faq/cpptips",
