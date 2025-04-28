@@ -1,15 +1,5 @@
----
-title: cpp接口一览
-sidebar_label: CPP接口
----
 
-
-
-# THUAI8 角色控制接口文档
-
-import TOCInline from '@theme/TOCInline';
-
-<TOCInline toc={toc} />
+# cpp接口一览
 
 本文档详细介绍THUAI8游戏中的两个主要角色控制接口：ICharacterAPI和ITeamAPI，以及它们从IAPI继承的所有方法。
 
