@@ -222,7 +222,7 @@ module.exports = {
             "contests/THUAI8/intro/guide",
             "contests/THUAI8/intro/score",
             "contests/THUAI8/intro/programming",
-            "contests/THUAI8/intro/AI编写手册",
+            "contests/THUAI8/intro/ai_manual",
           ],
         },
         {
@@ -237,6 +237,11 @@ module.exports = {
           "角色": [
             "contests/THUAI8/character/character",
             "contests/THUAI8/character/shop&&equipment",
+          ],
+        },
+        {
+          "接口": [
+            "contests/THUAI8/interface/interfacecpp",
           ],
         },
         {
