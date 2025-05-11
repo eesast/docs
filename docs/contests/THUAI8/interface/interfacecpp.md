@@ -285,26 +285,20 @@ std::future<bool> MoveDown(int64_t timeInMilliseconds)
 ### 角色攻击
 
 ```cpp
-std::future<bool> Skill_Attack(int64_t TeamID, int64_t PlayerID, double angle)
+std::future<bool> Skill_Attack(double angle)
 ```
 
 - **返回类型：** `std::future<bool>`
 - **参数：**
-  - `TeamID`：队伍ID
-  - `PlayerID`：角色ID
   - `angle`：攻击方向，单位为弧度
 
 角色向指定方向使用技能攻击，返回操作是否成功的future对象。
 
 ```cpp
-std::future<bool> Common_Attack(int64_t teamID, int64_t PlayerID, int64_t attackedTeamID, int64_t attackedPlayerID)
+std::future<bool> Common_Attack(int64_t attackedPlayerID)
 ```
-
 - **返回类型：** `std::future<bool>`
 - **参数：**
-  - `teamID`：攻击者队伍ID
-  - `PlayerID`：攻击者角色ID
-  - `attackedTeamID`：被攻击者队伍ID
   - `attackedPlayerID`：被攻击者角色ID
 
 角色对指定目标进行普通攻击，返回操作是否成功的future对象。
