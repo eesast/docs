@@ -93,21 +93,68 @@ def GetPlaceType(self, cellX: int, cellY: int) -> THUAI8.PlaceType
 
 #### GetEconomyResourceState
 ```python
-def GetEconomyResourceState(self, cellX: int, cellY: int) -> int
+def GetEconomyResourceState(self, cellX: int, cellY: int) -> THUAI8.EconomyResource
 ```
 - **参数**:
   - `cellX`: 格子X坐标
   - `cellY`: 格子Y坐标
-- **返回值**: 指定格子的经济资源采集进度，若无返回-1
+- **返回值**: `EconomyResource` 结构体，包含以下字段：
+  ```python
+  class EconomyResource:
+      def __init__(
+          self,
+          id: int = 0,
+          process: int = 0,
+          type: EconomyResourceType = EconomyResourceType.NullEconomyResourceType
+      ):
+          self.economyResourceType = type 
+          self.process = process
+          self.id = id 
+  ```
+- **说明**: 
+  - 若指定位置无经济资源，返回默认值（所有字段为0或Null）
+- **示例**:
+  ```python
+  economy_resource = api.GetEconomyResourceState(0, 0).result()
+  if economy_resource:
+      print(f"资源类型: {economy_resource.economyResourceType}")
+      print(f"采集进度: {economy_resource.process}")
+      if economy_resource.process > 0:
+          api.Produce().result()
+  else:
+      print("该位置没有经济资源")
+  ```
 
 #### GetAdditionResourceState
 ```python
-def GetAdditionResourceState(self, cellX: int, cellY: int) -> int
+def GetAdditionResourceState(self, cellX: int, cellY: int) -> THUAI8.AdditionResource
 ```
 - **参数**:
   - `cellX`: 格子X坐标
   - `cellY`: 格子Y坐标
-- **返回值**: 指定格子的加成资源血量，若无返回-1
+- **返回值**: `AdditionResource` 结构体，包含以下字段：
+  ```python
+  class AdditionResource:
+      def __init__(
+          self,
+          id: int = 0,
+          hp: int = 0,
+          type: AdditionResourceType = AdditionResourceType.NullAdditionResourceType
+      ):
+          self.additionResourceType = type
+          self.hp = hp
+          self.id = id
+  ```
+- **说明**: 
+  - 若指定位置无加成资源，返回默认值（所有字段为0或Null）
+- **示例**:
+  ```python
+  addition_resource = api.GetAdditionResourceState(0, 0).result()
+  if addition_resource:
+      print(f"资源生命值: {addition_resource.hp}")
+  else:
+      print("该位置没有加成资源")
+  ```
 
 #### GetConstructionState
 ```python
@@ -116,7 +163,21 @@ def GetConstructionState(self, cellX: int, cellY: int) -> THUAI8.ConstructionSta
 - **参数**:
   - `cellX`: 格子X坐标
   - `cellY`: 格子Y坐标
-- **返回值**: 建筑状态信息
+- **返回值**: `ConstructionState` 结构体，包含以下字段：
+  ```python
+  class ConstructionState:
+      def __init__(
+          self,
+          teamID: int = 0,
+          HP: int = 0,
+          type: ConstructionType = ConstructionType.NullConstructionType
+      ):
+          self.teamID = teamID 
+          self.hp = HP 
+          self.constructionType = type 
+  ```
+- **说明**: 
+  - 若指定位置无建筑，返回默认值（所有字段为0或Null）
 
 #### GetEnergy
 ```python
@@ -200,6 +261,21 @@ def Common_Attack(self, ATKplayerID: int) -> Future[bool]
   - `ATKplayerID`: 目标玩家ID
 - **返回值**: `Future[bool]`，表示普通攻击指令是否成功发送
 
+#### AttackConstruction
+```python
+def AttackConstruction(self) -> Future[bool]
+```
+- **返回值**: `Future[bool]`，表示攻击附近建筑指令是否成功发送
+
+#### AttackAdditionResource
+```python
+def AttackAdditionResource(self) -> Future[bool]
+```
+- **返回值**: `Future[bool]`，表示攻击附加资源指令是否成功发送
+- **说明**: 
+  - 需要在附加资源附近使用
+  - 通过 `.result()` 获取实际执行结果
+
 ### 资源操作
 
 #### Produce
@@ -228,6 +304,15 @@ def Construct(self, constructionType: THUAI8.ConstructionType) -> Future[bool]
   - `constructionType`: 建筑类型
 - **返回值**: `Future[bool]`，表示建造指令是否成功发送
 - **说明**: 在可建造位置新建建筑
+
+#### ConstructTrap
+```python
+def ConstructTrap(self, trapType: THUAI8.TrapType) -> Future[bool]
+```
+- **参数**:
+  - `trapType`: 陷阱类型
+- **返回值**: `Future[bool]`，表示建造陷阱指令是否成功发送
+- **说明**: 通过 `.result()` 获取实际执行结果
 
 #### Rebuild
 ```python
