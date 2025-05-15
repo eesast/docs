@@ -248,13 +248,11 @@ void PrintSelfInfo() const
 ### 角色移动
 
 ```cpp
-std::future<bool> Move(int64_t teamID, int64_t characterID, int32_t moveTimeInMilliseconds, double angle)
+std::future<bool> Move(int32_t moveTimeInMilliseconds, double angle)
 ```
 
 - **返回类型：** `std::future<bool>`
 - **参数：**
-  - `teamID`：队伍ID
-  - `characterID`：角色ID
   - `moveTimeInMilliseconds`：移动持续时间，单位为毫秒
   - `angle`：移动方向，单位为弧度，使用极坐标（竖直向下方向为x轴，水平向右方向为y轴）
 
@@ -317,13 +315,11 @@ std::future<bool> Recover(int64_t recover)
 角色进行生命值恢复，返回操作是否成功的future对象。
 
 ```cpp
-std::future<bool> Produce(int64_t playerID, int64_t teamID)
+std::future<bool> Produce()
 ```
 
 - **返回类型：** `std::future<bool>`
-- **参数：**
-  - `playerID`：角色ID
-  - `teamID`：队伍ID
+- **参数：无**
 
 角色进行资源生产，返回操作是否成功的future对象。
 
