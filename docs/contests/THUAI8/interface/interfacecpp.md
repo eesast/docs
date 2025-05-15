@@ -1,5 +1,4 @@
-
-# cpp接口一览
+# THUAI8 角色控制接口文档
 
 本文档详细介绍THUAI8游戏中的两个主要角色控制接口：ICharacterAPI和ITeamAPI，以及它们从IAPI继承的所有方法。
 
@@ -139,26 +138,43 @@ THUAI8::PlaceType GetPlaceType(int32_t cellX, int32_t cellY) const
 获取指定格子的类型，如障碍、空地等。
 
 ```cpp
-std::optional<THUAI8::EconomyResourceState> GetEnconomyResourceState(int32_t cellX, int32_t cellY) const
+std::optional<THUAI8::EconomyResource> GetEnconomyResourceState(int32_t cellX, int32_t cellY) const
 ```
 
-- **返回类型：** `std::optional<THUAI8::EconomyResourceState>`
+- **返回类型：** `std::optional<THUAI8::EconomyResource>`
 - **参数：**
   - `cellX`：格子X坐标
   - `cellY`：格子Y坐标
 
 获取指定格子的经济资源状态，如果该格子没有经济资源则返回空。
 
+**注：这里``THUAI8::EconomyResource``包含了关于经济资源的所有有效信息，包括：所属队伍``team_id``、开采进程``process``、经济资源类型``THUAI8::EconomyResourceType``**
+
 ```cpp
-std::optional<std::pair<int32_t, int32_t>> GetAdditionResourceState(int32_t cellX, int32_t cellY) const
+std::optional<THUAI8::AdditionResource> GetAdditionResourceState(int32_t cellX, int32_t cellY) const
 ```
 
-- **返回类型：** `std::optional<std::pair<int32_t, int32_t>>`
+- **返回类型：** `std::optional<THUAI8::AdditionResource>`
 - **参数：**
   - `cellX`：格子X坐标
   - `cellY`：格子Y坐标
 
 获取指定格子的加成资源状态，如果该格子没有加成资源则返回空。
+
+**注：这里``THUAI8::AdditionResource``包含了关于加成资源的所有有效信息，包括：所属队伍``team_id``、剩余血量``hp``、加成资源类型``THUAI8::AdditionResourceType``**
+
+```cpp
+std::optional<THUAI8::ConstructionState> GetConstructionState(int32_t cellX, int32_t cellY) const
+```
+
+* **返回类型：**``std::optional<THUAI8::ConstructionState>``
+* **参数：**
+  - ``cellX``：格子X坐标
+  - ``cellY``：格子Y坐标
+
+获取指定格子的建筑状态（不含陷阱），如果该格子没有建筑则返回空。
+
+**注：这里``THUAI8::ConstructionState``包含了关于建筑的所有有效信息，包括：所属队伍``team_id``、剩余血量``hp``、建筑类型（不含陷阱）``THUAI8::ConstructionType``**
 
 ```cpp
 std::vector<int64_t> GetPlayerGUIDs() const
@@ -232,55 +248,17 @@ void PrintSelfInfo() const
 ### 角色移动
 
 ```cpp
-std::future<bool> Move(int32_t moveTimeInMilliseconds, double angle)
+std::future<bool> Move(int64_t teamID, int64_t characterID, int32_t moveTimeInMilliseconds, double angle)
 ```
 
 - **返回类型：** `std::future<bool>`
 - **参数：**
+  - `teamID`：队伍ID
+  - `characterID`：角色ID
   - `moveTimeInMilliseconds`：移动持续时间，单位为毫秒
   - `angle`：移动方向，单位为弧度，使用极坐标（竖直向下方向为x轴，水平向右方向为y轴）
 
 控制角色向指定方向移动指定的时间，返回操作是否成功的future对象。
-
-```cpp
-std::future<bool> MoveRight(int64_t timeInMilliseconds)
-```
-
-- **返回类型：** `std::future<bool>`
-- **参数：**
-  - `timeInMilliseconds`：移动持续时间，单位为毫秒
-
-控制角色向右指定的时间，返回操作是否成功的future对象。
-
-```cpp
-std::future<bool> MoveUp(int64_t timeInMilliseconds)
-```
-
-- **返回类型：** `std::future<bool>`
-- **参数：**
-  - `timeInMilliseconds`：移动持续时间，单位为毫秒
-
-控制角色向上指定的时间，返回操作是否成功的future对象。
-
-```cpp
-std::future<bool> MoveLeft(int64_t timeInMilliseconds)
-```
-
-- **返回类型：** `std::future<bool>`
-- **参数：**
-  - `timeInMilliseconds`：移动持续时间，单位为毫秒
-
-控制角色向左指定的时间，返回操作是否成功的future对象。
-
-```cpp
-std::future<bool> MoveDown(int64_t timeInMilliseconds)
-```
-
-- **返回类型：** `std::future<bool>`
-- **参数：**
-  - `timeInMilliseconds`：移动持续时间，单位为毫秒
-
-控制角色向下指定的时间，返回操作是否成功的future对象。
 
 ### 角色攻击
 
@@ -297,11 +275,34 @@ std::future<bool> Skill_Attack(double angle)
 ```cpp
 std::future<bool> Common_Attack(int64_t attackedPlayerID)
 ```
+
 - **返回类型：** `std::future<bool>`
 - **参数：**
   - `attackedPlayerID`：被攻击者角色ID
 
 角色对指定目标进行普通攻击，返回操作是否成功的future对象。
+
+### 攻击建筑
+
+```cpp
+ std::future<bool> AttackConstruction()
+```
+
+* **返回类型：**``std::future<bool>``
+* **参数：无**
+
+角色对建筑进行攻击，返回是否成功的future对象。
+
+### 攻击加成资源
+
+```cpp
+std::future<bool> AttackAdditionResource()
+```
+
+* **返回类型：**``std::future<bool>``
+* **参数：无**
+
+角色对加成资源进行攻击，返回是否成功的future对象。
 
 ### 角色恢复与生产
 
@@ -334,9 +335,21 @@ std::future<bool> Construct(THUAI8::ConstructionType constructionType)
 
 - **返回类型：** `std::future<bool>`
 - **参数：**
-  - `constructionType`：建筑类型
+  - `constructionType`：建筑类型（除陷阱类型外）
 
 角色建造指定类型的建筑，返回操作是否成功的future对象。
+
+### 建造陷阱
+
+```cpp
+std::future<bool> ConstructTrap(THUAI8::TrapType trapType)
+```
+
+* **返回类型：**``std::future<bool>``
+* **参数：**
+  - ``trapType``：陷阱类型
+
+角色建造陷阱，返回操作是否成功的future对象。
 
 ### 角色信息获取
 
