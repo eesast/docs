@@ -359,14 +359,6 @@ def InstallEquipment(self, playerID: int, equipmentType: THUAI8.EquipmentType) -
   - `equipmentType`: 装备类型
 - **返回值**: `Future[bool]`，表示安装装备指令是否成功发送
 
-#### Recycle
-```python
-def Recycle(self, playerID: int) -> Future[bool]
-```
-- **参数**:
-  - `playerID`: 待回收角色的ID
-- **返回值**: `Future[bool]`，表示回收指令是否成功发送
-
 #### BuildCharacter
 ```python
 def BuildCharacter(self, characterType: THUAI8.CharacterType, birthIndex: int) -> Future[bool]
