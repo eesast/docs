@@ -125,6 +125,8 @@ def GetEconomyResourceState(self, cellX: int, cellY: int) -> THUAI8.EconomyResou
       print("该位置没有经济资源")
   ```
 
+
+
 #### GetAdditionResourceState
 ```python
 def GetAdditionResourceState(self, cellX: int, cellY: int) -> THUAI8.AdditionResource
@@ -155,6 +157,29 @@ def GetAdditionResourceState(self, cellX: int, cellY: int) -> THUAI8.AdditionRes
   else:
       print("该位置没有加成资源")
   ```
+
+#### GetTrapState
+```python
+def GetTrapState(self, cellX: int, cellY: int) -> THUAI8.Trap
+```
+- **参数**:
+  - `cellX`: 格子X坐标
+  - `cellY`: 格子Y坐标
+- **返回值**: `Trap` 结构体，包含以下字段：
+  ```python
+  class Trap:
+      def __init__(
+              self,
+              trapType: TrapType = TrapType.NullTrapType,
+              teamID: int = 0,
+              trapValid: bool = False,
+          ):
+          self.trapType = trapType
+          self.teamID = teamID
+          self.trapValid = trapValid
+  ```
+- **说明**: 
+  - 若指定位置无陷阱，返回默认值（所有字段为0或Null）
 
 #### GetConstructionState
 ```python
