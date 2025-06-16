@@ -5273,10 +5273,10 @@ ansi-styles@^6.0.0, ansi-styles@^6.1.0, ansi-styles@^6.2.1:
   resolved "https://registry.npmmirror.com/ansi-styles/-/ansi-styles-6.2.1.tgz#0e62320cf99c21afff3b3012192546aacbfb05c5"
   integrity sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==
 
-antd@5.26.0:
-  version "5.26.0"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-5.26.0.tgz#8b9721cb95febc19c583697bef1d2076096062e8"
-  integrity sha512-iMPYKFTo2HvIRGutUOuN5AG+Uf+B2QaqcGQbdPp/100fqV3FAil6vFZLVuV3C4XEUOlDNkkUlJKhLR9V5rzIEg==
+antd@5.26.1:
+  version "5.26.1"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-5.26.1.tgz#14cd1bd7c117f2e9c8bde7c1fc2f3934243d3230"
+  integrity sha512-CiLGZ2Ftld+fuoj+U3OL8uouuqUppqFJnW4O/4bOgSWzM9XsJGibpNtUa9QArhrZ5ndfnzlPP/4RVXUK/xfSvQ==
   dependencies:
     "@ant-design/colors" "^7.2.1"
     "@ant-design/cssinjs" "^1.23.0"
