@@ -98,7 +98,7 @@ gRPC 有诸多优点：
 
 两者使用语言不同，如何使得两者建立联系？我们可以使用 gRPC 的思路：
 
-- 在`.proto`文件中定义选手可以调用的游戏方法（如人物操作和获取物品信息）。
+- 在 `.proto` 文件中定义选手可以调用的游戏方法（如人物操作和获取物品信息）。
 - 在 Server 端实现这些接口的内部逻辑。
 - 在 Client 端提供用户需要直接调用的方法，而无需关心其具体实现。
 
@@ -108,7 +108,7 @@ gRPC 有诸多优点：
 
 ### C++
 
-安装 gRPC C++相关的库需要手动编译其源码：
+安装 gRPC C++ 相关的库需要手动编译其源码：
 
 ```bash
 $ git clone -b v1.46.3 --depth 1 --shallow-submodules https://github.com/grpc/grpc
@@ -126,14 +126,7 @@ $ make install # 或 sudo make install
 $ popd
 ```
 
-> 需要指出的是，由于网络等问题，`git submodule update --init --recursive`一步往往无法正常运行。为此可以点击[此处](https://cloud.tsinghua.edu.cn/f/57ed9214f07e4b41a11c/)下载`third_party.tar.gz`，并将`git submodule..`一步替换为以下操作：
->
-> ```bash
-> $ rm -rf third_party
-> $ mv <tar_gz_path> .
-> $ tar -zxvf third_party.tar.gz
-> $ cd ..
-> ```
+> 需要指出的是，由于网络等问题，`git submodule update --init --recursive` 一步往往无法正常运行，需要自行处理。
 
 ### Csharp
 
