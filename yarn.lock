@@ -7420,10 +7420,10 @@ eslint-compat-utils@^0.5.1:
   dependencies:
     semver "^7.5.4"
 
-eslint-config-prettier@10.1.5:
-  version "10.1.5"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.5.tgz#00c18d7225043b6fbce6a665697377998d453782"
-  integrity sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==
+eslint-config-prettier@10.1.7:
+  version "10.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.7.tgz#c62a7128f48f60fd7bd737be481d42bbca207428"
+  integrity sha512-xztdELuHs7grBM+qdMUF4M4SjPpeOMN3kx7sGU6ifl5yibck/GRa0+0d+m1lPsGNkd+2bIWh2lUUTzX7MX/obw==
 
 eslint-config-standard@17.1.0:
   version "17.1.0"
