@@ -3820,7 +3820,7 @@
   resolved "https://registry.npmmirror.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
-"@mapbox/node-pre-gyp@^1.0.9":
+"@mapbox/node-pre-gyp@^1.0.10":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz#417db42b7f5323d79e93b34a6d7a2a12c0df43fa"
   integrity sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==
@@ -10903,10 +10903,10 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-node-addon-api@^3.0.2:
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
-  integrity sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
+node-addon-api@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-5.1.0.tgz#49da1ca055e109a23d537e9de43c09cca21eb762"
+  integrity sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==
 
 node-emoji@^2.1.0:
   version "2.1.3"
@@ -10945,13 +10945,13 @@ node-releases@^2.0.19:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.19.tgz#9e445a52950951ec4d177d843af370b411caf314"
   integrity sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==
 
-nodejieba@3.4.4:
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-3.4.4.tgz#d8b97f853b8d96fa9a8659d5d035958d9e919f9d"
-  integrity sha512-yqx89UYqTQoIL04reK6cRWBGpzUEeahwX65Qrj8+6d4FN/DOE3h26gBD2KmLAY5lTEQt0Uc42uZqKjlNUuIReA==
+nodejieba@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/nodejieba/-/nodejieba-3.5.0.tgz#4f7a1f91faa32d59551110103773a70c3bc7fb88"
+  integrity sha512-cwYMVzIwT6JAU8+TM7swlyGQ+DfzO1rmxQNpbif4QOIA1eAN9zNuFv+f8QY73pVIjBa7w+kqLL4zJARbMbKCGQ==
   dependencies:
-    "@mapbox/node-pre-gyp" "^1.0.9"
-    node-addon-api "^3.0.2"
+    "@mapbox/node-pre-gyp" "^1.0.10"
+    node-addon-api "^5.1.0"
 
 nopt@^5.0.0:
   version "5.0.0"
