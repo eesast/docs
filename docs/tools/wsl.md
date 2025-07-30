@@ -114,11 +114,21 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ### 第五步：安装 WSL 2 内核组件
 
+对于部分较老版本的 Windows 操作系统，需要手动安装 WSL 2 内核组件。
+
 访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
 
 > 如果处理器是 ARM 架构，需要下载 [https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)（应该很少有 ARM 架构的吧 2333333）
 
 然后运行 wsl_update_x64.msi，一步步全按“Next”进行安装即可。
+
+如果上一步安装失败，或你的 Windows 操作系统较新，打开 cmd 或 powershell（可以使用普通用户，也可以使用管理员 / Administrator 身份或 Administrator 用户），输入以下命令：
+
+```powershell
+> wsl --update
+```
+
+即可。
 
 下面将路线分为多条。如果你已经拥有了 WSL 1，那么你可以直接将其升级到 WSL 2，不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 \<二\> 中所述，将其安装在其他磁盘。
 
@@ -146,7 +156,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 > wsl --list --verbose
 ```
 
-如果显示的 VERSION 是 2，则成功升级到了 WSL 2。
+如果显示的 `VERSION` 是 2，则成功升级到了 WSL 2。
 
 ### <二\> 在其他磁盘中安装 WSL 2（推荐）
 
@@ -167,6 +177,16 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 然后输入 `wsl` 即可进入标有”默认“字样的 Linux 版本。
 
 如果要指定进入某个发行版（以进入 CentOS 为例），可以输入 `wsl -d CentOS7`。
+
+#### 第八步：检查是否是 WSL 2
+
+输入：
+
+```powershell
+> wsl --list --verbose
+```
+
+如果显示的 `VERSION` 是 2，则成功升级到了 WSL 2。
 
 ## 安装 WSLg
 
