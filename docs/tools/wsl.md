@@ -114,7 +114,7 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 ### 第五步：安装 WSL 2 内核组件
 
-对于部分较老版本的 Windows 操作系统，需要手动安装 WSL 2 内核组件。
+对于部分**较老版本的 Windows 操作系统**，需要手动安装 WSL 2 内核组件（较新的操作系统不需要安装，且安装会提示失败）。
 
 访问网址：[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 即可开始下载，得到“wsl_update_x64.msi”。
 
