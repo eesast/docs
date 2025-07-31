@@ -168,7 +168,10 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 #### 第七步：安装 WSL 2 发行版
 
-以 Ubuntu 20.04 为例，下载之后会得到一个 .appx 文件。将其重命名，后缀名改成 .zip，并解压。会得到 ubuntu2004.exe【注：新的安装包此时并没有 ubuntu2004.exe，而是会得到一系列的 .appx 文件。选择使用自己电脑架构的 .appx 文件，重复上述操作并解压，方可得到 .exe 文件】。运行 ubuntu2004.exe 即可在该目录下进行安装。安装后在该目录下会生成虚拟磁盘 ext4.vhdx。然后按照提示输入用户名和密码即可。
+以 Ubuntu 20.04 为例，下载之后会得到一个 .appx 或 .AppxBundle 文件：
+
+1. 如果是 .AppxBundle 文件，将其重命名，后缀名改成 .zip，并解压，会得到一系列的 .appx 文件。选择适合你电脑架构的 .appx 文件，作为下一步的 .appx 文件进行第 2. 步操作：
+2. 如果是 .appx 文件，将其重命名，后缀名改成 .zip，并解压，会得到一个后缀名为 .exe 的文件，例如 ubuntu2004.exe、ubuntu.exe 等【注：有些版本的安装包解压后会获得两个 .exe 文件，例如 ubuntu.exe 和 ubuntu_wsl_splash.exe，这时要选择 ubuntu.exe，而非 ubuntu_wsl_plash.exe】。运行该文件即可在该目录下进行安装。安装后在该目录下会生成虚拟磁盘 ext4.vhdx。然后按照提示输入用户名和密码即可。
 
 在 cmd 或 powershell 中输入 `wsl --list` 可以看到已经成功安装的 Linux 发行版：
 
