@@ -202,7 +202,9 @@ WSLg 需要电脑已经安装了 WSL 2 内核组件。
 
 按 `Ctrl+alt+delete`，打开任务管理器，进入“性能”，查看“GPU”，记住右上角显示的 GPU 厂家。支持该功能的显卡厂商必须是 Intel、AMD 和 NVIDIA 中的一个。
 
-### 第三步：安装虚拟显卡驱动
+### 第三步：安装或更新虚拟显卡驱动
+
+在开始菜单搜索“设备管理器”，在其中的“显示适配器”中查看你的显卡驱动版本；或对于 NVIDIA 显卡来说，也可在 NVIDIA Geforce Experience 中查看驱动版本。如果驱动版本过旧，需要安装新的虚拟显卡驱动（具体哪个版本开始还在搜寻当中，但都更新一下总没问题，已知 2024 年后的没问题）。
 
 进入 [https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps#prerequisites](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps#prerequisites)，安装适合自己的 GPU 的虚拟显卡驱动，并重启电脑。
 
