@@ -56,11 +56,31 @@ WSL 需要 **Windows 10 1709 专业版** 或者 **Windows 10 1803 及以上的�
 
 ### 第三步：安装 Ubuntu
 
-按键 `Win+Q`，搜索“store”找到 Microsoft Store 并打开，搜索“ubuntu”：
++ 方法一：在微软商店中安装
 
-![ubuntu](assets/wsl/ubuntu.png)
+  按键 `Win+Q`，搜索“store”找到 Microsoft Store 并打开，搜索“ubuntu”：
 
-找到“Ubuntu 20.04 LTS”，点击“获取”，并安装 Ubuntu 20.04 LTS。
+  ![ubuntu](assets/wsl/ubuntu.png)
+
+  找到“Ubuntu 20.04 LTS”，点击“获取”，并安装 Ubuntu 20.04 LTS。
+
++ 方法二：使用命令行安装
+
+  最方便的方法是直接使用命令行安装（但经常遇到网络问题，需要一些魔法，否则看方法三）。打开 cmd 或 powershell（可以使用普通用户，也可以使用管理员 / Administrator 身份或 Administrator 用户），输入以下命令：
+
+  ```powershell
+  > wsl --install Ubuntu-22.04
+  ```
+
++ 方法三：使用国内镜像安装
+
+  如果方法二遇到了网络问题，那么可以在国内的镜像源解决，例如在 TUNA 镜像源网址 [https://mirrors.tuna.tsinghua.edu.cn/](https://mirrors.tuna.tsinghua.edu.cn/) 中搜索你需要的 Linux 发行版。例如，对于 Ubuntu 的 x64 架构镜像源，下载地址为：[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/noble/ubuntu-24.04.2-wsl-amd64.wsl](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/noble/ubuntu-24.04.2-wsl-amd64.wsl)；对于 Ubuntu 的 ARM64 镜像源，下载地址为：[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/noble/ubuntu-24.04.2-wsl-amd64.wsl](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/noble/ubuntu-24.04.2-wsl-amd64.wsl)。
+
+  下载结束后双击该文件打开即可安装，或打开 cmd 或 powershell（可以使用普通用户，也可以使用管理员 / Administrator 身份或 Administrator 用户），输入以下命令：
+
+  ```powershell
+  > wsl --install --from-file <下载的文件路径>
+  ```
 
 安装完毕后，点击“启动”，或者按 `Win+R`，输入 `wsl`，即可开始按照提示创建用户名（username）和密码（password）了。
 
@@ -132,9 +152,9 @@ WSL 实际上并不是 Linux 内核，很多 Linux 应用与功能无法使用�
 
 下面将路线分为多条。如果你已经拥有了 WSL 1，那么你可以直接将其升级到 WSL 2，不过默认是安装在系统盘。如果系统盘容量不足，不建议使用这种方式，而是建议参照 \<二\> 中所述，将其安装在其他磁盘。
 
-### <一\> 基于 WSL 1 升级到 WSL 2
+### <一\> 在系统盘中安装 WSL 2
 
-本条分支假定你已经完成了上面“安装 WSL 1” 的三个步骤。
+本条分支需要你已经完成了上面“安装 WSL 1” 的三个步骤。
 
 #### 第六步：将 WSL 2 设置为默认版本
 
