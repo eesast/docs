@@ -509,6 +509,6 @@ foreach (var tup in tups)
 
 ### 2022 年暑期培训
 
-import Video from '@site/src/component/video_player';
+ Video from '@site/src/component/video_player';
 
 <Video url="https://cloud.tsinghua.edu.cn/d/0d8895f41a4a4dcaa0a4/files/?p=%2F%E5%9B%9E%E6%94%BE%2F6.Protobuf_gRPC.mp4" source="THU"/>

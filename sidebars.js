@@ -109,6 +109,7 @@ module.exports = {
       云原生: [
         "web/cloud_native/README",
         "web/cloud_native/docker",
+        "web/cloud_native/fundamental",
         {
           通信: ["web/cloud_native/communication/Protobuf", "web/cloud_native/communication/gRPC"],
         },
