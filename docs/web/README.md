@@ -22,6 +22,7 @@ slug: ./
   - [Web 服务器](deployment/nginx.mdx)
 - [云原生（Cloud Native）](cloud_native/README.mdx)
   - [Docker](./cloud_native/docker.mdx)
+  - [云原生基础](./cloud_native/fundamental.mdx)
   - Kubernetes
   - 通信
     - [Protobuf](./cloud_native/communication/Protobuf.md)
