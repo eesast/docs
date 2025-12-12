@@ -32,8 +32,8 @@
     "clsx": "2.1.1",
     "lint-staged": "16.2.7",
     "nodejieba": "3.5.2",
-    "react": "19.2.2",
-    "react-dom": "19.2.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "rehype-katex": "7.0.1",
     "remark-math": "6.0.0"
   },
