@@ -31,7 +31,7 @@
     "antd": "6.3.1",
     "clsx": "2.1.1",
     "lint-staged": "16.3.2",
-    "nodejieba": "3.5.2",
+    "nodejieba": "3.5.5",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rehype-katex": "7.0.1",
