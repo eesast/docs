@@ -38,6 +38,8 @@ AI 工厂模拟（THUAI9）
 
 ### PVE 赛道（Python）
 
+不熟悉强化学习的可以访问https://github.com/konpoku/THUAI9-RL，在小项目中学习一下
+
 详细的使用说明参照选手包里的logic\pve\docs\CONTESTANT_GUIDE.md
 
 ---
