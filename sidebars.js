@@ -253,6 +253,79 @@ module.exports = {
           ]
         },
       ]
+    },
+    {
+      "THUAI9": [
+        "contests/THUAI9/README",
+        {
+          "PVE": [
+            {
+              "引入": [
+                "contests/THUAI9/pve/intro/rule",
+              ],
+            },
+            {
+              "游戏": [
+                "contests/THUAI9/pve/game/actions",
+                "contests/THUAI9/pve/game/state",
+                "contests/THUAI9/pve/game/reward",
+              ],
+            },
+            {
+              "接口": [
+                "contests/THUAI9/pve/interface/gym",
+              ],
+            },
+            {
+              "训练": [
+                "contests/THUAI9/pve/training/training",
+              ],
+            },
+            {
+              "常见问题": [
+                "contests/THUAI9/pve/faq/README",
+              ],
+            },
+          ]
+        },
+        {
+          "PVP": [
+            {
+              "引入": [
+                "contests/THUAI9/pvp/intro/rule",
+                "contests/THUAI9/pvp/intro/score",
+              ],
+            },
+            {
+              "地图": [
+                "contests/THUAI9/pvp/map/map",
+                "contests/THUAI9/pvp/map/placetype",
+                "contests/THUAI9/pvp/map/resource",
+                "contests/THUAI9/pvp/map/factory",
+                "contests/THUAI9/pvp/map/market",
+                "contests/THUAI9/pvp/map/compute_center",
+              ],
+            },
+            {
+              "角色": [
+                "contests/THUAI9/pvp/character/character",
+                "contests/THUAI9/pvp/character/tech",
+              ],
+            },
+            {
+              "接口": [
+                "contests/THUAI9/pvp/interface/interfacecpp",
+              ],
+            },
+            {
+              "常见问题": [
+                "contests/THUAI9/pvp/faq/README",
+                "contests/THUAI9/pvp/faq/cpptips",
+              ],
+            },
+          ]
+        },
+      ]
     }
   ]
 };
