@@ -255,6 +255,42 @@ module.exports = {
       ]
     },
     {
+      "RL9": [
+        {
+          "PVE": [
+            "contests/RL9/pve/README",
+            {
+              "引入": [
+                "contests/RL9/pve/intro/rule",
+              ],
+            },
+            {
+              "游戏": [
+                "contests/RL9/pve/game/actions",
+                "contests/RL9/pve/game/state",
+                "contests/RL9/pve/game/reward",
+              ],
+            },
+            {
+              "接口": [
+                "contests/RL9/pve/interface/gym",
+              ],
+            },
+            {
+              "训练": [
+                "contests/RL9/pve/training/training",
+              ],
+            },
+            {
+              "常见问题": [
+                "contests/RL9/pve/faq/README",
+              ],
+            },
+          ]
+        },
+      ]
+    },
+    {
       "THUAI9": [
         "contests/THUAI9/README",
         {
