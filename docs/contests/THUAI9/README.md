@@ -14,13 +14,13 @@ AI 工厂模拟（THUAI9）
 | 编程语言 | C++                        | Python                     |
 | 交互方式 | gRPC 连接服务器            | Gymnasium 本地环境         |
 | 控制对象 | 1 Team + 3 Character       | 1 个单位                   |
-| 动作     | 连续移动 + 多种操作        | 8 个离散动作               |
-| 得分机制 | 售卖 + 战斗 + 摧毁工厂     | 售卖 × 10                 |
+| 动作     | 连续移动 + 多种操作        | 28 个离散动作              |
+| 得分机制 | 售卖 + 战斗 + 摧毁工厂     | 售卖 × 10（SELL成功时）   |
 | 文档入口 | [`pvp/`](pvp/intro/rule.md) | [`pve/`](pve/intro/rule.md) |
 
 ## PVP 概要
 
-2~4 支队伍在同一地图对抗。每队拥有 1 座工厂和最多 3 个角色（Drone / Robot / AutonomousCar），通过采集资源、生产产品、占领算力中心、市场售卖、攻击敌方来获取分数。游戏时长 2 分钟，得分高者获胜。
+2~4 支队伍在同一地图对抗。每队拥有 1 座工厂和最多 3 个角色（Drone / Robot / AutonomousCar），通过采集资源、生产产品、占领算力中心、市场售卖、攻击敌方来获取分数。游戏时长 10 分钟，得分高者获胜。
 
 ## PVE 概要
 
@@ -38,7 +38,7 @@ AI 工厂模拟（THUAI9）
 
 ### PVE 赛道（Python）
 
-不熟悉强化学习的可以访问https://github.com/konpoku/THUAI9-RL，在小项目中学习一下
+不熟悉强化学习的可以访问https://github.com/konpoku/THUAI9-RL  ，在小项目中学习一下
 
 详细的使用说明参照选手包里的logic\pve\docs\CONTESTANT_GUIDE.md
 
