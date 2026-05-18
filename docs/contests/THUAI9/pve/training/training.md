@@ -4,52 +4,32 @@
 
 ```bash
 pip install -r requirements.txt
+python -m pytest tests/ -v       # 验证环境
 ```
 
-## 单元测试
-
-验证环境正常：
+## 训练
 
 ```bash
-python -m pytest tests/ -v
-```
-
-## 基础训练
-
-```bash
-# easy 难度，10 万步
 python TrainingDemo/train_basic.py --config easy --timesteps 100000
-
-# medium 难度，20 万步
 python TrainingDemo/train_basic.py --config medium --timesteps 200000
-
-# 自定义 YAML 配置
 python TrainingDemo/train_basic.py --config TrainingDemo/configs/medium.yaml --timesteps 200000
 ```
 
-## 评测模型
+## 评测
 
 ```bash
 python TrainingDemo/evaluate.py --model models/ppo_thuai9_best --config medium --episodes 50
 ```
 
-输出多 seed 下的平均得分和方差。
-
 ## MaskablePPO
-
-使用 `sb3-contrib` 的 `MaskablePPO` 可以自动利用动作掩码：
 
 ```python
 from sb3_contrib import MaskablePPO
 from sb3_contrib.common.wrappers import ActionMasker
 
-def mask_fn(env):
-    return env.unwrapped.action_masks()
-
-env = ActionMasker(env, mask_fn)
+env = ActionMasker(env, lambda e: e.unwrapped.action_masks())
 model = MaskablePPO("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=100000)
-model.save("ppo_thuai9")
 ```
 
 ## 难度对比
@@ -67,37 +47,10 @@ model.save("ppo_thuai9")
 | 初始资源 | 200 | 100 | 50 |
 | 游戏时长 | 300s | 300s | 500s |
 
-## 项目结构
-
-```
-logic/pve/
-├── GameLogic/           # 游戏规则与状态管理（算法不可直接修改）
-│   ├── config.py        # 全局配置（难度参数化）
-│   ├── board.py         # 地图、资源点、算力中心
-│   ├── character.py     # 单位（HP、背包、状态机）
-│   ├── market.py        # 市场动态价格函数
-│   ├── action_space.py  # 动作空间与动作掩码
-│   ├── reward_calculator.py  # 奖励计算
-│   └── game_env.py      # 主环境（Gymnasium 接口）
-├── RLInterfaces/        # RL 算法接口层
-│   ├── base_agent.py    # 抽象基类
-│   ├── ppo_agent.py     # PPO 实现（支持 MaskablePPO）
-│   └── training_loop.py # 训练循环
-├── TrainingDemo/        # 训练与评测脚本
-│   ├── train_basic.py   # 训练入口
-│   ├── evaluate.py      # 评测脚本
-│   ├── visualization.py # ASCII 渲染 + 奖励曲线
-│   └── configs/         # YAML 配置
-├── tests/               # 单元测试
-└── docs/                # 选手/开发者文档
-```
-
 ## 建议方向
 
-- 使用 `action_masks()` 过滤无效动作
-- BFS / A* 路径规划，找最优路线
-- 建模市场价格正弦周期（利用观测中的 sin/cos 相位）
-- 选择高利润商品（半导体 40–120、服饰 32–96）
-- 规则策略 + RL 混合（Hybrid Policy）
-- 课程学习（easy → medium → hard）
-- Recurrent Policy 识别价格周期
+- `action_masks()` 过滤无效动作；BFS/A* 路径规划
+- 建模 OU 价格随机游走，利用观测 sin/cos 相位辅助时序判断
+- 生产链：食品（1s）快周转，半导体（40–120）高利润
+- 优先占领算力中心 → efficiency(×0.5) 或 marketing(×1.1)
+- 课程学习 easy→medium→hard；Recurrent Policy 捕捉价格趋势
