@@ -16,6 +16,7 @@ AI 工厂模拟（THUAI9）
 | 控制对象 | 1 Team + 3 Character       | 1 个单位                   |
 | 动作     | 连续移动 + 多种操作        | 28 个离散动作              |
 | 得分机制 | 售卖 + 战斗 + 摧毁工厂     | 售卖 × 10（SELL成功时）   |
+| 市场定价 | 乘数 + 衰减               | OU 随机游走，禁止原地套利  |
 | 文档入口 | [`pvp/`](pvp/intro/rule.md) | [`pve/`](pve/intro/rule.md) |
 
 ## PVP 概要

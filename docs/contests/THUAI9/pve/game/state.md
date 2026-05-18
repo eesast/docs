@@ -2,116 +2,84 @@
 
 ## 时间系统
 
-| 参数 | 值 |
-|:----:|:--:|
-| 每 tick 时长 | 0.25s |
-| easy/medium 总时长 | 300s（1200 ticks） |
-| hard 总时长 | 500s（2000 ticks） |
+每 tick **0.25s**。easy/medium 300s（1200 tick），hard 500s（2000 tick）。
 
-## 单位属性
+## 单位
 
 | 属性 | 值 |
 |:----:|:--:|
-| 血量 | 300 |
+| HP | 300 |
 | 背包容量 | 30 |
 | 采集速率 | 10/s |
-| 算力中心占领时间 | 10s |
+| 占领耗时 | 10s |
 
-- 背包分为**原材料**（`raw_inv`）和**成品**（`prod_inv[pid]`）两部分
-- `busy_ticks > 0` 时单位忙碌，仅 WAIT 有效
-- 移动默认消耗 1 busy_tick（购买 path_optimization 科技后变为 0）
-- BUY/SELL/LOAD 消耗 `int(0.25 / time_step)` 个 busy_tick
+- 背包分原材料(`raw_inv`)和成品(`prod_inv[pid]`)；商品追踪购买来源市场(`prod_origin`)
+- `busy_ticks > 0` 时仅 WAIT 有效；移动消耗 1 tick（TECH_5 后为 0）；BUY/SELL/LOAD 消耗 `0.25/dt` tick
 
 ## 工厂
 
 | 属性 | 值 |
 |:----:|:--:|
-| 位置 | (0, 0) |
+| 位置 | (0,0) |
 | 仓储上限 | 300 |
-| 初始生产线数 | 3 |
+| 初始产线 | 3 |
 
-### 生产系统
-
-工厂将原材料加工为成品。生产队列最大长度 = `生产线数 × 5`。
-
-生产流程：
-1. 采集原材料（HARVEST）
-2. 存入工厂（DEPOSIT）
-3. 排队生产（PRODUCE_pid）——消耗原材料，加入生产队列
-4. 等待工厂 tick 推进完成
-5. 装载成品（LOAD）
-
-生产时间受 efficiency 科技影响（×0.5）。
+生产队列上限 = 产线数 × 5。流程：HARVEST → DEPOSIT → PRODUCE → 等待 tick 完成 → LOAD → SELL。
 
 ## 商品
 
-| ID | 名称 | 购买成本 | 原材料消耗 | 市场价格范围 | 生产时间 |
-|:--:|:----:|:--------:|:----------:|:------------:|:--------:|
+| ID | 名称 | 买价 | 原料消耗 | 市价范围 | 生产时间 |
+|:--:|:----:|:----:|:--------:|:--------:|:--------:|
 | 0 | 半导体 | 10 | 5 | 40–120 | 5.0s |
 | 1 | 药品 | 5 | 3 | 20–60 | 4.0s |
 | 2 | 小商品 | 1 | 1 | 4–12 | 2.0s |
 | 3 | 服饰 | 8 | 4 | 32–96 | 6.0s |
 | 4 | 食品 | 3 | 2 | 12–24 | 1.0s |
 
-- 购买成本受 cost_reduction 科技影响（−2，最低为 0）
-- 生产时间受 efficiency 科技影响（×0.5）
+买价受 TECH_0(−2)，生产时间受 TECH_1(×0.5) 影响。
 
-## 市场定价
+## 市场
 
-每个市场对每种商品有独立的正弦价格函数：
+OU 随机游走价格，每 tick 更新：
 
 ```
-price(t) = base + amplitude × (1 + sin(2π·t / period + phase)) / 2
+dP = θ(μ−P)·dt + σ·√dt·N(0,1)
 ```
 
-- 不同市场的价格**相位随机不同步**，套利窗口随时间移动
-- `price_volatility` 控制波动幅度（easy=0.3, medium=1.0, hard=2.0）
-- 卖价受 marketing 科技影响（×1.1）
+θ=0.05，σ=amplitude×0.12，价格夹在 [lo, lo+amplitude] 内。`price_volatility` 控制振幅（easy=0.3, medium=1.0, hard=2.0）。
 
-## 算力系统
+**套利规则**：BUY 选跨市场卖价最高的可负担商品。禁止同市场原地套利（商品追踪购买来源，卖出时排除当前市场来源部分）。卖价受 TECH_2(×1.1) 影响。
 
-- **基础产出**：每个已开放算力中心产出 **1 算力/秒**
-- 购买 compute_expansion 科技后：+30% 算力速率
-- 可消耗算力招募新单位（40 算力/个，最多 5 个单位）——Phase 2
+## 算力
 
-### 算力中心
+- 每个开放算力中心 +1 算力/秒；TECH_7 后 +30%
+- OCCUPY 每 tick 推进 0.25s，10s 后开放
+- 招募新单位：40 算力/个，上限 5
 
-- 占领方式：在相邻格执行 OCCUPY，每次 tick 推进 0.25s 进度
-- 进度达到 `unit_occupy_time`（10s）后开放
-- 开放后持续产出算力
+## 科技
 
-## 科技树
+| 键名 | 效果 | 消耗 | 前置 |
+|:-----|------|:----:|:----:|
+| cost_reduction | 买价 −2 | 50 | — |
+| efficiency | 生产时间 ×0.5 | 40 | — |
+| marketing | 卖价 ×1.1 | 80 | — |
+| durability | HP +50% | 30 | — |
+| multi_line | 产线 +1 | 60 | — |
+| path_optimization | 移动无 busy_tick | 50 | efficiency |
+| market_analysis | obs标记（可重复） | 40 | — |
+| compute_expansion | 算力 +30% | 70 | — |
 
-| 键名 | 效果 | 消耗 | 前置 | 持久 |
-|:-----|------|:----:|:----:|:----:|
-| cost_reduction | 商品购买成本 −2 | 50 | — | ✓ |
-| efficiency | 生产时间 ×0.5 | 40 | — | ✓ |
-| marketing | 卖价 ×1.1 | 80 | — | ✓ |
-| durability | 单位 max HP +50% | 30 | — | ✓ |
-| multi_line | 工厂 +1 生产线 | 60 | — | ✓ |
-| path_optimization | 移动不产生 busy_tick | 50 | efficiency | ✓ |
-| market_analysis | 观测中标记已购买 | 40 | — | ✗ |
-| compute_expansion | 算力速率 +30% | 70 | — | ✓ |
-
-- 持久科技每种只能购买一次
-- market_analysis 可重复购买
-- 科技在工厂格执行
+持久科技（除 market_analysis）限购一次。在工厂格执行。
 
 ## 资源再生
 
-资源点库存会随时间缓慢再生：
-
 ```
-regen(t) = rate × (1 + sin(2π·t / period)) / 2
+regen(t) = rate × (1 + sin(2π·t/period)) / 2
 ```
 
-- 再生倍率：easy=2.0, medium=1.0, hard=0.5
-- 资源耗尽（累计采集量 ≥ max_stock）后停止再生
-- 最大库存为初始库存的 2 倍
+倍率：easy=2.0, medium=1.0, hard=0.5。耗尽（累计≥max_stock=2×初始）后停止。
 
 ## 得分与终止
 
-- **得分**：`score += revenue × score_factor`（默认 ×10），仅在 SELL 成功时增加
-- **terminated**：`money < 0`（破产）
-- **truncated**：`step >= max_steps`（时间耗尽）
-- 最终排名以多 seed 下的 `info["score"]` 平均为准
+- `score += revenue × 10`（仅 SELL 成功时）
+- `money < 0` → terminated；`step ≥ max_steps` → truncated
