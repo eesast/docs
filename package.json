@@ -32,8 +32,8 @@
     "clsx": "2.1.1",
     "lint-staged": "17.0.7",
     "nodejieba": "3.5.8",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "rehype-katex": "7.0.1",
     "remark-math": "6.0.0"
   },
@@ -52,7 +52,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
     "@docusaurus/tsconfig": "^3.2.1",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-helmet": "6.1.11",
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "8.60.1",
