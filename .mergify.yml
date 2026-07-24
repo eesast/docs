@@ -39,11 +39,6 @@ pull_request_rules:
     actions:
       merge:
         method: rebase
-  - name: delete head branch after merge
-    conditions:
-      - merged
-    actions:
-      delete_head_branch: {}
   - name: automatic label Renovate pull requests
     conditions:
       - author=renovate[bot]
