@@ -33,7 +33,7 @@
     "lint-staged": "17.2.0",
     "nodejieba": "3.5.8",
     "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react-dom": "19.2.8",
     "rehype-katex": "7.0.1",
     "remark-math": "6.0.0"
   },
