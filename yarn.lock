@@ -5944,10 +5944,10 @@ algoliasearch@^5.37.0:
     "@algolia/requester-fetch" "5.38.0"
     "@algolia/requester-node-http" "5.38.0"
 
-all-contributors-cli@7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/all-contributors-cli/-/all-contributors-cli-7.0.1.tgz#c5279eb3b29fc0fb73b0c517d63c8b4ae57507c0"
-  integrity sha512-gMP/2fSB3aUjM147lCFIGoALT7d4+RzPNicUvmTFh1aCBp8eprureRWaOvmkAGg3Esc2IJTeW9mh/LB+RDQevQ==
+all-contributors-cli@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/all-contributors-cli/-/all-contributors-cli-7.0.2.tgz#c2f2a034236d215ceec1fcdb1d28523507a2d910"
+  integrity sha512-dgZfjqyQ5mWo/InlyxtBNG58Ks4n7eGMot19euaXN5to4O3UdV5D352Aqqzw7qMnd3u3gWN9j4n7TFaj96Ia5Q==
   dependencies:
     eta "^4.5.1"
     inquirer "^14.0.2"
