@@ -57,7 +57,7 @@
     "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "8.72.2",
     "@typescript-eslint/parser": "8.72.2",
-    "all-contributors-cli": "7.0.1",
+    "all-contributors-cli": "7.0.2",
     "eslint": "10.14.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-standard": "17.1.0",
